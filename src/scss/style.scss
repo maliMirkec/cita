@@ -1,0 +1,91 @@
+$color: #c1177a;
+$white: #fff;
+
+@mixin css-locks($properties, $min-vw, $max-vw, $min-value, $max-value) {
+    @each $property in $properties {
+        #{$property}: $min-value;
+    }
+
+    @media screen and (min-width: $min-vw) {
+        @each $property in $properties {
+            #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+        }
+    }
+
+    @media screen and (min-width: $max-vw) {
+        @each $property in $properties {
+            #{$property}: $max-value;
+        }
+    }
+}
+
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: $color;
+  color: $white;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont,
+"Segoe UI", "Roboto", "Oxygen",
+"Ubuntu", "Cantarell", "Fira Sans",
+"Droid Sans", "Helvetica Neue", sans-serif;
+  @include css-locks(font-size, 20em, 75em, 14px, 16px);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 100vh;
+}
+
+.header {
+  border-bottom: 1px dotted $color;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.cita {
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transform: translateX(-10px);
+}
+
+.cita__word {
+  stroke-width: 25px;
+}
+
+.info {
+  @include css-locks(font-size, 400px, 800px, 12px, 14px);
+  color: $color;
+  list-style: none;
+  font-weight: 100;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  border-top: 1px dotted $color;
+}
+
+.info__element {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
