@@ -1,0 +1,10 @@
+/
+  Link: </main.js> rel=preload as=script
+  Link: </webfont.js> rel=preload as=script
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Cache-Control: max-age: 0, must-revalidate, public
+  Age: 0
+  Expires: 3000
+  Content-Encoding: gzip
