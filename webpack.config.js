@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const WebpackAutoInject = require('webpack-auto-inject-version');
 
 module.exports = {
   entry: './src/index.js',
@@ -63,11 +62,6 @@ module.exports = {
         twitter: true,
         yandex: true,
         windows: true
-      }
-    }),
-    new WebpackAutoInject({
-      components: {
-        AutoIncreaseVersion: true
       }
     }),
     new HtmlWebpackPlugin({
