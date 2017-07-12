@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -72,5 +73,12 @@ module.exports = {
       template: './src/templates/404.html',
       filename: '404.html'
     }),
+    new CompressionPlugin({
+			asset: '[path].gz[query]',
+			algorithm: 'gzip',
+			test: /\.(js|json|html|css)$/,
+			threshold: 10240,
+			minRatio: 0.8
+		})
   ]
 };
