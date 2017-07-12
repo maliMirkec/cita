@@ -1,11 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractSass = new ExtractTextPlugin({
-  filename: "[name].css",
-  disable: process.env.NODE_ENV === "development"
-});
+// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WebpackAutoInject = require('webpack-auto-inject-version');
 
 module.exports = {
   entry: './src/index.js',
@@ -23,21 +20,29 @@ module.exports = {
           minimize: true
         }
       }],
-    }],
-    rules: [{
+    }, {
       test: /\.scss$/,
-      use: extractSass.extract({
-        use: [{
-          loader: "css-loader"
-        }, {
-          loader: "sass-loader"
-        }],
-        fallback: "style-loader"
-      })
+      use: [{
+        loader: 'style-loader',
+        options: {
+          minimize: true
+        }
+      }, {
+        loader: 'css-loader',
+        options: {
+          minimize: true
+        }
+      }, {
+        loader: 'postcss-loader'
+      }, {
+        loader: 'sass-loader',
+        options: {
+          minimize: true
+        }
+      }]
     }]
   },
   plugins: [
-    extractSass,
     new FaviconsWebpackPlugin({
       logo: './gfx/logo/c-line.svg',
       prefix: 'icons-[hash]/',
@@ -58,6 +63,11 @@ module.exports = {
         twitter: true,
         yandex: true,
         windows: true
+      }
+    }),
+    new WebpackAutoInject({
+      components: {
+        AutoIncreaseVersion: true
       }
     }),
     new HtmlWebpackPlugin({
