@@ -1,8 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
+const DEBUG = process.env.NODE_ENV === 'development';
+const extractCritical = new ExtractTextPlugin({
+  filename: 'critical.css',
+  disable: DEBUG
+});
+const extractStyle = new ExtractTextPlugin({
+  filename: 'style.css',
+  disable: DEBUG
+});
 
 module.exports = {
   entry: './src/index.js',
@@ -15,39 +24,48 @@ module.exports = {
     rules: [{
       test: /\.html$/,
       use: [{
-        loader: 'html-loader',
-        options: {
-          minimize: true
-        }
+        loader: 'html-loader?minimize=true&interpolate=true'
       }],
     }, {
-      test: /\.scss$/,
+      test: /critical.scss/,
+      use: extractCritical.extract({
+        fallback: 'style-loader',
+        use: [{
+          loader: 'css-loader'
+        }, {
+          loader: 'postcss-loader'
+        }, {
+          loader: 'sass-loader'
+        }]
+      })
+    }, {
+      test: /style.scss/,
+      use: extractStyle.extract({
+        fallback: 'style-loader',
+        use: [{
+          loader: 'css-loader'
+        }, {
+          loader: 'postcss-loader'
+        }, {
+          loader: 'sass-loader'
+        }]
+      })
+    }, {
+      test: /\.svg$/,
       use: [{
-        loader: 'style-loader',
-        options: {
-          minimize: true
-        }
-      }, {
-        loader: 'css-loader',
-        options: {
-          minimize: true
-        }
-      }, {
-        loader: 'postcss-loader'
-      }, {
-        loader: 'sass-loader',
-        options: {
-          minimize: true
-        }
+        loader: 'svg-inline-loader?idPrefix=true'
       }]
     }]
   },
   plugins: [
+    extractCritical,
+    extractStyle,
+    new StyleExtHtmlWebpackPlugin(DEBUG ? false : 'critical.css'),
     new FaviconsWebpackPlugin({
       logo: './gfx/logo/c-line.svg',
-      prefix: 'icons-[hash]/',
+      prefix: 'icons/',
       emitStats: false,
-      statsFilename: 'iconstats-[hash].json',
+      statsFilename: 'iconstats.json',
       persistentCache: false,
       inject: true,
       background: '#c1177a',
@@ -72,13 +90,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/templates/404.html',
       filename: '404.html'
-    }),
-    new CompressionPlugin({
-			asset: '[path].gz[query]',
-			algorithm: 'gzip',
-			test: /\.(js|json|html|css|ico)$/,
-			threshold: 0,
-			minRatio: 0.8
-		})
-  ]
+    })
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, '/dist/'),
+    port: 2309
+  }
 };
