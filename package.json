@@ -1,6 +1,6 @@
 {
   "name": "cita",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Website for CiTA d.o.o.",
   "main": "index",
   "repository": "git@bitbucket.org:maliMirkec/cita.git",
@@ -11,7 +11,7 @@
     "clean": "rm -rf dist",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --open --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --hide-modules",
-    "build-clean": "yarn run clean && yarn run build && yarn run headers"
+    "build-clean": "npm run clean && npm run build && npm run headers"
   },
   "dependencies": {
     "cross-env": "^5.0.1",
@@ -30,6 +30,7 @@
     "style-loader": "^0.18.2",
     "svg-inline-loader": "^0.7.1",
     "webpack": "^3.1.0",
-    "webpack-dev-server": "^2.5.1"
+    "webpack-dev-server": "^2.5.1",
+    "yarn": "^0.27.5"
   }
 }
