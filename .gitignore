@@ -3,4 +3,5 @@
 /node_modules/
 npm-debug.log
 .yarnclean
+yarn.lock
 /dist/

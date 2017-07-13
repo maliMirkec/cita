@@ -1,0 +1,159 @@
+@import "config";
+@import "mixins";
+
+// general reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// general selection style
+::selection {
+  background-color: $color;
+  color: $white;
+}
+
+// general font definitions
+html {
+  @include css-locks(font-size, $mq-mobile, $mq-desktop, 16px, 18px);
+  font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  * {
+    font-weight: 100;
+  }
+}
+
+// theme
+body,
+.logo,
+.info,
+.info__header,
+.info__body,
+.info__footer {
+  display: flex;
+  align-items: center;
+}
+
+body,
+.logo,
+.info__header,
+.info__body,
+.info__footer {
+  justify-content: center;
+}
+
+body {
+  padding: 5px;
+  min-height: calc(100vh - 10px);
+  background-size: 40px;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq($from: desktop) {
+    width: calc(100vmin - 10px);
+    height: calc(100vmin - 10px);
+    min-width: 600px;
+    max-width: 800px;
+    min-height: 600px;
+    max-height: 800px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  @include mq($until: desktop) {
+    max-width: 400px;
+  }
+}
+
+.logo,
+.info__header,
+.info__body,
+.info__footer {
+  background-color: $color;
+  color: $white;
+}
+
+.logo {
+  @include mq($from: desktop) {
+    grid-area: 1 / 1;
+  }
+
+  @include mq($until: desktop) {
+    margin-bottom: 2px;
+  }
+}
+
+.cita {
+  @include css-locks(padding-top padding-bottom, $mq-mobile, $mq-desktop, 50px, 25px);
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 75%;
+  height: 75%;
+
+  @include mq($until: desktop) {
+    max-width: 150px;
+  }
+}
+
+.cita__word {
+  stroke-width: 25px;
+  stroke: $white;
+}
+
+.info {
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  @include mq($from: desktop) {
+    grid-area: 2 / 2 / 4 / 4;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted $white;
+  }
+}
+
+.info__header,
+.info__body,
+.info__footer {
+  @include css-locks(padding, $mq-mobile, $mq-desktop, 20px, 10px);
+  width: 100%;
+
+  @include mq($from: desktop) {
+    box-shadow: 2.5px 2.5px 0 0 transparentize($color, .5), 5px 5px 0 0 transparentize($color, .5);
+  }
+}
+
+.info__header,
+.info__body {
+  &:last-of-type {
+    margin-bottom: 2px;
+  }
+}
+
+.info__title {
+  @include css-locks(font-size, $mq-mobile, $mq-desktop, 18px, 20px);
+}
+
+.info__body {
+  line-height: 1.5;
+  word-break: break-word;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.info__footer {
+  @include css-locks(font-size, $mq-mobile, $mq-desktop, 13px, 14px);
+}

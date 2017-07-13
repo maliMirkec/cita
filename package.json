@@ -1,20 +1,19 @@
 {
   "name": "cita",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Website for CiTA d.o.o.",
   "main": "index",
   "repository": "git@bitbucket.org:maliMirkec/cita.git",
   "author": "Star Bist <malimirkeccita@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "cp_headers": "cp src/_headers dist/_headers",
-    "remove-dist": "rm -rf dist",
+    "headers": "cp src/_headers dist/_headers",
+    "clean": "rm -rf dist",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --open --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --hide-modules",
-    "build-clean": "yarn run remove-dist && yarn run build && yarn run cp_headers"
+    "build-clean": "yarn run clean && yarn run build && yarn run headers"
   },
   "dependencies": {
-    "compression-webpack-plugin": "^0.4.0",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
@@ -27,7 +26,9 @@
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
     "sass-mq": "^3.3.2",
+    "style-ext-html-webpack-plugin": "^3.4.1",
     "style-loader": "^0.18.2",
+    "svg-inline-loader": "^0.7.1",
     "webpack": "^3.1.0",
     "webpack-dev-server": "^2.5.1"
   }

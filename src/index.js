@@ -1,3 +1,2 @@
+import './scss/critical.scss';
 import './scss/style.scss';
-
-require('html-loader!./templates/index.html');
