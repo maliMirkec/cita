@@ -66,6 +66,7 @@ body,
 .logo,
 .info,
 .info__header,
+.info__body,
 .info__footer {
   display: flex;
   align-items: center;
@@ -74,6 +75,7 @@ body,
 body,
 .logo,
 .info__header,
+.info__body,
 .info__footer {
   justify-content: center;
 }
@@ -83,24 +85,26 @@ body {
   min-height: calc(100vh - 10px);
   background-size: 40px;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg class='cita' viewBox='0 0 2811 1612' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg class='cita__word' transform='translate(205.000000%2C 205.000000)' stroke='%23000' stroke-width='100' opacity='.04'%3E %3Cpath d='M406.009756%2C403 C134.009756%2C403 -1.32357724%2C535.666667 0.00975609756%2C801 C1.34308943%2C1066.33333 136.676423%2C1200 406.009756%2C1202' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E %3Cg transform='translate(500.000000%2C 0.000000)' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpath d='M303%2C602 L303%2C1202'%3E%3C/path%3E %3Cpath d='M2.27373675e-13%2C199 C4.66666667%2C323.666667 105.333333%2C391.333333 302%2C402 C514%2C402 613.333333%2C335.333333 600%2C202 C582.666667%2C68.6666667 483.333333%2C2 302%2C2 C117.333333%2C-12 16.6666667%2C53.6666667 2.27373675e-13%2C199 Z'%3E%3C/path%3E %3C/g%3E %3Cg transform='translate(1200.000000%2C 400.000000)' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpath d='M0%2C1 L600%2C1'%3E%3C/path%3E %3Cpath d='M300%2C802 L300%2C2'%3E%3C/path%3E %3C/g%3E %3Cg transform='translate(1999.000000%2C 403.000000)'%3E %3Cpath d='M1%2C797 C0.79595113%2C634.5771 0.79595113%2C435.910433 1%2C201 C1%2C69 67.6641237%2C2.33333333 200.992371%2C1 C334.320618%2C-0.333333333 400.989828%2C66.3333333 401%2C201 C401.183705%2C452.104362 401.183705%2C650.771029 401%2C797' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E %3Cpath d='M1%2C458 L401%2C458'%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E ");
-  /* SVG encoded with https://cdpn.io/rrOZQQ */
 }
 
 .wrapper {
-  width: calc(100vmin - 10px);
-  height: calc(100vmin - 10px);
-  min-width: 600px;
-  max-width: 800px;
-  min-height: 600px;
-  max-height: 800px;
   margin-left: auto;
   margin-right: auto;
-  display: grid;
-  align-items: stretch;
-  justify-content: center;
 
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  @include mq($from: desktop) {
+    width: calc(100vmin - 10px);
+    height: calc(100vmin - 10px);
+    min-width: 600px;
+    max-width: 800px;
+    min-height: 600px;
+    max-height: 800px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: stretch;
+    justify-content: center;
+  }
 }
 
 .logo,
@@ -111,15 +115,28 @@ body {
 
 .logo {
   background-image: radial-gradient(circle at bottom right, $color, darken($color, 12%));
-  box-shadow: -2.5px -2.5px 0 0 transparentize($color, .5), -5px -5px 0 0 transparentize($color, .5);
-  grid-area: 1 / 1;
+
+  @include mq($from: desktop) {
+    box-shadow: -2.5px -2.5px 0 0 transparentize($color, .5), -5px -5px 0 0 transparentize($color, .5);
+    grid-area: 1 / 1;
+  }
+
+  @include mq($until: desktop) {
+    margin-bottom: 2px;
+  }
 }
 
 .cita {
+  @include css-locks(padding-top padding-bottom, $mq-mobile, $mq-desktop, 50px, 20px);
   display: block;
+  padding-left: 10px;
+  padding-right: 10px;
   width: 75%;
   height: 75%;
-  padding: 10px;
+
+  @include mq($until: desktop) {
+    max-width: 150px;
+  }
 }
 
 .cita__word {
@@ -128,29 +145,31 @@ body {
 }
 
 .info {
+  background-image: radial-gradient(circle at top left, $color, darken($color, 12%));
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
-  background-image: radial-gradient(circle at top left, $color, darken($color, 12%));
-  box-shadow: 2.5px 2.5px 0 0 transparentize($color, .5), 5px 5px 0 0 transparentize($color, .5);
 
-  grid-area: 2 / 2 / 4 / 4;
+  @include mq($from: desktop) {
+    box-shadow: 2.5px 2.5px 0 0 transparentize($color, .5), 5px 5px 0 0 transparentize($color, .5);
+    grid-area: 2 / 2 / 4 / 4;
+  }
 }
 
 .info__header,
 .info__body,
 .info__footer {
-  padding: 5px;
+  @include css-locks(padding, $mq-mobile, $mq-desktop, 20px, 10px);
+}
+
+.info__header,
+.info__body {
+  border-bottom: 2px solid $white;
 }
 
 .info__header,
 .info__footer {
   width: 100%;
-  height: 60px;
-}
-
-.info__header {
-  border-bottom: 1px solid $white;
 }
 
 .info__title {
@@ -159,11 +178,13 @@ body {
 
 .info__body {
   line-height: 1.5;
+  word-break: break-word;
+  flex: 1 1 auto;
+  flex-direction: column;
 }
 
 .info__footer {
   @include css-locks(font-size, $mq-mobile, $mq-desktop, 13px, 14px);
-  border-top: 1px solid $white;
 
   a {
     color: inherit;
