@@ -12,6 +12,7 @@ const extractStyle = new ExtractTextPlugin({
   filename: 'style.css',
   disable: DEBUG
 });
+const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -85,12 +86,15 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/templates/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
+      excludeAssets: /style.css/
     }),
     new HtmlWebpackPlugin({
       template: './src/templates/404.html',
-      filename: '404.html'
-    })
+      filename: '404.html',
+      excludeAssets: /style.css/
+    }),
+    new HtmlWebpackExcludeAssetsPlugin()
   ],
   devServer: {
     contentBase: path.join(__dirname, '/dist/'),
