@@ -20,26 +20,36 @@ html {
   font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
   * {
-    font-weight: 100;
+    font-weight: 200;
   }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted $white;
+}
+
+p + p {
+  @include css-locks(margin-top, $mq-mobile, $mq-desktop, 2.5px, 5px);
 }
 
 // theme
 body,
 .logo,
+.tagline,
+.tech,
+.tech__body,
 .info,
-.info__header,
-.info__body,
-.info__footer {
+.info__body {
   display: flex;
   align-items: center;
 }
 
 body,
 .logo,
-.info__header,
-.info__body,
-.info__footer {
+.tech__body,
+.info__body {
   justify-content: center;
 }
 
@@ -56,16 +66,17 @@ body {
   @include mq($from: desktop) {
     width: calc(100vmin - 10px);
     height: calc(100vmin - 10px);
-    min-width: 600px;
+    min-width: 700px;
     max-width: 800px;
-    min-height: 600px;
+    min-height: 700px;
     max-height: 800px;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     align-items: stretch;
     justify-content: center;
+    grid-gap: 2px;
   }
 
   @include mq($until: desktop) {
@@ -74,20 +85,24 @@ body {
 }
 
 .logo,
-.info__header,
-.info__body,
-.info__footer {
+.tagline,
+.tech,
+.info {
   background-color: $color;
   color: $white;
 }
 
-.logo {
-  @include mq($from: desktop) {
-    grid-area: 1 / 1;
-  }
-
+.logo,
+.tagline,
+.tech {
   @include mq($until: desktop) {
     margin-bottom: 2px;
+  }
+}
+
+.logo {
+  @include mq($from: desktop) {
+    grid-area: 1 / 1 / 3 / 2;
   }
 }
 
@@ -109,51 +124,119 @@ body {
   stroke: $white;
 }
 
-.info {
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-
-  @include mq($from: desktop) {
-    grid-area: 2 / 2 / 4 / 4;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px dotted $white;
-  }
-}
-
-.info__header,
-.info__body,
-.info__footer {
-  @include css-locks(padding, $mq-mobile, $mq-desktop, 20px, 10px);
-  width: 100%;
-
-  @include mq($from: desktop) {
-    box-shadow: 2.5px 2.5px 0 0 transparentize($color, .5), 5px 5px 0 0 transparentize($color, .5);
-  }
-}
-
-.info__header,
+.tagline,
+.tech,
+.tech__body,
+.info,
 .info__body {
-  &:last-of-type {
+  flex-direction: column;
+}
+
+.tagline,
+.tech__body,
+.info__body {
+  @include css-locks(padding, $mq-mobile, $mq-desktop, 20px, 10px);
+}
+
+.tagline {
+  justify-content: center;
+
+  @include mq($from: desktop) {
+    grid-area: 3 / 1 / 5 / 2;
+  }
+
+  @include mq($until: desktop) {
     margin-bottom: 2px;
   }
 }
 
-.info__title {
-  @include css-locks(font-size, $mq-mobile, $mq-desktop, 18px, 20px);
+.tagline__word {
+  text-transform: uppercase;
+
+  &::first-letter {
+    font-size: 200%;
+  }
 }
 
+.info,
+.tech {
+  justify-content: space-between;
+  text-align: center;
+}
+
+.tech {
+  position: relative;
+
+  @include mq($from: desktop) {
+    grid-area: 1 / 2 / 3 / 5;
+  }
+
+  @include mq($until: desktop) {
+    margin-bottom: 2px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-right: 50px solid $color;
+    border-left: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+  }
+}
+
+.language {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  border: 0;
+  z-index: 2;
+  line-height: 1;
+  display: block;
+}
+
+.info {
+  @include mq($from: desktop) {
+    grid-area: 3 / 2 / 5 / 5;
+  }
+}
+
+.tech__body,
+.info__body {
+  width: 100%;
+}
+
+.tech__title,
+.info__title {
+  @include css-locks(font-size, $mq-mobile, $mq-desktop, 18px, 22px);
+  @include css-locks(margin-bottom, $mq-mobile, $mq-desktop, 10px, 20px);
+}
+
+.tech__body,
 .info__body {
   line-height: 1.5;
   word-break: break-word;
   flex: 1 1 auto;
-  flex-direction: column;
 }
 
-.info__footer {
-  @include css-locks(font-size, $mq-mobile, $mq-desktop, 13px, 14px);
+.tech__link {
+  @include css-locks(margin-top, $mq-mobile, $mq-desktop, 10px, 20px);
+  @include css-locks(padding-top padding-bottom, $mq-mobile, $mq-desktop, 2px, 4px);
+  @include css-locks(padding-left padding-right, $mq-mobile, $mq-desktop, 12px, 16px);
+  @include css-locks(font-size, $mq-mobile, $mq-desktop, 18px, 21px);
+  text-transform: uppercase;
+  border: 1px solid $white;
+  border-radius: 3px;
+  background-color: $white;
+  color: $color;
+  transition: background-color .23s cubic-bezier(0.13, 0.79, 0.62, 1.04), color .23s cubic-bezier(0.13, 0.79, 0.62, 1.04);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: transparent;
+    color: $white;
+  }
 }
