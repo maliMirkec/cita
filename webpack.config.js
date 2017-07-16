@@ -85,8 +85,8 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: './src/templates/index-hr.html',
-      filename: 'index-hr.html',
+      template: './src/templates/hr.html',
+      filename: 'hr.html',
       excludeAssets: /style.css/
     }),
     new HtmlWebpackPlugin({
