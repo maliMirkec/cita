@@ -5,27 +5,48 @@ body {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg class='cita' viewBox='0 0 2811 1612' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg class='cita__word' transform='translate(205.000000%2C 205.000000)' stroke='%23000' stroke-width='100' opacity='.04'%3E %3Cpath d='M406.009756%2C403 C134.009756%2C403 -1.32357724%2C535.666667 0.00975609756%2C801 C1.34308943%2C1066.33333 136.676423%2C1200 406.009756%2C1202' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E %3Cg transform='translate(500.000000%2C 0.000000)' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpath d='M303%2C602 L303%2C1202'%3E%3C/path%3E %3Cpath d='M2.27373675e-13%2C199 C4.66666667%2C323.666667 105.333333%2C391.333333 302%2C402 C514%2C402 613.333333%2C335.333333 600%2C202 C582.666667%2C68.6666667 483.333333%2C2 302%2C2 C117.333333%2C-12 16.6666667%2C53.6666667 2.27373675e-13%2C199 Z'%3E%3C/path%3E %3C/g%3E %3Cg transform='translate(1200.000000%2C 400.000000)' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpath d='M0%2C1 L600%2C1'%3E%3C/path%3E %3Cpath d='M300%2C802 L300%2C2'%3E%3C/path%3E %3C/g%3E %3Cg transform='translate(1999.000000%2C 403.000000)'%3E %3Cpath d='M1%2C797 C0.79595113%2C634.5771 0.79595113%2C435.910433 1%2C201 C1%2C69 67.6641237%2C2.33333333 200.992371%2C1 C334.320618%2C-0.333333333 400.989828%2C66.3333333 401%2C201 C401.183705%2C452.104362 401.183705%2C650.771029 401%2C797' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E %3Cpath d='M1%2C458 L401%2C458'%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E ");
 }
 
+.cita {
+  display: block;
+}
+
 .logo,
-.info__header,
-.info__body,
-.info__footer {
-  background-image: radial-gradient(circle at center center, $color, darken($color, 10%));
+.tagline,
+.tech,
+.info {
+  @include mq($until: desktop) {
+    background-image: radial-gradient(circle at center center, $color, darken($color, 10%));
+  }
 }
 
 .logo {
   @include mq($from: desktop) {
-    box-shadow: -2.5px -2.5px 0 0 transparentize($color, .5), -5px -5px 0 0 transparentize($color, .5);
+    background-image: radial-gradient(circle at bottom right, $color, darken($color, 10%));
+    box-shadow: -2px -2px 0 0 transparentize($color, .45), -4px -4px 0 0 transparentize($color, .45);
   }
 }
 
-.info__header,
-.info__body,
-.info__footer {
+.tagline {
   @include mq($from: desktop) {
-    box-shadow: 2.5px 2.5px 0 0 transparentize($color, .5), 5px 5px 0 0 transparentize($color, .5);
+    background-image: radial-gradient(circle at top right, $color, darken($color, 10%));
+    box-shadow: -2px 2px 0 0 transparentize($color, .45), -4px 4px 0 0 transparentize($color, .45);
   }
 }
 
+.tech {
+  @include mq($from: desktop) {
+    background-image: radial-gradient(circle at bottom left, $color, darken($color, 10%));
+    box-shadow: 4px -2px 0 0 transparentize($color, .65), 8px -4px 0 0 transparentize($color, .65);
+  }
+}
+
+.info {
+  @include mq($from: desktop) {
+    background-image: radial-gradient(circle at top left, $color, darken($color, 10%));
+    box-shadow: 4px 2px 0 0 transparentize($color, .65), 8px 4px 0 0 transparentize($color, .65);
+  }
+}
+
+.tech__body,
 .info__body {
   word-break: break-word;
 }
