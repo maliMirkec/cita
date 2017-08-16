@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const StyleExtHtmlWebpackPlugin = require("style-ext-html-webpack-plugin");
@@ -117,6 +118,13 @@ module.exports = {
       filename: "404.html",
       excludeAssets: /style.css/
     }),
+    new ScriptExtHtmlWebpackPlugin(
+      DEBUG
+        ? false
+        : {
+            defer: "main.js"
+          }
+    ),
     new HtmlWebpackExcludeAssetsPlugin()
   ],
   devServer: {
