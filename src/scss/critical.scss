@@ -1,5 +1,6 @@
 @import "config";
 @import "mixins";
+@import "animation";
 
 // general reset
 * {
@@ -17,17 +18,18 @@
 // general font definitions
 html {
   @include css-locks(font-size, $mq-mobile, $mq-desktop, 16px, 18px);
-  font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 
   * {
-    font-weight: 200;
+    font-weight: 500;
   }
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px dotted $white;
 }
 
 p + p {
@@ -35,208 +37,74 @@ p + p {
 }
 
 // theme
-body,
-.logo,
-.tagline,
-.tech,
-.tech__body,
-.info,
-.info__body {
+body {
   display: flex;
   align-items: center;
-}
-
-body,
-.logo,
-.tech__body,
-.info__body {
   justify-content: center;
+  min-height: 100vh;
 }
 
-body {
-  padding: 5px;
-  min-height: calc(100vh - 10px);
-  background-size: 40px;
-}
-
-.wrapper {
-  margin-left: auto;
-  margin-right: auto;
+.rect {
+  display: flex;
+  flex-direction: column;
 
   @include mq($from: desktop) {
-    width: calc(100vmin - 10px);
-    height: calc(100vmin - 10px);
-    min-width: 700px;
-    max-width: 800px;
-    min-height: 700px;
-    max-height: 800px;
-
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    align-items: stretch;
-    justify-content: center;
-    grid-gap: 2px;
-  }
-
-  @include mq($until: desktop) {
-    max-width: 400px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, minmax(auto, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    min-width: 90vmin;
+    max-width: 100%;
+    min-height: 90vmin;
+    max-height: 100%;
   }
 }
 
-.logo,
-.tagline,
-.tech,
-.info {
-  background-color: $color;
-  color: $white;
+.rect__element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:not(.rect__element--CiTA) {
+    opacity: 0;
+    transform-origin: center center;
+    transform-style: preserve-3d;
+  }
 }
 
-.logo,
-.tagline,
-.tech {
-  @include mq($until: desktop) {
-    margin-bottom: 2px;
+.rect__element--CiTA {
+  @include mq($from: desktop) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+}
+
+.rect__element--C {
+  @include mq($from: desktop) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}
+
+.rect__element--i {
+  @include mq($from: desktop) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+}
+
+.rect__element--T {
+  @include mq($from: desktop) {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+}
+
+.rect__element--A {
+  @include mq($from: desktop) {
+    grid-area: 2 / 1 / 3 / 2;
   }
 }
 
 .logo {
-  @include mq($from: desktop) {
-    grid-area: 1 / 1 / 3 / 2;
-  }
-}
-
-.cita {
-  @include css-locks(padding-top padding-bottom, $mq-mobile, $mq-desktop, 50px, 25px);
   display: block;
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 75%;
-  height: 75%;
-
-  @include mq($until: desktop) {
-    max-width: 150px;
-  }
-}
-
-.cita__word {
-  stroke-width: 25px;
-  stroke: $white;
-}
-
-.tagline,
-.tech,
-.tech__body,
-.info,
-.info__body {
-  flex-direction: column;
-}
-
-.tagline,
-.tech__body,
-.info__body {
-  @include css-locks(padding, $mq-mobile, $mq-desktop, 20px, 10px);
-}
-
-.tagline {
-  justify-content: center;
-
-  @include mq($from: desktop) {
-    grid-area: 3 / 1 / 5 / 2;
-  }
-
-  @include mq($until: desktop) {
-    margin-bottom: 2px;
-  }
-}
-
-.tagline__word {
-  text-transform: uppercase;
-
-  &::first-letter {
-    font-size: 200%;
-  }
-}
-
-.info,
-.tech {
-  justify-content: space-between;
-  text-align: center;
-}
-
-.tech {
-  position: relative;
-
-  @include mq($from: desktop) {
-    grid-area: 1 / 2 / 3 / 5;
-  }
-
-  @include mq($until: desktop) {
-    margin-bottom: 2px;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-right: 50px solid $color;
-    border-left: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-  }
-}
-
-.language {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px;
-  border: 0;
-  z-index: 2;
-  line-height: 1;
-  display: block;
-}
-
-.info {
-  @include mq($from: desktop) {
-    grid-area: 3 / 2 / 5 / 5;
-  }
-}
-
-.tech__body,
-.info__body {
-  width: 100%;
-}
-
-.tech__title,
-.info__title {
-  @include css-locks(font-size, $mq-mobile, $mq-desktop, 18px, 22px);
-  @include css-locks(margin-bottom, $mq-mobile, $mq-desktop, 10px, 20px);
-}
-
-.tech__body,
-.info__body {
-  line-height: 1.5;
-  word-break: break-word;
-  flex: 1 1 auto;
-}
-
-.tech__link {
-  @include css-locks(margin-top, $mq-mobile, $mq-desktop, 10px, 20px);
-  @include css-locks(padding-top padding-bottom, $mq-mobile, $mq-desktop, 2px, 4px);
-  @include css-locks(padding-left padding-right, $mq-mobile, $mq-desktop, 12px, 16px);
-  @include css-locks(font-size, $mq-mobile, $mq-desktop, 18px, 21px);
-  text-transform: uppercase;
-  border: 1px solid $white;
-  border-radius: 3px;
-  background-color: $white;
-  color: $color;
-  transition: background-color .23s cubic-bezier(0.13, 0.79, 0.62, 1.04), color .23s cubic-bezier(0.13, 0.79, 0.62, 1.04);
-
-  &:hover,
-  &:focus,
-  &:active {
-    background-color: transparent;
-    color: $white;
-  }
+  max-width: 100%;
 }
