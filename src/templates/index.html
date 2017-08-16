@@ -8,7 +8,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="CiTA d.o.o.">
   <meta property="og:url" content="https://www.cita.hr">
-  <meta property="og:image" content="https://www.cita.hr/gfx/logo/cita-line.png">
+  <meta property="og:image" content="https://www.cita.hr/gfx/logo/CiTA-rect.png">
   <meta property="og:site_name" content="CiTA d.o.o.">
   <meta property="og:description" content="CREATIVE INTERNET TECHNOLOGY AGENCY">
   <meta name="twitter:card" content="summary">
@@ -21,41 +21,59 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <a class="logo" href="/">
-      ${require('../../gfx/logo/cita-line.svg')}
-    </a>
-    <article class="tech">
-      <a href="/hr/" class="language">Hr</a>
-      <main class="tech__body">
-        <h1 class="tech__title">We can help you with your project</h1>
-        <p>The main goal of our company is to create an accessible and beautiful user interface with a focus on user experience.
-          We enjoy working with reusable and modular components by building an easily maintainable style guides. Our favorite
-          technologies are SASS, Webpack, Gulp and Markdown, to name just a few.</p>
-        <p>If you are interested in collaboration, don't hesitate to contact us.</p>
-        <a href="mailto:silvestar@cita.hr" class="tech__link">Contact</a>
-      </main>
-    </article>
-    <article class="tagline">
-      <div class="tagline__word tagline__word">Creative</div>
-      <div class="tagline__word tagline__word">Internet</div>
-      <div class="tagline__word tagline__word">Technology</div>
-      <div class="tagline__word tagline__word">Agency</div>
-    </article>
-    <article class="info">
-      <main class="info__body">
-        <h1 class="info__title">
-          CiTA d.o.o.
-        </h1>
-        <p>Croatia | Josipovac (Osijek City) | Sunčana 6</p>
-        <p>030188176</p>
-        <p>54399369952</p>
-        <p>Bank account: HR9423400091110866884</p>
-        <p>Founder: <a href="//www.silvestarbistrovic.from.hr">Silvestar Bistrović</a></p>
-      </main>
-    </article>
+  <div class="rect">
+    <div class="rect__element rect__element--CiTA">
+      ${require('../../gfx/logo/CiTA-rect.svg')}
+    </div>
+    <div class="rect__element rect__element--C">
+      <h2 class="rect__tagline">${require('../../gfx/logo/C.svg')} <span class="rect__tagline-text rect__tagline-text--C"><span class="rect__tagline-text-letter">C</span>reative</span>
+      </h2>
+      <div class="rect__text">
+        <p>We are creative</p>
+        <p>in finding</p>
+        <p>
+          <u>the right solution</u>
+        </p>
+        <p>for your projects.</p>
+      </div>
+    </div>
+    <div class="rect__element rect__element--i">
+      <h2 class="rect__tagline">${require('../../gfx/logo/i.svg')} <span class="rect__tagline-text rect__tagline-text--i"><span class="rect__tagline-text-letter">I</span>nternet</span>
+      </h2>
+      <div class="rect__text">
+        <p>We are oriented</p>
+        <p>in delivering</p>
+        <p>
+          <u>the best experience</u>
+        </p>
+        <p>for every web user.</p>
+      </div>
+    </div>
+    <div class="rect__element rect__element--T">
+      <h2 class="rect__tagline">${require('../../gfx/logo/T.svg')} <span class="rect__tagline-text rect__tagline-text--T"><span class="rect__tagline-text-letter">T</span>echnology</span>
+      </h2>
+      <div class="rect__text">
+        <p>We are using</p>
+        <p>the latest</p>
+        <p>
+          <u>front-end magic tricks</u>
+        </p>
+        <p>in our work.</p>
+      </div>
+    </div>
+    <div class="rect__element rect__element--A">
+      <h2 class="rect__tagline">${require('../../gfx/logo/A.svg')} <span class="rect__tagline-text rect__tagline-text--A"><span class="rect__tagline-text-letter">A</span>gency</span>
+      </h2>
+      <div class="rect__text rect__text--small">
+        <p>CiTA d.o.o.</p>
+        <p>Croatia | Josipovac | Sunčana 6</p>
+        <p>030188176 | 54399369952</p>
+        <p>HR9423400091110866884</p>
+        <p><a href="mailto:silvestar@cita.hr?Subject=Hello">silvestar@cita.hr →</a></p>
+      </div>
+    </div>
   </div>
-  ${require('./partials/fonts.html')} ${require('./partials/css-style.html')}
+  ${require('./partials/fonts.html')} ${require('./partials/css-style.html')} ${require('./partials/onload.html')}
 </body>
 
 </html>
