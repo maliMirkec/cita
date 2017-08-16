@@ -48,15 +48,20 @@ body {
   display: flex;
   flex-direction: column;
 
+  @include mq($until: desktop) {
+    width: 100%;
+    max-width: 400px;
+  }
+
   @include mq($from: desktop) {
     min-height: 100vh;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: repeat(3, minmax(auto, 1fr));
     grid-template-rows: repeat(3, 1fr);
     min-width: 90vmin;
-    max-width: 100%;
     min-height: 90vmin;
+    max-width: 100%;
     max-height: 100%;
   }
 }
