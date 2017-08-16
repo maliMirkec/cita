@@ -2,6 +2,10 @@
 $color: #f44a4a;
 $white: #fff;
 
+// animations
+$dur: 1.33s;
+$ani: cubic-bezier(0.15, 0.75, 0.25, 1.1);
+
 // sass-mq breakpoints
 $mq-mobile: 320px;
 $mq-desktop: 820px;
