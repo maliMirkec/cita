@@ -28,7 +28,8 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader?minimize=true&interpolate=true"
+            loader:
+              "html-loader?minimize=true&conservativeCollapse=false&interpolate=require"
           }
         ]
       },
