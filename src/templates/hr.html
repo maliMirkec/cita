@@ -21,8 +21,56 @@
 </head>
 
 <body>
-
-  ${require('./partials/fonts.html')} ${require('./partials/css-style.html')}
+  <div class="rect">
+    <div class="rect__element rect__element--CiTA">
+      ${require('../../gfx/logo/CiTA-rect.svg')}
+    </div>
+    <div class="rect__element rect__element--C">
+      <h2 class="rect__tagline">${require('../../gfx/logo/C.svg')} <span class="rect__tagline-text rect__tagline-text--C"><span class="rect__tagline-text-letter">C</span>reative</span>
+      </h2>
+      <div class="rect__text">
+        <p>Kreativni u pronalasku</p>
+        <p>
+          <u>pravih rješenja</u>
+        </p>
+        <p>za Vaše projekte.</p>
+      </div>
+    </div>
+    <div class="rect__element rect__element--i">
+      <h2 class="rect__tagline">${require('../../gfx/logo/i.svg')} <span class="rect__tagline-text rect__tagline-text--i"><span class="rect__tagline-text-letter">I</span>nternet</span>
+      </h2>
+      <div class="rect__text">
+        <p>Orijentirani na isporuku</p>
+        <p>
+          <u>najboljeg iskustva</u>
+        </p>
+        <p>za svakog web korisnika.</p>
+      </div>
+    </div>
+    <div class="rect__element rect__element--T">
+      <h2 class="rect__tagline">${require('../../gfx/logo/T.svg')} <span class="rect__tagline-text rect__tagline-text--T"><span class="rect__tagline-text-letter">T</span>echnology</span>
+      </h2>
+      <div class="rect__text">
+        <p>Koristimo najnovije</p>
+        <p>
+          <u>front-end trikove i čarolije</u>
+        </p>
+        <p>u svakodnevom poslu.</p>
+      </div>
+    </div>
+    <div class="rect__element rect__element--A">
+      <h2 class="rect__tagline">${require('../../gfx/logo/A.svg')} <span class="rect__tagline-text rect__tagline-text--A"><span class="rect__tagline-text-letter">A</span>gency</span>
+      </h2>
+      <div class="rect__text rect__text--small">
+        <p>CiTA d.o.o.</p>
+        <p>HRVATSKA | Josipovac | Sunčana 6</p>
+        <p>030188176 | 54399369952</p>
+        <p>HR9423400091110866884</p>
+        <p><a href="mailto:silvestar@cita.hr?Subject=Hello">silvestar@cita.hr →</a></p>
+      </div>
+    </div>
+  </div>
+  ${require('./partials/css-style.html')} ${require('./partials/fonts.html')}
 </body>
 
 </html>

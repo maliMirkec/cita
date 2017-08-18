@@ -1,2 +1,2 @@
-import './scss/critical.scss';
-import './scss/style.scss';
+import "./scss/critical.scss";
+import "./scss/style.scss";

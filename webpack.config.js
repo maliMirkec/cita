@@ -106,17 +106,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/templates/hr.html",
       filename: "hr.html",
-      excludeAssets: /style.css/
+      excludeAssets: DEBUG ? /style.css/ : [/style.css/, /main.js/]
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/index.html",
       filename: "index.html",
-      excludeAssets: /style.css/
+      excludeAssets: DEBUG ? /style.css/ : [/style.css/, /main.js/]
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/404.html",
       filename: "404.html",
-      excludeAssets: /style.css/
+      excludeAssets: DEBUG ? /style.css/ : [/style.css/, /main.js/]
     }),
     new ScriptExtHtmlWebpackPlugin(
       DEBUG

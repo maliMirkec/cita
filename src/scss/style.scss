@@ -12,7 +12,6 @@
     @include css-locks(padding-bottom, $mq-mobile, $mq-desktop, 20px, 30px);
     background-color: $color;
     color: $white;
-    box-shadow: 0 0 6px -2px darken($color, 30%);
   }
 }
 
