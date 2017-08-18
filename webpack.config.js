@@ -9,10 +9,6 @@ const extractCritical = new ExtractTextPlugin({
   filename: "critical.css",
   disable: DEBUG
 });
-const extractStyle = new ExtractTextPlugin({
-  filename: "style.css",
-  disable: DEBUG
-});
 const HtmlWebpackExcludeAssetsPlugin = require("html-webpack-exclude-assets-plugin");
 
 module.exports = {
@@ -51,23 +47,6 @@ module.exports = {
         })
       },
       {
-        test: /style.scss/,
-        use: extractStyle.extract({
-          fallback: "style-loader",
-          use: [
-            {
-              loader: "css-loader"
-            },
-            {
-              loader: "postcss-loader"
-            },
-            {
-              loader: "sass-loader"
-            }
-          ]
-        })
-      },
-      {
         test: /\.svg$/,
         use: [
           {
@@ -79,9 +58,7 @@ module.exports = {
   },
   plugins: [
     extractCritical,
-    extractStyle,
     new StyleExtHtmlWebpackPlugin(DEBUG ? false : "critical.css"),
-    new StyleExtHtmlWebpackPlugin(DEBUG ? false : "style.css"),
     new FaviconsWebpackPlugin({
       logo: "./gfx/logo/CiTA-rect.svg",
       prefix: "icons/",
@@ -107,17 +84,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/templates/hr.html",
       filename: "hr.html",
-      excludeAssets: DEBUG ? /style.css/ : [/style.css/, /main.js/]
+      excludeAssets: DEBUG ? false : /main.js/
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/index.html",
       filename: "index.html",
-      excludeAssets: DEBUG ? /style.css/ : [/style.css/, /main.js/]
+      excludeAssets: DEBUG ? false : /main.js/
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/404.html",
       filename: "404.html",
-      excludeAssets: DEBUG ? /style.css/ : [/style.css/, /main.js/]
+      excludeAssets: DEBUG ? false : /main.js/
     }),
     new ScriptExtHtmlWebpackPlugin(
       DEBUG
