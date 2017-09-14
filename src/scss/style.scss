@@ -53,7 +53,7 @@ body {
 }
 
 .tile {
-  min-height: 100vh;
+  height: 100vh;
   padding-bottom: 3em;
   padding-left: 3em;
   padding-right: 3em;
@@ -90,27 +90,25 @@ body {
 
 .tile__content--title {
   font-size: 2em;
-  transform: translateX(-15%);
+  transform: translateX(-25%) skewX(-10deg);
 }
 
 .tile__content--icon {
-  transform: translateX(15%);
+  transform: translateX(25%) skewX(10deg);
 }
 
 .tile__paragraph {
   &:nth-child(odd) {
-    transform: translateX(15%);
+    transform: translateX(25%) skewX(10deg);
   }
 
   &:nth-child(even) {
-    transform: translateX(-15%);
+    transform: translateX(-25%) skewX(-10deg);
   }
 }
 
 .tile__icon {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .tile__character {
@@ -144,19 +142,14 @@ body {
   border-left: 1em solid transparent;
   border-right: 1em solid transparent;
   transform: scale(0.5) translateY(2em);
-  border-top-color: $color1;
-
-  .tile--red & {
-    border-top-color: $color2;
-  }
 
   &:not(.tile__arrow--up) {
-    border-top: 1em solid;
+    border-top: 1em solid lighten($color1, 20%);
   }
 }
 
 .tile__arrow--up {
-  border-bottom: 1em solid;
+  border-bottom: 1em solid lighten($color1, 20%);
 }
 
 .cita {
