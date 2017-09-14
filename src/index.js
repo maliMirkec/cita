@@ -1,50 +1,58 @@
+"use strict";
+
 import "./scss/style.scss";
 
 import {
   TweenMax,
-  TimelineMax,
-  Bounce,
-  SlowMo,
   Elastic
 } from "gsap";
 
-const tl = new TimelineMax();
+const scr = window.requestAnimationFrame || ((callback) => setTimeout(callback, 1000/60));
 
-const logo = document.querySelectorAll(".cita");
-const letter = document.querySelectorAll(".cita__letter");
-const title = document.querySelectorAll(".js-target-title");
-const info = document.querySelectorAll(".js-target-info");
+const elementsToShow = document.querySelectorAll(".show-on-scroll");
 
-const bounceIn = {
-  scale: 0.15,
-  rotationY: 90,
-  rotationX: 90,
+const isElementInViewport = (el) => {
+  let rect = el.getBoundingClientRect();
+
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
+const tweenConfig = {
+  opacity: 1,
+  scale: 1,
+  transform: 0,
+  rotation: 0,
+  skewX: 0,
+  x: 0,
+  y: 0,
   transformOrigin: "center center",
-  ease: Bounce.easeOut
-};
-const bounceOut = {
-  scale: 0.85,
-  rotation: 6,
-  skewX: -3,
-  transformOrigin: "bottom center",
-  ease: Bounce.easeOut
-};
-const slideFromLeft = {
-  x: "-100%",
-  ease: SlowMo.ease.config(0.7, 0.7, false)
-};
-const slideFromRight = {
-  x: "100%",
-  ease: SlowMo.ease.config(0.7, 0.7, false)
-};
-const slideCenter = {
-  x: "0%",
-  ease: Elastic.easeOut.config(1, 0.75)
+  ease: Elastic.easeOut.config(1, 0.5)
 };
 
-tl.add(TweenMax.from(logo, 10, bounceIn));
-tl.add(TweenMax.staggerFrom(letter, 10, bounceOut, -0.5), "-=5");
-tl.add(TweenMax.staggerFromTo(title, 5, slideFromLeft, slideCenter, 2.8), "-=2.5");
-tl.add(TweenMax.staggerFromTo(info, 5, slideFromRight, slideCenter, 2.8), "-=2.5");
+const tweenDuration = 4;
+const tweenDelay = tweenDuration / 6;
 
-tl.duration(10);
+const loop = () => {
+  elementsToShow.forEach((element) => {
+    if (isElementInViewport(element) && !element.classList.contains("animate")) {
+      const elementDelay = element.getAttribute("data-delay");
+      let elementConfig = tweenConfig;
+
+      if(tweenDelay) {
+        elementConfig.delay = tweenDelay * elementDelay;
+      }
+
+      TweenMax.to(element, 1, elementConfig);
+      element.classList.add("animate");
+    }
+  });
+
+  scr(loop);
+}
+
+loop();
