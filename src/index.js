@@ -1,26 +1,12 @@
 "use strict";
 
-import "./scss/style.scss";
+import "./scss/cita.scss";
 
 import {
   TweenMax,
+  TimelineMax,
   Elastic
 } from "gsap";
-
-const scr = window.requestAnimationFrame || ((callback) => setTimeout(callback, 1000/60));
-
-const elementsToShow = document.querySelectorAll(".show-on-scroll");
-
-const isElementInViewport = (el) => {
-  let rect = el.getBoundingClientRect();
-
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
 
 const tweenConfig = {
   opacity: 1,
@@ -34,25 +20,41 @@ const tweenConfig = {
   ease: Elastic.easeOut.config(1, 0.5)
 };
 
-const tweenDuration = 4;
-const tweenDelay = tweenDuration / 6;
+const tweenDuration = 2;
+const tweenDelay = tweenDuration / 2;
+
+const scr = window.requestAnimationFrame || ((callback) => setTimeout(callback, 1000/60));
+
+const elementsToShow = document.querySelectorAll(".tile");
+
+const isElementInViewport = (el) => {
+  let rect = el.getBoundingClientRect();
+
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight * 1.55 || document.documentElement.clientHeight * 1.55) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
+const animateElements = (el) => {
+  if (isElementInViewport(el) && !el.classList.contains("animate")) {
+    el.classList.add("animate");
+
+    const tl = new TimelineMax();
+
+    const animateElements = el.querySelectorAll(".show-on-scroll");
+
+    tl.add(TweenMax.staggerTo(animateElements, tweenDuration, tweenConfig, tweenDelay));
+    tl.duration(animateElements.length * 2 / 3);
+  }
+};
 
 const loop = () => {
-  elementsToShow.forEach((element) => {
-    if (isElementInViewport(element) && !element.classList.contains("animate")) {
-      const elementDelay = element.getAttribute("data-delay");
-      let elementConfig = tweenConfig;
-
-      if(tweenDelay) {
-        elementConfig.delay = tweenDelay * elementDelay;
-      }
-
-      TweenMax.to(element, 1, elementConfig);
-      element.classList.add("animate");
-    }
-  });
+  elementsToShow.forEach(animateElements);
 
   scr(loop);
-}
+};
 
 loop();

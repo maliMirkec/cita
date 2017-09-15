@@ -1,7 +1,7 @@
 $color1: #f13131;
 $color2: #fff;
 
-$mq-mobile: 320px;
+$mq-mobile: 400px;
 $mq-desktop: 960px;
 
 $ease: ease-out;
@@ -53,15 +53,15 @@ body {
 }
 
 .tile {
-  height: 100vh;
+  min-height: 100vh;
   padding-bottom: 3em;
   padding-left: 3em;
   padding-right: 3em;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  align-items: stretch;
+  justify-content: center;
 
   &:not(.tile--red) {
     color: $color1;
@@ -83,14 +83,33 @@ body {
 }
 
 .tile__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-weight: 100;
-  line-height: 2;
+  min-height: calc((100vh - 3em) / 3);
 }
 
 .tile__content--title {
-  font-size: 2em;
+  @include css-locks(font-size, $mq-mobile, $mq-desktop, 24px, 36px);
   transform: translateX(-25%) skewX(-10deg);
+  flex-wrap: wrap;
+  line-height: 1.5;
+
+  span:not(:last-child) {
+    display: inline-block;
+    margin-right: .125em;
+  }
+
+  @media screen and (min-width: $mq-mobile) {
+    flex-direction: row;
+  }
+}
+
+.tile__content--info {
+  line-height: 2;
 }
 
 .tile__content--icon {
@@ -108,23 +127,25 @@ body {
 }
 
 .tile__icon {
+  margin-top: 3vmin;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tile__character {
-  height: 10vh;
-  width: 10vw;
+  flex: 0 0 auto;
+  width: 4vh;
+  height: 4vh;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
-
-  &:not(.tile__character--big) {
-    font-size: 4vh;
-  }
+  font-size: 4vh;
 
   &:first-child {
     transform: translateX(125%);
+    margin-right: 3vmin;
   }
 
   &:last-child {
@@ -132,13 +153,14 @@ body {
   }
 }
 
-.tile__character--big {
-  font-size: 8vh;
+.tile__character--box {
+  border: .1em solid $color1;
 }
 
 .tile__arrow {
   position: absolute;
   bottom: 1em;
+  left: calc(50vw - 1em);
   border-left: 1em solid transparent;
   border-right: 1em solid transparent;
   transform: scale(0.5) translateY(2em);
