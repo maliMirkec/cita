@@ -87,12 +87,18 @@ module.exports = {
       inline: true,
       minify: true,
       dest: "index.html"
-    },
-    {
+    }),
+    new CriticalPlugin({
       src: "hr.html",
       inline: true,
       minify: true,
       dest: "hr.html"
+    }),
+    new CriticalPlugin({
+      src: "404.html",
+      inline: true,
+      minify: true,
+      dest: "404.html"
     })
   ]
 };
