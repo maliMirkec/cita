@@ -41,7 +41,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin({ filename: "style.css" }),
+    new ExtractTextPlugin({ filename: "cita.css" }),
     new FaviconsWebpackPlugin({
       logo: "./gfx/logo/CiTA-rect.svg",
       prefix: "icons/",
