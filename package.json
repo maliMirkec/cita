@@ -1,6 +1,6 @@
 {
   "name": "cita",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Website for CiTA d.o.o.",
   "main": "index",
   "repository": "git@bitbucket.org:maliMirkec/cita.git",
@@ -13,7 +13,7 @@
     "clean": "rm -rf dist",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js --open --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --hide-modules",
-    "build-clean": "npm run clean && npm run build && npm run headers && npm run gfx && npm run gzip"
+    "build-clean": "yarn clean && yarn build && yarn headers && yarn gfx && yarn gzip"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
