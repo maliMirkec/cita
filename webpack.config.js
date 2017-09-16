@@ -85,21 +85,18 @@ module.exports = {
     new CriticalPlugin({
       src: "index.html",
       inline: true,
-      extract: true,
       minify: true,
       dest: "index.html"
     }),
     new CriticalPlugin({
       src: "hr.html",
       inline: true,
-      extract: true,
       minify: true,
       dest: "hr.html"
     }),
     new CriticalPlugin({
       src: "404.html",
       inline: true,
-      extract: true,
       minify: true,
       dest: "404.html"
     })
