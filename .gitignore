@@ -4,3 +4,4 @@
 npm-debug.log
 .yarnclean
 yarn.lock
+/dist/
