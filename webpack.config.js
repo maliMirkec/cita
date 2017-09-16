@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const CriticalPlugin = require("webpack-plugin-critical").CriticalPlugin;
+const HtmlCriticalPlugin = require("html-critical-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -66,39 +66,48 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/hr.html",
-      filename: "hr.html",
-      inject: true
+      filename: "hr.html"
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/index.html",
-      filename: "index.html",
-      inject: true
+      filename: "index.html"
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/404.html",
-      filename: "404.html",
-      inject: true
+      filename: "404.html"
     }),
     new ScriptExtHtmlWebpackPlugin({
       defer: "main.js"
     }),
-    new CriticalPlugin({
+    new HtmlCriticalPlugin({
+      base: path.join(path.resolve(__dirname), "dist/"),
       src: "index.html",
-      inline: true,
+      dest: "index.html",
       minify: true,
-      dest: "index.html"
+      inline: true,
+      penthouse: {
+        blockJSRequests: true
+      }
     }),
-    new CriticalPlugin({
+    new HtmlCriticalPlugin({
+      base: path.join(path.resolve(__dirname), "dist/"),
       src: "hr.html",
-      inline: true,
+      dest: "hr.html",
       minify: true,
-      dest: "hr.html"
+      inline: true,
+      penthouse: {
+        blockJSRequests: true
+      }
     }),
-    new CriticalPlugin({
+    new HtmlCriticalPlugin({
+      base: path.join(path.resolve(__dirname), "dist/"),
       src: "404.html",
-      inline: true,
+      dest: "404.html",
       minify: true,
-      dest: "404.html"
+      inline: true,
+      penthouse: {
+        blockJSRequests: true
+      }
     })
   ]
 };
