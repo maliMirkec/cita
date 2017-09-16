@@ -46,6 +46,6 @@ var replace = require("gulp-replace");
 
 gulp.task("critical:fix", function () {
   gulp.src("./dist/*.html")
-    .pipe(replace("\<link href=\"/cita.css\" rel=\"preload\" as=\"style\" onload=\"this\.rel=\'stylesheet\'\"\>", "\<link href=\"/cita.css\" rel=\"preload\" as=\"style\" onload=\'this\.rel=\"stylesheet\"\'\>"))
+    .pipe(replace("\<link href=\"/cita.css\" rel=\"preload\" as=\"style\" onload=\"this\.rel=\'stylesheet\'\"\>", "\<script\>var criticalFix=function(e){e.rel=\"stylesheet\"};\</script\>\<link href=\"/cita.css\" rel=\"preload\" as=\"style\" onload=\"criticalFix(this)\"\>"))
     .pipe(gulp.dest("./dist/"));
 });
