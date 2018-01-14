@@ -5,19 +5,14 @@ let FontFaceObserver;
 (function () {
   // Optimization for Repeat Views
   if (window.sessionStorage.criticalFoftDataUriFontsLoaded) {
-    document.documentElement.className += ' fonts-stage-1 fonts-stage-2'
+    document.documentElement.className += ' fonts-stage-1'
     return
   }
 
-  const fontASubset = new FontFaceObserver('LatoSubset')
+  const fontASubset = new FontFaceObserver('Muli')
 
   Promise.all([fontASubset.load()]).then(() => {
     document.documentElement.className += ' fonts-stage-1'
-    const fontA = new FontFaceObserver('Muli')
-    Promise.all([fontA.load()]).then(() => {
-      document.documentElement.className += ' fonts-stage-2'
-      // Optimization for Repeat Views
-      window.sessionStorage.criticalFoftDataUriFontsLoaded = true
-    })
+    window.sessionStorage.criticalFoftDataUriFontsLoaded = true
   })
 })()
