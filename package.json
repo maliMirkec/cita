@@ -7,8 +7,7 @@
   "author": "Star Bist <malimirkeccita@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "headers": "cp src/_headers dist/_headers",
-    "build-clean": "npm run headers && gulp"
+    "build-clean": "gulp"
   },
   "dependencies": {
     "starter-project": "^1.1.14"
