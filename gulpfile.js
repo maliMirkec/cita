@@ -1,51 +1,33 @@
-"use strict";
+const gulp = require('gulp')
+const requireDir = require('require-dir')
+const gulpSequence = require('gulp-sequence')
+const exit = require('gulp-exit')
+global.config = require('./config.json')
+global.bs = require('browser-sync').create()
 
-var gulp = require("gulp");
-var bump = require("gulp-bump");
+requireDir(global.config.root + global.config.gulp.src)
 
-// Defined method of updating:
-// Semantic major
-gulp.task("bump:major", function () {
-  gulp
-    .src("./package.json")
-    .pipe(
-      bump({
-        type: "major"
-      })
-    )
-    .pipe(gulp.dest("./"));
-});
+gulp.task('dist:sequence', (callback) => {
+  gulpSequence('clean', global.config.gfx.run ? 'gfx' : '', global.config.fonts.run ? 'fonts' : '', global.config.js.run ? 'js' : '', global.config.jsdoc.run ? 'jsdoc' : '', global.config.css.run ? 'css' : '', global.config.sassdoc.run ? 'sassdoc' : '', global.config.kss.run ? 'kss' : '', global.config.html.run ? 'html:dist' : '', 'watch:dist', global.config.penthouse.run ? 'critical:dist' : '')(callback)
+})
 
-// Semantic minor
-gulp.task("bump:minor", function () {
-  gulp
-    .src("./package.json")
-    .pipe(
-      bump({
-        type: "minor"
-      })
-    )
-    .pipe(gulp.dest("./"));
-});
+gulp.task('dist', ['dist:sequence'])
 
-// Semantic patch
-gulp.task("bump:patch", function () {
-  gulp
-    .src("./package.json")
-    .pipe(
-      bump({
-        type: "patch"
-      })
-    )
-    .pipe(gulp.dest("./"));
-});
+gulp.task('dev:sequence', (callback) => {
+  gulpSequence('clean', global.config.gfx.run ? 'gfx' : '', global.config.fonts.run ? 'fonts' : '', global.config.js.run ? 'js' : '', global.config.jsdoc.run ? 'jsdoc' : '', global.config.css.run ? 'css' : '', global.config.sassdoc.run ? 'sassdoc' : '', global.config.kss.run ? 'kss' : '', global.config.html.run ? 'html:dev' : '', 'watch:dev', global.config.penthouse.run ? 'critical:dev' : '')(callback)
+})
 
-// Replace invalid html
+gulp.task('dev', ['dev:sequence'])
 
-var replace = require("gulp-replace");
+gulp.task('kill', () => {
+  global.bs.exit()
 
-gulp.task("critical:fix", function () {
-  gulp.src("./dist/*.html")
-    .pipe(replace("\<link href=\"/cita.css\" rel=\"preload\" as=\"style\" onload=\"this\.rel=\'stylesheet\'\"\>", "\<script\>var criticalFix=function(e){e.rel=\"stylesheet\"};\</script\>\<link href=\"/cita.css\" rel=\"preload\" as=\"style\" onload=\"criticalFix(this)\"\>"))
-    .pipe(gulp.dest("./dist/"));
-});
+  gulp.src(global.config.src)
+    .pipe(exit())
+})
+
+gulp.task('deploy:sequence', (callback) => {
+  gulpSequence('clean', global.config.favicon.run ? 'favicon' : '', global.config.gfx.run ? 'gfx' : '', global.config.fonts.run ? 'fonts' : '', global.config.js.run ? 'js:deploy' : '', global.config.jsdoc.run ? 'jsdoc' : '', global.config.css.run ? 'css:deploy' : '', global.config.sassdoc.run ? 'sassdoc' : '', global.config.kss.run ? 'kss' : '', global.config.html.run ? 'html:dist' : '', global.config.penthouse.run ? 'critical:deploy' : '', 'gzip', 'kill')(callback)
+})
+
+gulp.task('default', ['deploy:sequence'])
