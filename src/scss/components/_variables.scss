@@ -1,0 +1,113 @@
+/// Media query definition for mobile devices, used in css-locks.
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Variables
+/// @ignore false
+/// @link false
+/// @name mq--mobile
+/// @property false
+/// @since 1.0.0
+/// @todo false
+/// @type Unit
+$mq--mobile: 480px;
+
+/// Media query definition for desktop devices, used in css-locks.
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Variables
+/// @name mq--desktop
+/// @since 1.0.0
+/// @type Unit
+$mq--desktop: 960px;
+
+/// Default font size on mobile devices, used in css-locks.
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Variables
+/// @name font-size--mobile
+/// @since 1.0.0
+/// @type Unit
+$font-size--mobile: 13px;
+
+/// Default font size on desktop devices, used in css-locks.
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Variables
+/// @name font-size--desktop
+/// @since 1.0.0
+/// @type Unit
+$font-size--desktop: 16px;
+
+/// Configuration for modular scale
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Variables
+/// @name modularscale
+/// @since 1.0.0
+/// @todo Add modular scale variables
+/// @type Unit
+$modularscale: (
+  base: 1rem,
+  ratio: $major-third
+);
+
+/// Color from color palette
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Color Palette
+/// @name color-alpha
+/// @link https://color.adobe.com/create/color-wheel/?base=2&rule=Triad&selected=0&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.6568627450980393,0.19544358727097397,0.19544358727097397,0.9640522875816994,0.95754157838587,0.4796555234115503,0.9568627450980393,0.3803921568627451,0.3803921568627451,0.22519768563162967,0.5516586870584572,0.7568627450980392,0.2282867245258759,0.4914474389123604,0.6568627450980393&swatchOrder=0,1,2,3,4
+/// @since 1.0.0
+/// @type Color
+$color-alpha: #f46161;
+
+/// Color from color palette
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Color Palette
+/// @name color-beta
+/// @link https://color.adobe.com/create/color-wheel/?base=2&rule=Triad&selected=0&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.6568627450980393,0.19544358727097397,0.19544358727097397,0.9640522875816994,0.95754157838587,0.4796555234115503,0.9568627450980393,0.3803921568627451,0.3803921568627451,0.22519768563162967,0.5516586870584572,0.7568627450980392,0.2282867245258759,0.4914474389123604,0.6568627450980393&swatchOrder=0,1,2,3,4
+/// @since 1.0.0
+/// @type Color
+$color-beta: #398dc1;
+
+/// Color from color palette
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Color Palette
+/// @name color-gamma
+/// @link https://color.adobe.com/create/color-wheel/?base=2&rule=Triad&selected=0&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.6568627450980393,0.19544358727097397,0.19544358727097397,0.9640522875816994,0.95754157838587,0.4796555234115503,0.9568627450980393,0.3803921568627451,0.3803921568627451,0.22519768563162967,0.5516586870584572,0.7568627450980392,0.2282867245258759,0.4914474389123604,0.6568627450980393&swatchOrder=0,1,2,3,4
+/// @since 1.0.0
+/// @type Color
+$color-gamma: #f6f47a;
+
+/// Color from color palette
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Color Palette
+/// @name color-delta
+/// @link https://color.adobe.com/create/color-wheel/?base=2&rule=Triad&selected=0&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.6568627450980393,0.19544358727097397,0.19544358727097397,0.9640522875816994,0.95754157838587,0.4796555234115503,0.9568627450980393,0.3803921568627451,0.3803921568627451,0.22519768563162967,0.5516586870584572,0.7568627450980392,0.2282867245258759,0.4914474389123604,0.6568627450980393&swatchOrder=0,1,2,3,4
+/// @since 1.0.0
+/// @type Color
+$color-delta: #3a7da7;
+
+/// Color from color palette
+/// @access public
+/// @author Silvestar Bistrović <me@silvestarbistrovic.from.hr>
+/// @example @include css-locks(font-size, $mq--mobile, $mq--desktop, $font-size--mobile, $font-size--desktop);
+/// @group Color Palette
+/// @name color-epsilon
+/// @link https://color.adobe.com/create/color-wheel/?base=2&rule=Triad&selected=0&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.6568627450980393,0.19544358727097397,0.19544358727097397,0.9640522875816994,0.95754157838587,0.4796555234115503,0.9568627450980393,0.3803921568627451,0.3803921568627451,0.22519768563162967,0.5516586870584572,0.7568627450980392,0.2282867245258759,0.4914474389123604,0.6568627450980393&swatchOrder=0,1,2,3,4
+/// @since 1.0.0
+/// @type Color
+$color-epsilon: #a73232;
+
