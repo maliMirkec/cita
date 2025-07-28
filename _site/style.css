@@ -1,0 +1,207 @@
+html {
+  --c1: azure;
+  --c2: aquamarine;
+  --c3: turquoise;
+  --c4: mediumpurple;
+  --c5: indigo;
+  --s: min(.1em, 4px);
+  --ff1: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
+  --ff2: system-ui, sans-serif;
+  --tr1: 101ms;
+}
+
+body {
+  font-family: var(--ff2);
+  background-color: var(--c1);
+  color: var(--c5);
+  display: grid;
+  margin: unset;
+}
+
+:is(header, footer) {
+  background-color: var(--c2);
+}
+
+header {
+  padding-block: .5rem 1rem;
+  mask: conic-gradient(from -20deg at bottom,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%;
+}
+
+footer {
+  padding-block: 1rem .5rem;
+  mask: conic-gradient(from 160deg at top,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%
+}
+
+:is(header, footer) ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: .5rem;
+  list-style: none;
+  padding-inline: unset;
+}
+
+:is(header, footer) a {
+  --ts: var(--c3);
+  font-family: var(--ff2);
+  font-size: max(4dvmin, 1.25rem);
+  font-weight: 900;
+  letter-spacing: .0625em;
+  line-height: 1.4;
+  text-align: center;
+  text-wrap: pretty;
+  text-shadow: var(--s) var(--s) 0 var(--ts), -1px -1px 0 var(--ts), 1px -1px 0 var(--ts), -1px 1px 0 var(--ts);
+  color: inherit;
+  text-decoration: none;
+  transition: var(--tr1);
+}
+
+:is(header, footer) svg {
+  max-block-size: 3rem;
+  inline-size: auto;
+}
+
+:is(header, footer) path {
+  stroke-width: 1rem;
+}
+
+:is(header, footer) a:is(:hover, :focus, :active) {
+  color: var(--c3);
+  --ts: var(--c5);
+}
+
+footer p {
+  color: var(--c4);
+  font-size: max(2.4dvmin, 1rem);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+main {
+  padding-inline: 1rem;
+}
+
+section {
+  display: grid;
+  align-items: center;
+  min-block-size: 80dvh;
+  padding-block: 10dvh;
+}
+
+section:not(:last-child) {
+  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.025));
+  mask: conic-gradient(from -20deg at bottom,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%;
+}
+
+.inner {
+  display: grid;
+  row-gap: 1rem;
+  max-inline-size: 1000px;
+  inline-size: 100%;
+  margin-inline: auto;
+}
+
+:is(h1, h2, h3, h4, h5) {
+  --ts: var(--c2);
+  font-weight: 900;
+  line-height: 1.4;
+  text-wrap: balance;
+  margin-block: 1rem;
+}
+
+section:has(h1 ~ h2) h1,
+section h1:only-child,
+section:has(h2 ~ h3) h2,
+section h2:only-child,
+section:has(h3 ~ h4) h3,
+section h3:only-child,
+section:has(h4 ~ h5) h4,
+section h4:only-child {
+  font-family: var(--ff1);
+  text-shadow: var(--s) var(--s) 0 var(--ts), -1px -1px 0 var(--ts), 1px -1px 0 var(--ts), -1px 1px 0 var(--ts);
+}
+
+section:has(h1 ~ h2) h2,
+section:has(h2 ~ h3) h3,
+section:has(h3 ~ h4) h4,
+section:has(h4 ~ h5) h5 {
+  font-style: italic;
+  font-family: var(--ff2);
+}
+
+section[style*="--bg"] {
+  background-image: url(var(--bg));
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: max(5dvmin, 2rem);
+}
+
+h2 {
+  font-size: max(4.5dvmin, 1.75rem);
+}
+
+h3 {
+  font-size: max(4dvmin, 1.5rem);
+}
+
+h4 {
+  font-size: max(3.5dvmin, 1.25rem);
+}
+
+h5 {
+  font-size: max(3dvmin, 1rem);
+}
+
+.split__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 3rem;
+  padding-block: 10rem;
+  margin-block: 10rem;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.split__item :is(
+  :has(h3 ~ h4) h3,
+  :has(h4 ~ h5) h4
+) {
+  text-align: right;
+}
+
+.split__item :is(
+  :has(h3 ~ h4) h3,
+  :has(h4 ~ h5) h4
+) {
+  text-decoration: overline;
+  text-underline-offset: 0.33em;
+  text-decoration-thickness: 0.125em;
+  text-decoration-style: wavy;
+  line-height: 1.8;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.split__item :is(
+  :has(h3 ~ h4) h4,
+  :has(h4 ~ h5) h5
+) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.split__gfx {
+  margin-block: 1rem;
+}
+
+.split__gfx svg {
+  max-block-size: 12rem;
+  inline-size: auto;
+}
