@@ -21,7 +21,7 @@ sections:
         subtitle: Jer posjetitelji dolaze sa svih strana svijeta
         bg: speed.svg
         type: split
-      - title: Bit će unikatna
+      - title: Bit će unikatna*
         subtitle: Jer ste i vi i vaš posao unikatni
         bg: speed.svg
     type: split
