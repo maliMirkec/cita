@@ -40,7 +40,7 @@ sections:
         href: https://heyflow.com
     type: testimonials
     nav: Preporuke
-  - title: Contact
+  - title: Kontaktirajte nas
     clients:
       - title: Heyflow
         href: https://heyflow.com
