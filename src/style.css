@@ -8,6 +8,7 @@ html {
   --ff1: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
   --ff2: system-ui, sans-serif;
   --tr1: 101ms;
+  --tr2: 303ms;
 }
 
 body {
@@ -97,6 +98,7 @@ section:not(:last-child) {
 
 .inner {
   display: grid;
+  justify-items: start;
   row-gap: 1rem;
   max-inline-size: 1000px;
   inline-size: 100%;
@@ -202,6 +204,38 @@ h5 {
 }
 
 .split__gfx svg {
-  max-block-size: 12rem;
+  max-block-size: min(20rem, 90vw);
   inline-size: auto;
+}
+
+.cta {
+  background-color: var(--c5);
+  color: var(--c2);
+  font-family: var(--ff2);
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 5rem;
+  min-inline-size: 10rem;
+  padding-inline: 2rem;
+  border-radius: 10rem;
+  margin-block: 1rem;
+  outline: solid .1rem transparent;
+  outline-offset: .2rem;
+  transition: var(--tr1) ease-in;
+}
+
+.cta:is([href]) {
+  text-decoration: none;
+}
+
+.cta:is(:hover, :focus, :active) {
+  background-color: var(--c4);
+  color: var(--c1);
+  outline-color: var(--c4);
+  transition: var(--tr2) ease-out;
 }

@@ -5,6 +5,9 @@ sections:
   - title: Mi ćemo napraviti vašu stranicu
     subtitle: Ali uz vašu malu pomoć
     gfx: help.svg
+    cta:
+      href: '#kontakt'
+      text: Pošalji nam poruku #Zaposli nas
     list:
       - title: Bit će brza
         subtitle: Jer posjetitelji vole brzo učitavanje

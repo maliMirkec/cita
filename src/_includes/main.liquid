@@ -24,6 +24,9 @@
               {% endif %}
             </div>
           {% endif %}
+          {%- if item.cta -%}
+            <a class="cta" href="{{ item.cta.href }}">{{ item.cta.text }}</a>
+          {%- endif -%}
           {%- for subitem in item.list -%}
             {%- assign hlevel3 = hlevel2 -%}
             <div class="{{ item.type }}__item"{% if subitem.bg %} style="background-image: url('/{{ subitem.bg }}');"{% endif %}>
