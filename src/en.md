@@ -39,56 +39,51 @@ sections:
     description: |
       Explore the variety of projects we delivered with 100% success rate.
     list:
-      - title: Westwing
-        tags: [Static Website, Hugo, Personio]
+      - title:
+          href: https://www.westwing.com/
+          text: westwing.com
+        tags: [Static website, Hugo, Personio]
         description: |
-          **Challenge**
-
+          **Challenge:**<br>
           Westwing needed a fast, reliable, and maintainable website with integrations for dynamic content like careers.
 
-          **Solution**
+          **Solution:**<br>
+          We built a Hugo-based front-end with integrations such as Personio for automated careers content, optimized for speed and usability.
 
-          We built a Hugo-based front-end with integrations such as Personio for automated careers content, optimized for speed and accessibility.
-
-          **Outcome**
-
+          **Outcome:**<br>
           A fast-loading, easy-to-maintain website with reliable integrations and strong performance.
+      - title:
+          href: https://www.wundermobility.com/
+          text: Wunder Mobility
+        tags: [Static website, Hugo]
+        description: |
+          Clean, professional front-end for a mobility platform, focused on usability and polished UI.
       - title: Spartan Precision Equipment
         tags: [E-commerce Store, Shopify]
         description: |
-          **Challenge**
-
+          **Challenge:**<br>
           The client needed a store that showcased products clearly and provided a smooth buying experience.
 
-          **Solution**
-
+          **Solution:**<br>
           We built a custom Shopify front-end focused on usability, responsiveness, and brand alignment.
 
-          **Outcome**
-
+          **Outcome:**<br>
           A scalable and reliable store that makes browsing and purchasing simple for customers.
-      - title: Heyflow
-        tags: [Static Website, Eleventy, Contentful, Cloudinary]
-        description: |
-          **Challenge**
-
-          Heyflow needed a fast, flexible site that allowed easy content updates without performance loss.
-
-          **Solution**
-
-          We used Eleventy with Contentful and Cloudinary to combine speed with flexible content management.
-
-          **Outcome**
-
-          A lightweight, maintainable website that scales easily and performs consistently.
-      - title: Wunder Mobility
-        tags: [Static Website, Hugo]
-        description: |
-          Clean, professional front-end for a mobility platform, focused on usability and polished UI.
       - title: Approximately Blue
-        tags: [Static Website, Eleventy]
+        tags: [Static website, Eleventy]
         description: |
           Creative and visually distinct project demonstrating design variety and technical skill.
+      - title: Heyflow
+        tags: [Static website, Eleventy, Contentful, Cloudinary]
+        description: |
+          **Challenge:**<br>
+          Heyflow needed a fast, flexible site that allowed easy content updates without performance loss.
+
+          **Solution:**<br>
+          We used Eleventy with Contentful and Cloudinary to combine speed with flexible content management.
+
+          **Outcome:**<br>
+          A lightweight, maintainable website that scales easily and performs consistently.
     type: split
     icon: browser
     nav: Work

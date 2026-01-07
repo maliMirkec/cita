@@ -5,7 +5,13 @@
       <section class="{{ item.type }}"{% if item.nav %} id="{{ item.nav | slugify }}"{% endif %}>
         <div class="inner">
           {%- if item.title -%}
-            <h{{ hlevel1 }} class="title">{{ item.title }}</h{{ hlevel1 }}>
+            <h{{ hlevel1 }} class="title">
+              {%- if item.title.href and item.title.text -%}
+                <a href="{{ item.title.href }}">{{ item.title.text }}</a>
+              {%- else -%}
+                {{ item.title }}
+              {%- endif -%}
+            </h{{ hlevel1 }}>
             {%- assign hlevel1 = 2 -%}
           {%- endif -%}
           {%- assign hlevel2 = hlevel1 -%}
@@ -37,7 +43,13 @@
                 {%- assign hlevel3 = 3 -%}
                 <div class="{{ item.type }}__item">
                   {%- if subitem.title -%}
-                    <h{{ hlevel3 }} class="{{ item.type }}__title">{{ subitem.title }}</h{{ hlevel3 }}>
+                    <h{{ hlevel3 }} class="{{ item.type }}__title">
+                      {%- if subitem.title.href and subitem.title.text -%}
+                        <a href="{{ subitem.title.href }}">{{ subitem.title.text }}</a>
+                      {%- else -%}
+                        {{ subitem.title }}
+                      {%- endif -%}
+                    </h{{ hlevel3 }}>
                     {%- assign hlevel3 = hlevel3 | plus: 1 -%}
                   {%- endif -%}
                   {%- assign hlevel4 = hlevel3 -%}
@@ -45,7 +57,7 @@
                     <h{{ hlevel4 }} class="{{ item.type }}__subtitle">{{ subitem.subtitle }}</h{{ hlevel4 }}>
                   {%- endif -%}
                   {%- if subitem.tags -%}
-                    <ul>
+                    <ul class="{{ item.type }}__tags">
                       {%- for tag in subitem.tags -%}
                         <li>{{ tag }}</li>
                       {%- endfor -%}

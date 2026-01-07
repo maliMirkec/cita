@@ -166,6 +166,11 @@ section:nth-of-type(even) .cover svg {
   font-size: 110%;
 }
 
+[class*="title"] a {
+  color: inherit;
+  text-decoration-thickness: .05em;
+}
+
 .subtitle {
   font-family: var(--ff2);
   font-size: max(3dvmin, 1.5rem);
@@ -232,10 +237,34 @@ section:nth-of-type(even) .cover svg {
 
 .split__item {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   align-items: baseline;
-  gap: 3rem;
+  column-gap: 3rem;
+  row-gap: 1rem;
   position: relative;
+}
+
+.split__item:not(:first-of-type) {
+  margin-block-start: clamp(1.25rem, calc(-2.321rem + 9.524vw), 6.25rem); /* min: 20px, max: 100px */
+}
+
+.split__item:is(:first-of-type) {
+  margin-block-start: clamp(1.25rem, calc(0.357rem + 2.381vw), 2.5rem); /* min: 20px, max: 40px */
+}
+
+.split__title,
+.split__tags {
+  grid-column: 1;
+}
+
+.split__description {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+
+.split__title,
+.split__tags {
+  margin: unset;
 }
 
 .split__gfx {
