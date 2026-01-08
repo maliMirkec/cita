@@ -43,7 +43,7 @@ sections:
           href: https://heyflow.com/
           text: Heyflow
         tags:
-          - Static website,
+          - Static website
           - Eleventy
           - Contentful
           - Cloudinary
@@ -144,66 +144,80 @@ sections:
   - title: Your words about us
     description: |
       Our clients speak highly of us since 2016.
-
-      All testimonials are verified on our [LinkedIn](https://www.linkedin.com/in/starbist/).
     list:
-      - title: Adam Maschek
+      - person: Adam Maschek
         position: CTO, Westwing
-        quote: |
-          It was a pleasure to work with Silvestar; he delivered quality on time.
-      - title: François-Luc Giraldeau
+        quote:
+          summary: |
+            It was a pleasure to work with Silvestar. He was available on a short notice, he closely collaborated with the PM on the project and delivered it on time with good quality.
+          full: |
+            I would work with him again, and actually we are considering to kick off our next project with him.
+      - person: François-Luc Giraldeau
         position: Founder, Approximately Blue
-        quote: |
-          Clear communication, thoughtful execution, and clean code.
-      - title: Cory Schmidt
+        quote:
+          summary: |
+            My partner and I teamed up with Silvestar this year to bring our new company’s website to life, based on some design sketches I had. The work he did for us was top-notch.
+          full: |
+            Throughout the process, we felt in good hands with his expertise and his readiness to go the extra mile to guide us through the different steps.
+
+            It’s worth mentioning that he was super quick in getting the job done and was really accommodating with our requests. The whole experience was smooth and enjoyable. We’re looking forward to the next chance to work with him!
+      - person: Cory Schmidt
         position: Chief Revenue Officer, Wunder Mobility
-        quote: |
-          A thought-leader whose expertise goes beyond development.
-      - title: Nicholas Bailey
-        position: Digital Media Manager, Spartan Precision Equipment
-        quote: |
-          Proactive, forward-thinking, and dependable.
-      - title: Devran Taskesen
-        position: Brand / Visual Designer, Wunder Mobility
-        quote: |
-          He always brought care and clarity to every task.
-      - title: Theresa Kneißle
-        position: Product Manager eCommerce, Westwing
-        quote: |
-          Professional, reliable, and well-aligned with our goals.
-      - title: Tim Endom
+        quote:
+          summary: |
+            Silvestar has been our web developer at Wunder Mobility for the past year. In that time, I’ve found him to be diligent, highly talented, hard working, collaborative and self-motivated.
+
+          full: |
+            When Silvestar took over our domain, it had multiple technical issues and was on an outdated CMS. He quickly made progress and improved our technical set up making iterative gains each week. At the same time, he worked together with our Creative team to improve the design of the website. He was able to not only collaborate with designers but had synergy and helped improve the overall UI and UX.
+
+            Silvestar is a thought-leader in web development, and his work reflects it. His knowledge goes beyond development of websites and extends into areas like technical SEO and backend development. He assisted on Google Ads and CRM connection projects that were vital to our success.
+
+            Silvestar is a great developer to work with, and I recommend him to any Marketing team.
+      # - person: Nicholas Bailey
+      #   position: Digital Media Manager, Spartan Precision Equipment
+      #   quote: |
+      #     Silvestar was great to work with on our recent website development project, forward-thinking and great communication. Would recommend to any businesses looking to bring their websites and e-com platforms to the next level.
+      - person: Tim Endom
         position: Senior Marketing Designer, Heyflow
-        quote: |
-          The most seamless developer-designer collaboration I’ve had.
+        quote:
+          summary: |
+            I've been working closely with Silvestar for about 2 years now, managing and designing the website project that he's in charge of developing. It has clearly been the most seamless and enriching developer-designer-collaboration I've had so far.
+          full: |
+            His work transformed our website from a poorly built, difficult-to-maintain draft into a high-performance, scalable site that will serve us well for years to come. Silvestar has worked with us on finding the best possible software and code solutions for each part of the website's infrastructure, and has implemented them all himself, incl. the complete CMS setup in a highly editor-friendly way. Since then, I've had the pleasure to bring over 40 new pages to life with his help.
+
+            What I like particularly is Silvestar's eagerness to find straightforward solutions for our needs with the lowest amount of code necessary, rather than relying on third party tools that would just clutter things up and lead to bad performance. That being said, he even optimized some of our landing pages to achieve a perfect 100% score across all PageSpeed Insights categories – something I’ve never seen before. It's all thanks to his constant hard work of iterating on all ends of the code until perfection.
+
+            I highly recommend Silvestar to any marketing team in need of a skilled, diligent freelancer who delivers robust and scalable web solutions. I've learned so much from our collaboration and I'm looking forward to continuing it.
+      - person: Theresa Kneißle
+        position: Product Manager eCommerce, Westwing
+        quote:
+          summary: |
+            Excited to have worked alongside Silvestar during our implementation of a new ATS! He supported us with setting up our careers page integration and revamp our candidate facing pages.
+          full: |
+            The partnership was smooth, and his contribution greatly supported the successful launch. Thank you Silvestar for your support!
+      # - person: Devran Taskesen
+      #   position: Brand / Visual Designer, Wunder Mobility
+      #   quote: |
+      #     Working with Silvestar on various web projects was an absolute pleasure!
+
+      #     He always found an effective and efficient way to realize the ideas the team came up while also bringing more than just his exceptional work ethic to the table. Always enjoyed the humor and humanity while working with him!
+    note: |
+      All testimonials are verified on our [LinkedIn](https://www.linkedin.com/in/starbist/).
     type: quotes
     icon: bubble
     nav: Proof
-  # - title: Expertise you can rely on, experience you can trust.
-  #   subtitle: Over 30 projects worldwide, direct collaboration, and a trusted network of vetted collaborators.
-  #   points:
-  #     - title: Senior Expertise, Personal Attention
-  #       description: "Every project is guided by senior-level experience with direct communication."
-  #     - title: Proven Track Record
-  #       description: "More than 30 successful projects delivered across industries."
-  #     - title: Cross-Functional Collaboration & Network
-  #       description: "Experience working with PMs, CTOs, designers, developers, sales teams, and vetted partners."
-  #     - title: Outcome-Focused Delivery
-  #       description: "Practical, maintainable solutions that support real business growth."
-  #   type: split
-  #   icon: bulb
-  #   nav:
   - title: Get started
     description: |
       We would love to hear from you.
 
-      FORM HERE
-
       No project is too small or too complex.
+    note: |
 
       Prefer email? Reach me at silvestar [at] cita.hr.
     # cta:
     #   href: "#contact"
     #   text: Work with your expert
+    form: true
     type: contact
     icon: phone
     nav: Contact

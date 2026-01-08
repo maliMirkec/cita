@@ -76,9 +76,38 @@
                       {%- endif -%}
                     </div>
                   {%- endif -%}
+                  {%- if subitem.quote -%}
+                    <blockquote class="{{ item.type }}__quote">
+                      {%- if subitem.quote.summary and subitem.quote.full -%}
+                        <details>
+                          <summary>{{ subitem.quote.summary | markdownify }}</summary>
+                          <div>{{ subitem.quote.full | markdownify }}</div>
+                        </details>
+                      {%- else -%}
+                        {{ subitem.quote | markdownify }}
+                      {%- endif -%}
+                      {%- if subitem.person or subitem.position -%}
+                        <div>
+                          {%- if subitem.person -%}— <b>{{ subitem.person }}</b>{%- endif -%}{%- if subitem.position -%}, {{ subitem.position }}{%- endif -%}
+                        </div>
+                      {%- endif -%}
+                    </blockquote>
+                  {%- endif -%}
                 </div>
               {%- endfor -%}
             </div>
+          {%- endif -%}
+          {%- if item.form -%}
+            <form name="contact" netlify>
+              <label for="contactName">Name</label>
+              <input type="text" name="name" id="contactName">
+              <label for="contactEmail">Email</label>
+              <input type="email" name="email" id="contactEmail">
+              <button type="submit">Send</button>
+            </form>
+          {%- endif -%}
+          {%- if item.note -%}
+            <div class="note">{{ item.note | markdownify }}</div>
           {%- endif -%}
         </div>
         {%- if item.icon -%}

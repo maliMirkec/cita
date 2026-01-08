@@ -1,0 +1,6 @@
+{
+  "clampExtension.globalMinViewport": 600,
+  "clampExtension.globalMaxViewport": 1200,
+  "clampExtension.baseFontSize": 16,
+  "clampExtension.showComments": false
+}
