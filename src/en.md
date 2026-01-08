@@ -4,13 +4,13 @@ title: Studio CiTA
 sections:
   - title: Your partner<br>for building websites
     description: |
-      We are an experienced engineering studio who enjoy<br>developing challenging websites and online stores that performs.
+      We are an experienced engineering studio and we enjoy<br>developing challenging websites and online stores that perform.
     cta:
       href: "#contact"
       text: Work with your expert
     type: hero
     icon: code
-  - title: Services
+  - title: Services we offer
     description: |
       Studio CiTA offers a range of services for everyone.
     list:
@@ -35,126 +35,186 @@ sections:
     type: cards
     icon: laptop
     nav: Services
-  - title: Case studies and selected work
+  - title: Selected work
     description: |
       Explore the variety of projects we delivered with 100% success rate.
     list:
       - title:
-          href: https://www.westwing.com/
-          text: westwing.com
-        tags: [Static website, Hugo, Personio]
+          href: https://heyflow.com/
+          text: Heyflow
+        tags:
+          - Static website,
+          - Eleventy
+          - Contentful
+          - Cloudinary
         description: |
           **Challenge:**<br>
-          Westwing needed a fast, reliable, and maintainable website with integrations for dynamic content like careers.
+          Heyflow needed a fast and flexible site that allowed easy content updates without performance loss.
 
           **Solution:**<br>
-          We built a Hugo-based front-end with integrations such as Personio for automated careers content, optimized for speed and usability.
-
-          **Outcome:**<br>
-          A fast-loading, easy-to-maintain website with reliable integrations and strong performance.
-      - title:
-          href: https://www.wundermobility.com/
-          text: Wunder Mobility
-        tags: [Static website, Hugo]
-        description: |
-          Clean, professional front-end for a mobility platform, focused on usability and polished UI.
-      - title: Spartan Precision Equipment
-        tags: [E-commerce Store, Shopify]
-        description: |
-          **Challenge:**<br>
-          The client needed a store that showcased products clearly and provided a smooth buying experience.
-
-          **Solution:**<br>
-          We built a custom Shopify front-end focused on usability, responsiveness, and brand alignment.
-
-          **Outcome:**<br>
-          A scalable and reliable store that makes browsing and purchasing simple for customers.
-      - title: Approximately Blue
-        tags: [Static website, Eleventy]
-        description: |
-          Creative and visually distinct project demonstrating design variety and technical skill.
-      - title: Heyflow
-        tags: [Static website, Eleventy, Contentful, Cloudinary]
-        description: |
-          **Challenge:**<br>
-          Heyflow needed a fast, flexible site that allowed easy content updates without performance loss.
-
-          **Solution:**<br>
-          We used Eleventy with Contentful and Cloudinary to combine speed with flexible content management.
+          We used Eleventy and integrated Contentful for content management and Cloudinary for asset management to achieve high page optimization scores and scalable website everyone can use.
 
           **Outcome:**<br>
           A lightweight, maintainable website that scales easily and performs consistently.
+      - title:
+          href: https://www.wundermobility.com/
+          text: Wunder Mobility
+        tags:
+          - Static website
+          - Hugo
+        description: |
+          **Description:**<br>
+          A professional website for a mobility platform, focused on conversion rates, usability, and polished user interface.
+      - title:
+          href: https://javelinbipod.com/
+          text: Spartan Precision Equipment
+        tags:
+          - E-commerce Store
+          - Shopify
+        description: |
+          **Challenge:**<br>
+          Spartan Precision Equipment neeeded new templates for their landing and product pages that will help with better conversion.
+
+          **Solution:**<br>
+          We built a custom Shopify templates focused on usability, responsiveness, and brand alignment.
+
+          **Outcome:**<br>
+          A higher conversion rate based on cleaner look and more straighforward messaging.
+      - title:
+          href: https://approx.blue/
+          text: Approximately Blue
+        tags:
+          - Static website
+          - Eleventy
+        description: |
+          **Description:**<br>
+          A creative and visually different project allowing us to demonstrate our design variaty and technical implementations.
+      - title:
+          href: https://www.westwing.com/
+          text: Westwing
+        tags:
+          - Static website
+          - Hugo
+          - Personio
+        description: |
+          **Challenge:**<br>
+          Westwing needed a brand new site that is fast and reliable and it enables integrations for dynamic content like careers.
+
+          **Solution:**<br>
+          We build a static website with Hugo framework and integrated Personio third-party application in the careers page allowing automated job listing and application.
+
+          **Outcome:**<br>
+          An optimized and modern website that runs for years.
+      - title:
+          href: https://colours-alliance.eu/wp-admin
+          text: Colours Alliance
+        tags:
+          - WordPress
+        description: |
+          **Description:**<br>
+          A brand new WordPress theme built around a WordPress plugin developed specially for the customer needs.
     type: split
     icon: browser
     nav: Work
-  - title: Efficient, Iterative, Results-Driven Web Development
-    subtitle: We focus on efficiency over complexity, refining your websites and stores through clear iterations to achieve the best outcome.
-    steps:
-      - title: Understand & Plan
-        description: "We clarify goals and challenges early, keeping the plan simple and focused."
-      - title: Build & Iterate
-        description: "We develop in manageable steps, refining functionality, design, and performance along the way."
-      - title: Optimize & Refine
-        description: "We improve speed, usability, and reliability through focused optimization."
-      - title: Launch & Grow
-        description: "The final product is stable, scalable, and supported with ongoing improvements."
-    type: split
-  - title: What Clients Say
-    items:
+  - title: Our way of working
+    description: |
+      We listen to all your needs and develop a unique platform for your business allowing it to grow and scale.
+    list:
+      - title: Planning
+        description: |
+          We clarify all goals and challenges and prepare for the development as early as possible.
+      - title: Developing
+        description: |
+          We develop a minimum viable product with all the required functionalities, while focusing on design and performance.
+      - title: Iterating
+        description: |
+          We target bottlenecks and find all opportunities to optimize, from conversion rates to usability and speed scores.
+      - title: Optimizing
+        description: |
+          We make sure the final product keeps the its high scores across all fields, from page speed to SEO to security.
+      - title: Humanizing
+        description: |
+          We use modern development tools including AI but we make sure your product is human friendly and user oriented.
+      - title: Collaborating
+        description: |
+          Studio CiTA collaborates with its trusted partners, ensuring the direct communication and fast execution.
+    type: cards
+    icon: bulb
+    nav: Process
+  - title: Your words about us
+    description: |
+      Our clients speak highly of us since 2016.
+
+      All testimonials are verified on our [LinkedIn](https://www.linkedin.com/in/starbist/).
+    list:
       - title: Adam Maschek
-        role: "CTO"
-        company: "Westwing"
-        quote: "It was a pleasure to work with Silvestar; he delivered quality on time."
-      - title: Nicholas Bailey
-        role: "Digital Media Manager"
-        company: "Spartan Precision Equipment"
-        quote: "Proactive, forward-thinking, and dependable."
-      - title: Devran Taskesen
-        role: "Brand / Visual Designer"
-        company: "Wunder Mobility"
-        quote: "He always brought care and clarity to every task."
-      - title: Theresa Kneißle
-        role: "Product Manager eCommerce"
-        company: "Westwing"
-        quote: "Professional, reliable, and well-aligned with our goals."
+        position: CTO, Westwing
+        quote: |
+          It was a pleasure to work with Silvestar; he delivered quality on time.
       - title: François-Luc Giraldeau
-        role: "Founder"
-        company: "Approximately Blue"
-        quote: "Clear communication, thoughtful execution, and clean code."
-      - title: Tim Endom
-        role: "Senior Marketing Designer"
-        company: "Heyflow"
-        quote: "The most seamless developer-designer collaboration I’ve had."
+        position: Founder, Approximately Blue
+        quote: |
+          Clear communication, thoughtful execution, and clean code.
       - title: Cory Schmidt
-        role: "Chief Revenue Officer"
-        company: "Wunder Mobility"
-        quote: "A thought-leader whose expertise goes beyond development."
-    type: split
-  - title: Expertise you can rely on, experience you can trust.
-    subtitle: Over 30 projects worldwide, direct collaboration, and a trusted network of vetted collaborators.
-    points:
-      - title: Senior Expertise, Personal Attention
-        description: "Every project is guided by senior-level experience with direct communication."
-      - title: Proven Track Record
-        description: "More than 30 successful projects delivered across industries."
-      - title: Cross-Functional Collaboration & Network
-        description: "Experience working with PMs, CTOs, designers, developers, sales teams, and vetted partners."
-      - title: Outcome-Focused Delivery
-        description: "Practical, maintainable solutions that support real business growth."
-    type: split
-  - title: Work directly with your senior developer
-    subtitle: A senior-led studio handling development, optimization, and long-term growth.
-    cta:
-      label: "Work with Your Expert"
-      action: "contact"
-    email_note: "Prefer email? Reach me at your@email.com"
-    footer_note: "No project is too small or too complex."
-    type: split
-  - title: Beyond client work — building, writing, and sharing for the web
-    subtitle: Community contributions, tools, and side projects that reflect hands-on expertise.
-    sections:
+        position: Chief Revenue Officer, Wunder Mobility
+        quote: |
+          A thought-leader whose expertise goes beyond development.
+      - title: Nicholas Bailey
+        position: Digital Media Manager, Spartan Precision Equipment
+        quote: |
+          Proactive, forward-thinking, and dependable.
+      - title: Devran Taskesen
+        position: Brand / Visual Designer, Wunder Mobility
+        quote: |
+          He always brought care and clarity to every task.
+      - title: Theresa Kneißle
+        position: Product Manager eCommerce, Westwing
+        quote: |
+          Professional, reliable, and well-aligned with our goals.
+      - title: Tim Endom
+        position: Senior Marketing Designer, Heyflow
+        quote: |
+          The most seamless developer-designer collaboration I’ve had.
+    type: quotes
+    icon: bubble
+    nav: Proof
+  # - title: Expertise you can rely on, experience you can trust.
+  #   subtitle: Over 30 projects worldwide, direct collaboration, and a trusted network of vetted collaborators.
+  #   points:
+  #     - title: Senior Expertise, Personal Attention
+  #       description: "Every project is guided by senior-level experience with direct communication."
+  #     - title: Proven Track Record
+  #       description: "More than 30 successful projects delivered across industries."
+  #     - title: Cross-Functional Collaboration & Network
+  #       description: "Experience working with PMs, CTOs, designers, developers, sales teams, and vetted partners."
+  #     - title: Outcome-Focused Delivery
+  #       description: "Practical, maintainable solutions that support real business growth."
+  #   type: split
+  #   icon: bulb
+  #   nav:
+  - title: Get started
+    description: |
+      We would love to hear from you.
+
+      FORM HERE
+
+      No project is too small or too complex.
+
+      Prefer email? Reach me at silvestar [at] cita.hr.
+    # cta:
+    #   href: "#contact"
+    #   text: Work with your expert
+    type: contact
+    icon: phone
+    nav: Contact
+  - title: Beyond client work
+    description: |
+      We love building, writing, and sharing for the web.
+
+      Here are some of the community contributions, tools, and side projects that reflect our hands-on expertise.
+    list:
       - title: Published Author & Blog Writer
-        items:
+        tags:
         - "Smashing Magazine"
         - "CSS-Tricks"
         - "LogRocket"
@@ -173,4 +233,5 @@ sections:
       - title: Community & Expertise
         description: "These projects reflect a commitment to practical tools, shared knowledge, and better web development."
     type: split
+    nav: Beyond
 ---

@@ -16,8 +16,8 @@
           {%- endif -%}
           {%- assign hlevel2 = hlevel1 -%}
           {%- if item.subtitle -%}
-            <h{{ hlevel2 }} class="subtitle">{{ item.subtitle }}</h{{ hlevel2 }}>
             {%- assign hlevel2 = hlevel2 | plus: 1 -%}
+            <h{{ hlevel2 }} class="subtitle">{{ item.subtitle }}</h{{ hlevel2 }}>
           {%- endif -%}
           {%- if item.description -%}
             <div class="description">{{ item.description | markdownify }}</div>
