@@ -263,11 +263,11 @@ section:nth-of-type(even) .cover svg {
 }
 
 .split__item:not(:first-of-type) {
-  margin-block-start: clamp(1.25rem, calc(-2.321rem + 9.524vw), 6.25rem); /* min: 20px, max: 100px */
+  margin-block-start: clamp(1.25rem, calc(-2.321rem + 9.524vw), 6.25rem);
 }
 
 .split__item:is(:first-of-type) {
-  margin-block-start: clamp(1.25rem, calc(0.357rem + 2.381vw), 2.5rem); /* min: 20px, max: 40px */
+  margin-block-start: clamp(1.25rem, calc(0.357rem + 2.381vw), 2.5rem);
 }
 
 .split__title,
@@ -287,6 +287,36 @@ section:nth-of-type(even) .cover svg {
   column-gap: max(5dvw, 2rem);
   row-gap: max(2.5dvw, 1rem);
   inline-size: 100%;
+}
+
+.quotes__block {
+  margin-block: unset;
+  margin-inline: unset;
+}
+
+.quotes__block details {
+  margin-block-end: 1em;
+  font-size: clamp(1.063rem, calc(0.625rem + 1.167vw), 1.5rem);
+  font-style: italic;
+}
+
+.quotes__block details + div {
+  text-align: right;
+  font-size: clamp(1rem, calc(0.75rem + 0.667vw), 1.25rem);
+}
+
+.quotes__block summary {
+  display: block;
+  cursor: pointer;
+}
+
+.quotes__block summary p {
+  display: inline;
+}
+
+.quotes__block details:not([open]) summary:after {
+  content: "...";
+  display: block;
 }
 
 .action {

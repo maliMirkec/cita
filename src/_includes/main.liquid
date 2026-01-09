@@ -77,7 +77,7 @@
                     </div>
                   {%- endif -%}
                   {%- if subitem.quote -%}
-                    <blockquote class="{{ item.type }}__quote">
+                    <blockquote class="{{ item.type }}__block">
                       {%- if subitem.quote.summary and subitem.quote.full -%}
                         <details>
                           <summary>{{ subitem.quote.summary | markdownify }}</summary>
