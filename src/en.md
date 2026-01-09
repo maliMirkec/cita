@@ -1,10 +1,11 @@
 ---
 layout: default
+lang: en
 title: Studio CiTA
 sections:
   - title: Your partner<br>for building websites
     description: |
-      We are an experienced engineering studio and we enjoy<br>developing challenging websites and online stores that perform.
+      Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
     cta:
       href: "#contact"
       text: Work with your expert
@@ -22,7 +23,7 @@ sections:
           We develop secure web shops that convert and allow you to grow your business.
       - title: Regular<br>maintainance
         description: |
-          We maintain your services so your digital products stay safe and reliable.
+          We maintain all services so your digital products stay safe and reliable.
       - title: PageSpeed<br>optimization
         description: |
           We make sure your websites and stores get the best possible PageSpeed scores.
@@ -37,7 +38,7 @@ sections:
     nav: Services
   - title: Selected work
     description: |
-      Explore the variety of projects we delivered with 100% success rate.
+      Explore the variety of projects we delivered with a 100% success rate.
     list:
       - title:
           href: https://heyflow.com/
@@ -52,7 +53,7 @@ sections:
           Heyflow needed a fast and flexible site that allowed easy content updates without performance loss.
 
           **Solution:**<br>
-          We used Eleventy and integrated Contentful for content management and Cloudinary for asset management to achieve high page optimization scores and scalable website everyone can use.
+          We used Eleventy and integrated Contentful for content management and Cloudinary for asset management to achieve high page optimization scores and a scalable website everyone can use.
 
           **Outcome:**<br>
           A lightweight, maintainable website that scales easily and performs consistently.
@@ -64,7 +65,7 @@ sections:
           - Hugo
         description: |
           **Description:**<br>
-          A professional website for a mobility platform, focused on conversion rates, usability, and polished user interface.
+          A professional website for a mobility platform, focused on conversion rates, usability, and a polished user interface.
       - title:
           href: https://javelinbipod.com/
           text: Spartan Precision Equipment
@@ -73,13 +74,13 @@ sections:
           - Shopify
         description: |
           **Challenge:**<br>
-          Spartan Precision Equipment neeeded new templates for their landing and product pages that will help with better conversion.
+          Spartan Precision Equipment needed new templates for their landing and product pages that would help with better conversion.
 
           **Solution:**<br>
-          We built a custom Shopify templates focused on usability, responsiveness, and brand alignment.
+          We built custom Shopify templates focused on usability, responsiveness, and brand alignment.
 
           **Outcome:**<br>
-          A higher conversion rate based on cleaner look and more straighforward messaging.
+          A higher conversion rate based on a cleaner look and more straightforward messaging.
       - title:
           href: https://approx.blue/
           text: Approximately Blue
@@ -88,7 +89,7 @@ sections:
           - Eleventy
         description: |
           **Description:**<br>
-          A creative and visually different project allowing us to demonstrate our design variaty and technical implementations.
+          A creative and visually different project, allowing us to demonstrate our design variety and technical implementations.
       - title:
           href: https://www.westwing.com/
           text: Westwing
@@ -98,10 +99,10 @@ sections:
           - Personio
         description: |
           **Challenge:**<br>
-          Westwing needed a brand new site that is fast and reliable and it enables integrations for dynamic content like careers.
+          Westwing needed a brand new site that is fast and reliable, and it enables integrations for dynamic content like careers.
 
           **Solution:**<br>
-          We build a static website with Hugo framework and integrated Personio third-party application in the careers page allowing automated job listing and application.
+          We built a static website with the Hugo framework and integrated the Personio third-party application in the careers page, allowing automated job listing and application.
 
           **Outcome:**<br>
           An optimized and modern website that runs for years.
@@ -112,13 +113,13 @@ sections:
           - WordPress
         description: |
           **Description:**<br>
-          A brand new WordPress theme built around a WordPress plugin developed specially for the customer needs.
+          A brand new WordPress theme built around a WordPress plugin developed specially for the customer's needs.
     type: split
     icon: browser
     nav: Work
   - title: Our way of working
     description: |
-      We listen to all your needs and develop a unique platform for your business allowing it to grow and scale.
+      We listen to all your needs and develop a unique platform for your business, allowing it to grow and scale.
     list:
       - title: Planning
         description: |
@@ -131,19 +132,19 @@ sections:
           We target bottlenecks and find all opportunities to optimize, from conversion rates to usability and speed scores.
       - title: Optimizing
         description: |
-          We make sure the final product keeps the its high scores across all fields, from page speed to SEO to security.
+          We make sure the final product keeps its high scores across all fields, from page speed to SEO to security.
       - title: Humanizing
         description: |
-          We use modern development tools including AI but we make sure your product is human friendly and user oriented.
+          We use modern development tools, including AI, but we make sure your product is human-friendly and user-oriented.
       - title: Collaborating
         description: |
-          Studio CiTA collaborates with its trusted partners, ensuring the direct communication and fast execution.
+          Studio CiTA collaborates with its trusted partners, ensuring direct communication and fast execution.
     type: cards
     icon: bulb
     nav: Process
   - title: Your words about us
     description: |
-      Our clients speak highly of us since 2016.
+      Many of our clients speak highly of us since 2017.
     list:
       - person: Adam Maschek
         position: CTO, Westwing
@@ -177,17 +178,6 @@ sections:
       #   position: Digital Media Manager, Spartan Precision Equipment
       #   quote: |
       #     Silvestar was great to work with on our recent website development project, forward-thinking and great communication. Would recommend to any businesses looking to bring their websites and e-com platforms to the next level.
-      - person: Tim Endom
-        position: Senior Marketing Designer, Heyflow
-        quote:
-          summary: |
-            I've been working closely with Silvestar for about 2 years now, managing and designing the website project that he's in charge of developing. It has clearly been the most seamless and enriching developer-designer-collaboration I've had so far.
-          full: |
-            His work transformed our website from a poorly built, difficult-to-maintain draft into a high-performance, scalable site that will serve us well for years to come. Silvestar has worked with us on finding the best possible software and code solutions for each part of the website's infrastructure, and has implemented them all himself, incl. the complete CMS setup in a highly editor-friendly way. Since then, I've had the pleasure to bring over 40 new pages to life with his help.
-
-            What I like particularly is Silvestar's eagerness to find straightforward solutions for our needs with the lowest amount of code necessary, rather than relying on third party tools that would just clutter things up and lead to bad performance. That being said, he even optimized some of our landing pages to achieve a perfect 100% score across all PageSpeed Insights categories – something I’ve never seen before. It's all thanks to his constant hard work of iterating on all ends of the code until perfection.
-
-            I highly recommend Silvestar to any marketing team in need of a skilled, diligent freelancer who delivers robust and scalable web solutions. I've learned so much from our collaboration and I'm looking forward to continuing it.
       - person: Theresa Kneißle
         position: Product Manager eCommerce, Westwing
         quote:
@@ -195,12 +185,24 @@ sections:
             Excited to have worked alongside Silvestar during our implementation of a new ATS! He supported us with setting up our careers page integration and revamp our candidate facing pages.
           full: |
             The partnership was smooth, and his contribution greatly supported the successful launch. Thank you Silvestar for your support!
-      # - person: Devran Taskesen
-      #   position: Brand / Visual Designer, Wunder Mobility
-      #   quote: |
-      #     Working with Silvestar on various web projects was an absolute pleasure!
+      - person: Tim Endom
+        position: Senior Marketing Designer, Heyflow
+        quote:
+          summary: |
+            I've been working closely with Silvestar for about 2 years now, managing and designing the website project that he's in charge of developing. It has clearly been the most seamless and enriching developer-designer collaboration I've had so far.
+          full: |
+            His work transformed our website from a poorly built, difficult-to-maintain draft into a high-performance, scalable site that will serve us well for years to come. Silvestar has worked with us on finding the best possible software and code solutions for each part of the website's infrastructure, and has implemented them all himself, incl. the complete CMS setup in a highly editor-friendly way. Since then, I've had the pleasure to bring over 40 new pages to life with his help.
 
-      #     He always found an effective and efficient way to realize the ideas the team came up while also bringing more than just his exceptional work ethic to the table. Always enjoyed the humor and humanity while working with him!
+            What I like particularly is Silvestar's eagerness to find straightforward solutions for our needs with the lowest amount of code necessary, rather than relying on third-party tools that would just clutter things up and lead to bad performance. That being said, he even optimized some of our landing pages to achieve a perfect 100% score across all PageSpeed Insights categories – something I’ve never seen before. It's all thanks to his constant hard work of iterating on all ends of the code until perfection.
+
+            I highly recommend Silvestar to any marketing team in need of a skilled, diligent freelancer who delivers robust and scalable web solutions. I've learned so much from our collaboration and I'm looking forward to continuing it.
+      - person: Devran Taskesen
+        position: Brand / Visual Designer, Wunder Mobility
+        quote:
+          summary: |
+            Working with Silvestar on various web projects was an absolute pleasure! He always found an effective and efficient way to realize the ideas the team came up while also bringing more than just his exceptional work ethic to the table.
+          full: |
+            Always enjoyed the humor and humanity while working with him!
     note: |
       All testimonials are verified on our [LinkedIn](https://www.linkedin.com/in/starbist/).
     type: quotes
@@ -208,12 +210,9 @@ sections:
     nav: Proof
   - title: Get started
     description: |
-      We would love to hear from you.
-
-      No project is too small or too complex.
+      We would love to hear from you. No project is too small or too complex.
     note: |
-
-      Prefer email? Reach me at silvestar [at] cita.hr.
+      Prefer email? Reach me at silvestar[at]cita.hr.
     # cta:
     #   href: "#contact"
     #   text: Work with your expert
@@ -223,29 +222,38 @@ sections:
     nav: Contact
   - title: Beyond client work
     description: |
-      We love building, writing, and sharing for the web.
-
-      Here are some of the community contributions, tools, and side projects that reflect our hands-on expertise.
+      We always try to give something back to the community.
     list:
-      - title: Published Author & Blog Writer
-        tags:
-        - "Smashing Magazine"
-        - "CSS-Tricks"
-        - "LogRocket"
-        - "Frontend Masters"
-        - "Toptal Blog"
-      - title: Developer Tools & Extensions
-        items:
-        - "OKLChanger (VS Code)"
-        - "Clamp it! (VS Code)"
-        - "YAML Custom Fields (WordPress plugin)"
-      - title: Side Projects
-        items:
-        - "Code Line Daily"
-        - "UI Dev Newsletter"
-        - "CSS Auditors"
-      - title: Community & Expertise
-        description: "These projects reflect a commitment to practical tools, shared knowledge, and better web development."
+      - title: Published author & blog writer
+        description: |
+          Among our (not-so-regular) [blog posts](https://www.silvestar.codes/articles/), some articles got featured in dev magazines like:
+
+          - [Smashing Magazine](https://www.smashingmagazine.com/author/silvestar-bistrovic/)
+          - [CSS-Tricks](https://css-tricks.com/author/silvestar/)
+          - [Frontend Masters](https://frontendmasters.com/blog/author/silvestarbistrovic/)
+          - [Toptal Blog](https://www.toptal.com/developers/css/why-you-need-a-css-developer)
+          - [LogRocket](https://blog.logrocket.com/author/silvestarbistrovic/)
+      - title: Developer tools & extensions
+        description: |
+          When time allows, and the situation demands, we build tools that help other developers:
+
+          - [Visual Studio Code extension **OKLChanger**](https://marketplace.visualstudio.com/items?itemName=starbist.oklchanger)
+          - [Visual Studio Code extension **Clamp it!**](https://marketplace.visualstudio.com/items?itemName=starbist.clamp-it)
+          - [WordPress plugin **YAML Custom Fields**](https://wordpress.org/plugins/yaml-custom-fields/)
+      - title: Side projects
+        description: |
+          Sometimes, in our spare time, we build fun projects like:
+
+          - [UI Dev Newsletter](https://www.silvestar.codes/side-projects/ui-dev-newsletter/)
+          - [Code Line Daily](https://www.silvestar.codes/side-projects/code-line-daily/)
+          - [CSS Auditors](https://css-auditors.com/)
+      - title: Links
+        description: |
+          Check what else we are building elsewhere:
+
+          - [Codepen](https://codepen.io/CiTA/pens/popular)
+          - [GitHub](https://github.com/maliMirkec?tab=repositories)
+          - [npm](https://www.npmjs.com/~starbist)
     type: split
     nav: Beyond
 ---

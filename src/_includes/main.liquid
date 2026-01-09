@@ -98,16 +98,24 @@
             </div>
           {%- endif -%}
           {%- if item.form -%}
-            <form name="contact" netlify>
-              <label for="contactName">Name</label>
-              <input type="text" name="name" id="contactName">
-              <label for="contactEmail">Email</label>
-              <input type="email" name="email" id="contactEmail">
+            <form class="{{ item.type }}__form" name="contact" netlify>
+              <div class="{{ item.type }}__row">
+                <label for="contactName">Name</label>
+                <input type="text" name="name" id="contactName">
+              </div>
+              <div class="{{ item.type }}__row">
+                <label for="contactEmail">Email</label>
+                <input type="email" name="email" id="contactEmail">
+              </div>
+              <div class="{{ item.type }}__row">
+                <label for="contactText">Message</label>
+                <textarea name="message" id="contactText" rows="6"></textarea>
+              </div>
               <button type="submit">Send</button>
             </form>
           {%- endif -%}
           {%- if item.note -%}
-            <div class="note">{{ item.note | markdownify }}</div>
+            <div class="{{ item.type }}__note">{{ item.note | markdownify }}</div>
           {%- endif -%}
         </div>
         {%- if item.icon -%}

@@ -1,4 +1,5 @@
 html {
+  --c0: snow;
   --c1: azure;
   --c2: aquamarine;
   --c3: turquoise;
@@ -8,10 +9,12 @@ html {
   --c7: chocolate;
   --s: min(.1em, 4px);
   --ff1: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
-  --ff2: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  --ff2: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;;
+  --ff3: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   --tr1: 101ms;
   --tr2: 303ms;
   --tr3: 3030ms;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,6 +37,7 @@ body {
 :is(a) {
   color: inherit;
   text-decoration-thickness: .05em;
+  text-underline-offset: .1em;
 }
 
 :is(ul) {
@@ -42,7 +46,7 @@ body {
 }
 
 :is(li) {
-  margin-block: 0.33em;
+  margin-block: .33em;
 }
 
 :is(header, footer) {
@@ -73,10 +77,10 @@ footer {
   padding-inline: unset;
 }
 
-:is(header, footer) a {
+:is(header, footer) li a {
   --ts: var(--c3);
   font-family: var(--ff2);
-  font-size: clamp(1rem, calc(0.5rem + 1.333vw), 1.5rem);
+  font-size: clamp(1rem, calc(.5rem + 1.333vw), 1.5rem);
   font-weight: 900;
   letter-spacing: .025em;
   line-height: 1.4;
@@ -101,9 +105,9 @@ footer {
 
 footer p {
   color: var(--c4);
-  font-size: clamp(0.875rem, calc(0.75rem + 0.333vw), 1rem);
+  font-size: clamp(.875rem, calc(.75rem + .333vw), 1rem);
   font-weight: 900;
-  letter-spacing: 0.1em;
+  letter-spacing: .1em;
   text-align: center;
 }
 
@@ -113,7 +117,7 @@ section {
   align-items: center;
   padding-inline: 1rem;
   margin-block-end: -1rem;
-  padding-block: 20dvmin;
+  padding-block: min(15dvh, 10rem);
 }
 
 section:not(:last-child) {
@@ -134,9 +138,9 @@ section:has(.cover) {
 }
 
 .cover svg {
-  block-size: 40dvmin;
-  inline-size: 40dvmin;
-  filter: blur(.5rem) opacity(0.2);
+  block-size: max(40dvmin, 15rem);
+  inline-size: max(40dvmin, 15rem);
+  filter: blur(.5rem) opacity(.2);
   transform: skew(-3deg);
 }
 
@@ -172,7 +176,7 @@ section:nth-of-type(even) .cover svg {
 }
 
 .title:is(h2) {
-  font-size: clamp(1.688rem, calc(0.25rem + 3.833vw), 3.125rem);
+  font-size: clamp(1.688rem, calc(.25rem + 3.833vw), 3.125rem);
 }
 
 .title::first-line {
@@ -181,7 +185,7 @@ section:nth-of-type(even) .cover svg {
 
 .subtitle {
   font-family: var(--ff2);
-  font-size: clamp(1.563rem, calc(0.625rem + 2.5vw), 2.5rem);
+  font-size: clamp(1.563rem, calc(.625rem + 2.5vw), 2.5rem);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -189,8 +193,9 @@ section:nth-of-type(even) .cover svg {
 
 .description {
   text-wrap: pretty;
-  font-size: clamp(1.25rem, calc(0.938rem + 0.833vw), 1.563rem);
+  font-size: clamp(1.25rem, calc(.938rem + .833vw), 1.563rem);
   max-inline-size: 60ch;
+  margin-block-end: 1em;
 }
 
 .description p {
@@ -199,9 +204,9 @@ section:nth-of-type(even) .cover svg {
 }
 
 [class*="__title"] {
-  font-size: clamp(1.563rem, calc(0.625rem + 2.5vw), 2.5rem);
+  font-size: clamp(1.563rem, calc(.625rem + 2.5vw), 2.5rem);
   line-height: 1.05;
-  margin-block: 0.5em;
+  margin-block: .5em;
 }
 
 [class*="__title"]::first-letter {
@@ -212,6 +217,7 @@ section:nth-of-type(even) .cover svg {
 [class*="__title"]:not(:has(a))::first-letter {
   text-decoration: overline;
   text-decoration-thickness: .05em;
+  text-underline-offset: .1em;
 }
 
 [class*="__subtitle"] {
@@ -220,13 +226,24 @@ section:nth-of-type(even) .cover svg {
 }
 
 [class*="__description"] {
-  font-size: clamp(1.125rem, calc(0.75rem + 1vw), 1.5rem);
+  font-size: clamp(1.125rem, calc(.75rem + 1vw), 1.5rem);
   line-height: 1.5;
 }
 
 [class*="__tags"] {
-  font-size: clamp(1rem, calc(0.625rem + 1vw), 1.375rem);
+  font-size: clamp(1rem, calc(.625rem + 1vw), 1.375rem);
   line-height: 1.2;
+}
+
+[class*="__note"] {
+  display: inline-flex;
+  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
+  line-height: 1.5;
+  margin-block-start: 3em;
+}
+
+[class*="__grid"] {
+  inline-size: 100%;
 }
 
 .cards__grid {
@@ -235,14 +252,13 @@ section:nth-of-type(even) .cover svg {
   grid-template-rows: auto 1fr;
   column-gap: max(5dvw, 2rem);
   row-gap: max(2.5dvw, 1rem);
-  inline-size: 100%;
 }
 
 .cards__item {
   grid-row: span 2;
   display: grid;
   grid-template-rows: subgrid;
-  gap: 0.1rem;
+  gap: .1rem;
 }
 
 .cards__item h3 {
@@ -251,7 +267,7 @@ section:nth-of-type(even) .cover svg {
 
 .split__item {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
   align-items: baseline;
   column-gap: 3rem;
   row-gap: 1rem;
@@ -267,7 +283,7 @@ section:nth-of-type(even) .cover svg {
 }
 
 .split__item:is(:first-of-type) {
-  margin-block-start: clamp(1.25rem, calc(0.357rem + 2.381vw), 2.5rem);
+  margin-block-start: clamp(1.25rem, calc(.357rem + 2.381vw), 2.5rem);
 }
 
 .split__title,
@@ -282,11 +298,10 @@ section:nth-of-type(even) .cover svg {
 
 .quotes__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
-  grid-template-rows: auto 1fr;
-  column-gap: max(5dvw, 2rem);
-  row-gap: max(2.5dvw, 1rem);
-  inline-size: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(17.5rem, calc(10rem + 20vw), 25rem), 1fr));
+  column-gap: max(10dvw, 4rem);
+  row-gap: max(5dvw, 2rem);
+  margin-block-start: 2em;
 }
 
 .quotes__block {
@@ -296,18 +311,37 @@ section:nth-of-type(even) .cover svg {
 
 .quotes__block details {
   margin-block-end: 1em;
-  font-size: clamp(1.063rem, calc(0.625rem + 1.167vw), 1.5rem);
+  font-size: clamp(1.125rem, calc(.875rem + .667vw), 1.375rem);
   font-style: italic;
+  padding-inline-end: 1em;
 }
 
 .quotes__block details + div {
   text-align: right;
-  font-size: clamp(1rem, calc(0.75rem + 0.667vw), 1.25rem);
+  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
 }
 
 .quotes__block summary {
   display: block;
   cursor: pointer;
+  position: relative;
+}
+
+.quotes__block summary:before {
+  font-family: var(--ff3);
+  font-size: 125%;
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  transform: translate(150%, -50%);
+}
+
+.quotes__block details:is([open]) summary:before {
+  content: "-";
+}
+
+.quotes__block details:not([open]) summary:before {
+  content: "+";
 }
 
 .quotes__block summary p {
@@ -315,19 +349,96 @@ section:nth-of-type(even) .cover svg {
 }
 
 .quotes__block details:not([open]) summary:after {
-  content: "...";
+  font-size: 87.5%;
+  font-weight: 700;
+  font-style: normal;
   display: block;
+  margin-block-start: 1em;
+}
+
+[lang="en"] .quotes__block details:not([open]) summary:after {
+  content: "More...";
+}
+
+[lang="hr"] .quotes__block details:not([open]) summary:after {
+  content: "Više...";
+}
+
+.contact__form {
+  display: grid;
+  row-gap: 2em;
+  inline-size: min(100%, 30rem);
+  margin-block-start: 2em;
+}
+
+.contact__row {
+  display: grid;
+  row-gap: .5em;
+}
+
+.contact label {
+  font-family: var(--ff3);
+  font-weight: 700;
+  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.contact :is(input, textarea) {
+  background-color: var(--c0);
+  color: var(--c5);
+  font-family: var(--ff2);
+  font-weight: 500;
+  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
+  letter-spacing: .025em;
+  padding-block: .5em;
+  padding-inline: .5em;
+  border: .125em solid var(--c6);
+  border-radius: 0;
+  outline: solid .1em transparent;
+  outline-offset: .2em;
+  transition: var(--tr1) ease-in;
+}
+
+.contact :is(input, textarea):is(:hover, :focus, :active) {
+  border-color: var(--c4);
+  border-radius: 0;
+  outline-color: var(--c3);
+  transition: var(--tr2) ease-out;
+}
+
+.contact button {
+  background-color: var(--c5);
+  color: var(--c1);
+  font-family: var(--ff2);
+  font-weight: 900;
+  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
+  letter-spacing: .025em;
+  text-transform: uppercase;
+  padding-block: .75em;
+  padding-inline: 1em;
+  border: unset;
+  cursor: pointer;
+  outline: solid .1em transparent;
+  outline-offset: .2em;
+  transition: var(--tr1) ease-in;
+}
+
+.contact button:is(:hover, :focus, :active) {
+  color: var(--c2);
+  outline-color: var(--c4);
+  transition: var(--tr2) ease-out;
 }
 
 .action {
-  margin-block-start: 2em;
+  margin-block-start: 1em;
 }
 
 .cta {
   background-color: var(--c5);
   color: var(--c1);
   font-family: var(--ff2);
-  font-size: clamp(1.25rem, calc(0.625rem + 1.667vw), 1.875rem);
+  font-size: clamp(1.125rem, calc(.625rem + 1.333vw), 1.625rem);
   font-weight: 900;
   letter-spacing: .05em;
   text-align: center;
@@ -337,11 +448,12 @@ section:nth-of-type(even) .cover svg {
   justify-content: center;
   min-block-size: 3.2em;
   min-inline-size: 10em;
-  padding-inline: 1.5em;
+  padding-inline: clamp(1.25rem, calc(-0.625rem + 5vw), 3.125rem);
   border-radius: 3em;
   margin-block: 1rem;
   outline: solid .1em transparent;
   outline-offset: .2em;
+  cursor: pointer;
   transition: var(--tr1) ease-in;
 }
 
