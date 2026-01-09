@@ -2,6 +2,7 @@
 layout: default
 lang: hr
 title: Studio CiTA
+description: Studio CiTA je dugogodišnji inženjerski studio specijaliziran za razvoj izazovnih web stranica i učinkovitih online trgovina.
 sections:
   - title: Vaš partner za<br>izradu web stranica
     description: |

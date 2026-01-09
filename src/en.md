@@ -2,6 +2,7 @@
 layout: default
 lang: en
 title: Studio CiTA
+description: Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
 sections:
   - title: Your partner<br>for building websites
     description: |

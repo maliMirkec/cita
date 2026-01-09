@@ -2,7 +2,12 @@
   {%- if sections -%}
     <nav>
       <ul>
-        <li><a href="">{{ title }}</a></li>
+        <li>
+          <a href="">
+            {%- include 'gfx/studio-cita-indigo.svg' -%}
+            <span class="sr-only">{{ title }}</span>
+          </a>
+        </li>
         {%- for item in sections -%}
           {%- if item.nav -%}
             <li><a href="#{{ item.nav | slug }}">{{ item.nav }}</a></li>

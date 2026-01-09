@@ -6,7 +6,6 @@ html {
   --c4: mediumpurple;
   --c5: indigo;
   --c6: skyblue;
-  --c7: chocolate;
   --s: min(.1em, 4px);
   --ff1: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
   --ff2: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;;
@@ -34,6 +33,16 @@ body {
   background-color: var(--c2);
 }
 
+:is(.sr-only) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  block-size: 1px;
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
 :is(a) {
   color: inherit;
   text-decoration-thickness: .05em;
@@ -50,11 +59,14 @@ body {
 }
 
 :is(header, footer) {
-  background-color: var(--c2);
+  display: grid;
+  row-gap: min(5dvh, 1rem);
 }
 
 header {
-  padding-block: .5rem 1rem;
+  background-color: var(--c2);
+  color: var(--c5);
+  padding-block: 1.5rem 2rem;
   mask: conic-gradient(from -20deg at bottom,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%;
   position: sticky;
   inline-size: 100%;
@@ -63,22 +75,26 @@ header {
 }
 
 footer {
-  padding-block: 1rem .5rem;
-  mask: conic-gradient(from 160deg at top,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%
+  background-color: var(--c3);
+  color: var(--c5);
+  padding-block: 3.5rem 3rem;
+  mask: conic-gradient(from 160deg at top,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%;
+  text-align: center;
 }
 
 :is(header, footer) ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   column-gap: max(3dvw, 1rem);
   row-gap: max(1.5dvw, .5rem);
   list-style: none;
   padding-inline: unset;
+  margin-block: unset;
 }
 
 :is(header, footer) li a {
-  --ts: var(--c3);
   font-family: var(--ff2);
   font-size: clamp(1rem, calc(.5rem + 1.333vw), 1.5rem);
   font-weight: 900;
@@ -90,25 +106,33 @@ footer {
   text-transform: uppercase;
 }
 
-:is(header, footer) svg {
-  max-block-size: 3rem;
-  inline-size: auto;
-}
-
-:is(header, footer) path {
-  stroke-width: 1rem;
+:is(header, footer) a {
+  display: inline-flex;
 }
 
 :is(header, footer) a:is(:hover, :focus, :active) {
-  color: var(--c4);
+  filter: brightness(2);
 }
 
 footer p {
-  color: var(--c4);
+  color: inherit;
   font-size: clamp(.875rem, calc(.75rem + .333vw), 1rem);
   font-weight: 900;
   letter-spacing: .1em;
   text-align: center;
+  margin-block-start: .5em;
+  margin-block-end: unset;
+}
+
+:is(header, footer) svg {
+  max-block-size: 2rem;
+  inline-size: auto;
+  transition: var(--tr2);
+}
+
+:is(header, footer) svg:is(:hover, :focus, :active) {
+  transform: scale(1.025);
+  filter: brightness(1.5);
 }
 
 section {
@@ -244,6 +268,14 @@ section:nth-of-type(even) .cover svg {
 
 [class*="__grid"] {
   inline-size: 100%;
+}
+
+:is([class*="__item"], [class*="__note"]) a {
+  transition: var(--tr2);
+}
+
+:is([class*="__item"], [class*="__note"]) a:is(:hover, :focus, :active) {
+  text-decoration-thickness: .2em;
 }
 
 .cards__grid {
