@@ -12,8 +12,17 @@ html {
   --ff3: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
   --tr1: 101ms;
   --tr2: 303ms;
-  --tr3: 3030ms;
   scroll-behavior: smooth;
+}
+
+html {
+  --c0: snow;
+  --c1: azure;
+  --c2: hsl(160, 100%, 85%);
+  --c3: hsl(174, 82%, 76%);
+  --c4: hsl(260, 57%, 44%);
+  --c5: hsl(275, 100%, 10%);
+  --c6: hsl(197, 51%, 83%);
 }
 
 body {
@@ -47,6 +56,14 @@ body {
   color: inherit;
   text-decoration-thickness: .05em;
   text-underline-offset: .1em;
+  outline: solid .1em transparent;
+  outline-offset: .2em;
+  transition: var(--tr1) ease-in;
+}
+
+:is(a):is(:hover, :focus, :active) {
+  outline-color: currentColor;
+  transition: var(--tr2) ease-out;
 }
 
 :is(ul) {
@@ -64,7 +81,7 @@ body {
 }
 
 header {
-  background-color: var(--c2);
+  background-color: var(--c3);
   color: var(--c5);
   padding-block: 1.5rem 2rem;
   mask: conic-gradient(from -20deg at bottom,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%;
@@ -75,11 +92,12 @@ header {
 }
 
 footer {
-  background-color: var(--c3);
+  background-color: var(--c6);
   color: var(--c5);
   padding-block: 3.5rem 3rem;
   mask: conic-gradient(from 160deg at top,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%;
   text-align: center;
+  box-shadow: 0 -0.5rem 0 5rem var(--c5);
 }
 
 :is(header, footer) ul {
@@ -110,29 +128,32 @@ footer {
   display: inline-flex;
 }
 
-:is(header, footer) a:is(:hover, :focus, :active) {
-  filter: brightness(2);
+:is(header, footer) a:not(:has(svg)):is(:hover, :active) {
+  filter: brightness(5) hue-rotate(10deg);
+}
+
+:is(header, footer) a:has(svg):is(:hover, :focus, :active) {
+  filter: brightness(1.5) hue-rotate(10deg);
 }
 
 footer p {
   color: inherit;
   font-size: clamp(.875rem, calc(.75rem + .333vw), 1rem);
-  font-weight: 900;
-  letter-spacing: .1em;
+  font-weight: 700;
   text-align: center;
   margin-block-start: .5em;
   margin-block-end: unset;
 }
 
 :is(header, footer) svg {
-  max-block-size: 2rem;
+  max-block-size: clamp(1.25rem, calc(0rem + 3.333vw), 2.5rem);
   inline-size: auto;
   transition: var(--tr2);
 }
 
 :is(header, footer) svg:is(:hover, :focus, :active) {
-  transform: scale(1.025);
-  filter: brightness(1.5);
+  transform: scale(1.0125);
+  filter: brightness(1.25);
 }
 
 section {
@@ -233,6 +254,14 @@ section:nth-of-type(even) .cover svg {
   margin-block: .5em;
 }
 
+[class*="__title"]:has(a) {
+  transition: var(--tr1);
+}
+
+[class*="__title"]:has(a):is(:hover, :focus, :active) {
+  filter: brightness(1.5) hue-rotate(10deg);
+}
+
 [class*="__title"]::first-letter {
   color: var(--c4);
   font-size: 110%;
@@ -270,12 +299,12 @@ section:nth-of-type(even) .cover svg {
   inline-size: 100%;
 }
 
-:is([class*="__item"], [class*="__note"]) a {
-  transition: var(--tr2);
-}
-
 :is([class*="__item"], [class*="__note"]) a:is(:hover, :focus, :active) {
   text-decoration-thickness: .2em;
+}
+
+.inner :is(p, li) a:is(:hover, :focus, :active) {
+  filter: brightness(4) hue-rotate(10deg);
 }
 
 .cards__grid {
@@ -348,15 +377,13 @@ section:nth-of-type(even) .cover svg {
   padding-inline-end: 1em;
 }
 
-.quotes__block details + div {
-  text-align: right;
-  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
-}
-
 .quotes__block summary {
   display: block;
   cursor: pointer;
   position: relative;
+  outline: solid .1em transparent;
+  outline-offset: .2em;
+  transition: var(--tr1) ease-out;
 }
 
 .quotes__block summary:before {
@@ -380,6 +407,14 @@ section:nth-of-type(even) .cover svg {
   display: inline;
 }
 
+.quotes__block summary:is(:focus-visible) {
+  transition: var(--tr2) ease-in;
+}
+
+.quotes__block summary:is(:focus-visible) {
+  outline-color: currentColor;
+}
+
 .quotes__block details:not([open]) summary:after {
   font-size: 87.5%;
   font-weight: 700;
@@ -394,6 +429,11 @@ section:nth-of-type(even) .cover svg {
 
 [lang="hr"] .quotes__block details:not([open]) summary:after {
   content: "Više...";
+}
+
+.quotes__block details + div {
+  text-align: right;
+  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
 }
 
 .contact__form {
@@ -432,11 +472,14 @@ section:nth-of-type(even) .cover svg {
   transition: var(--tr1) ease-in;
 }
 
-.contact :is(input, textarea):is(:hover, :focus, :active) {
-  border-color: var(--c4);
+.contact :is(input, textarea):is(:hover, :active) {
+  border-color: var(--c5);
   border-radius: 0;
-  outline-color: var(--c3);
   transition: var(--tr2) ease-out;
+}
+
+.contact :is(input, textarea):is(:focus-visible) {
+  outline-color: var(--c4);
 }
 
 .contact button {
@@ -456,10 +499,13 @@ section:nth-of-type(even) .cover svg {
   transition: var(--tr1) ease-in;
 }
 
-.contact button:is(:hover, :focus, :active) {
-  color: var(--c2);
-  outline-color: var(--c4);
+.contact button:is(:hover, :active) {
+  filter: brightness(2) hue-rotate(10deg);
   transition: var(--tr2) ease-out;
+}
+
+.contact button:is(:focus-visible) {
+  outline-color: var(--c4);
 }
 
 .action {
@@ -493,9 +539,11 @@ section:nth-of-type(even) .cover svg {
   text-decoration: none;
 }
 
-.cta:is(:hover, :focus, :active) {
-  background-color: var(--c5);
-  color: var(--c2);
-  outline-color: var(--c4);
+.cta:is(:hover, :active) {
+  filter: brightness(2) hue-rotate(10deg);
   transition: var(--tr2) ease-out;
+}
+
+.cta:is(:focus-visible) {
+  outline-color: var(--c4);
 }

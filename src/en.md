@@ -1,6 +1,8 @@
 ---
 layout: default
 lang: en
+altLang: hr
+altPage: /hr/
 title: Studio CiTA
 description: Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
 sections:

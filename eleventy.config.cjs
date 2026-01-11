@@ -14,4 +14,7 @@ module.exports = async function(eleventyConfig) {
   eleventyConfig.setLayoutsDirectory('_layouts')
   eleventyConfig.addPassthroughCopy('src/*.css');
   eleventyConfig.addPassthroughCopy('src/*.svg');
+  eleventyConfig.addPassthroughCopy('src/favicon/*');
+
+  // eleventyConfig.addPassthroughCopy({ "src/favicon": "subfolder/img" });
 };
