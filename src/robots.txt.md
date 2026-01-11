@@ -3,10 +3,11 @@ permalink: /robots.txt
 eleventyExcludeFromCollections: true
 templateEngineOverride: liquid
 ---
-{%- if CONTEXT == 'production' -%}
-User-agent: *
+
+{%- if BRANCH == 'master' -%}
+User-agent: _
 Allow: /
 {%- else -%}
-User-agent: *
+User-agent: _
 Disallow: /
 {%- endif -%}

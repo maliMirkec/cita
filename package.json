@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "format": "prettier --write \"**/*.{css,js,md,liquid}\"",
+    "format:check": "prettier --check \"**/*.{css,js,md,liquid}\"",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,17 @@
   "homepage": "https://github.com/maliMirkec/cita#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2"
+  },
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.10.0",
+    "autoprefixer": "^10.4.23",
+    "clean-css": "^5.3.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "postcss": "^8.5.6",
+    "prettier": "^3.7.4"
+  },
+  "lint-staged": {
+    "*.{css,js,md,liquid}": "prettier --write"
   }
 }

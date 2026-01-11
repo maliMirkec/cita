@@ -10,7 +10,7 @@ sections:
     description: |
       Studio CiTA je dugogodišnji inženjerski studio specijaliziran za razvoj izazovnih web stranica i učinkovitih online trgovina.
     cta:
-      href: "#kontakt"
+      href: '#kontakt'
       text: Započnite suradnju
     type: hero
     icon: code

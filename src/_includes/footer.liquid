@@ -1,13 +1,15 @@
 <footer>
   <ul>
-    <li><a href="/en/">EN</a></li>
-    <li><a href="/hr/">HR</a></li>
+    <li><a href='/en/'>EN</a></li>
+    <li><a href='/hr/'>HR</a></li>
   </ul>
   <div>
-    <a href="">
+    <a href=''>
       {%- include 'gfx/studio-cita-indigo.svg' -%}
-      <span class="sr-only">{{ title }}</span>
+      <span class='sr-only'>{{ title }}</span>
     </a>
   </div>
-  <p>&copy; <a href="/{{ lang }}/">{{ title }}</a></p>
+  <p>
+    &copy; <a href='/{{ lang }}/'>{{ title }}</a>
+  </p>
 </footer>

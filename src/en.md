@@ -10,7 +10,7 @@ sections:
     description: |
       Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
     cta:
-      href: "#contact"
+      href: '#contact'
       text: Work with your expert
     type: hero
     icon: code

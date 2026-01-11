@@ -3,14 +3,16 @@
     <nav>
       <ul>
         <li>
-          <a href="/{{ lang }}/">
+          <a href='/{{ lang }}/'>
             {%- include 'gfx/studio-cita-indigo.svg' -%}
-            <span class="sr-only">{{ title }}</span>
+            <span class='sr-only'>{{ title }}</span>
           </a>
         </li>
         {%- for item in sections -%}
           {%- if item.nav -%}
-            <li><a href="#{{ item.nav | slug }}">{{ item.nav }}</a></li>
+            <li>
+              <a href='#{{ item.nav | slug }}'>{{ item.nav }}</a>
+            </li>
           {%- endif -%}
         {%- endfor -%}
       </ul>

@@ -6,10 +6,14 @@ html {
   --c4: mediumpurple;
   --c5: indigo;
   --c6: skyblue;
-  --s: min(.1em, 4px);
-  --ff1: Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', Georgia, serif;
-  --ff2: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;;
-  --ff3: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  --s: min(0.1em, 4px);
+  --ff1:
+    Superclarendon, 'Bookman Old Style', 'URW Bookman', 'URW Bookman L',
+    'Georgia Pro', Georgia, serif;
+  --ff2: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  --ff3:
+    ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+    'DejaVu Sans Mono', monospace;
   --tr1: 101ms;
   --tr2: 303ms;
   scroll-behavior: smooth;
@@ -27,8 +31,12 @@ html {
 
 body {
   background-color: var(--c1);
-  background-image:  linear-gradient(to bottom, transparent, var(--c1)), linear-gradient(to bottom, transparent 50%, var(--c1) 50%);
-  background-size: 100%, 100% .1rem;
+  background-image:
+    linear-gradient(to bottom, transparent, var(--c1)),
+    linear-gradient(to bottom, transparent 50%, var(--c1) 50%);
+  background-size:
+    100%,
+    100% 0.1rem;
   background-attachment: fixed;
   color: var(--c5);
   font-family: var(--ff2);
@@ -54,16 +62,19 @@ body {
 
 :is(a) {
   color: inherit;
-  text-decoration-thickness: .05em;
-  text-underline-offset: .1em;
-  outline: solid .1em transparent;
-  outline-offset: .2em;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.1em;
+  outline: solid 0.2em transparent;
+  outline-offset: 0.2em;
   transition: var(--tr1) ease-in;
 }
 
 :is(a):is(:hover, :focus, :active) {
-  outline-color: currentColor;
   transition: var(--tr2) ease-out;
+}
+
+:is(a):is(:focus-visible) {
+  outline-color: currentColor;
 }
 
 :is(ul) {
@@ -72,7 +83,7 @@ body {
 }
 
 :is(li) {
-  margin-block: .33em;
+  margin-block: 0.33em;
 }
 
 :is(header, footer) {
@@ -84,7 +95,13 @@ header {
   background-color: var(--c3);
   color: var(--c5);
   padding-block: 1.5rem 2rem;
-  mask: conic-gradient(from -20deg at bottom,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%;
+  mask: conic-gradient(
+      from -20deg at bottom,
+      #0000,
+      #000 1deg 39deg,
+      #0000 40deg
+    )
+    50%/0.73rem 100%;
   position: sticky;
   inline-size: 100%;
   inset-block-start: 0;
@@ -95,7 +112,8 @@ footer {
   background-color: var(--c6);
   color: var(--c5);
   padding-block: 3.5rem 3rem;
-  mask: conic-gradient(from 160deg at top,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%;
+  mask: conic-gradient(from 160deg at top, #0000, #000 1deg 39deg, #0000 40deg)
+    50%/0.73rem 100%;
   text-align: center;
   box-shadow: 0 -0.5rem 0 5rem var(--c5);
 }
@@ -106,7 +124,7 @@ footer {
   justify-content: center;
   align-items: center;
   column-gap: max(3dvw, 1rem);
-  row-gap: max(1.5dvw, .5rem);
+  row-gap: max(1.5dvw, 0.5rem);
   list-style: none;
   padding-inline: unset;
   margin-block: unset;
@@ -114,9 +132,9 @@ footer {
 
 :is(header, footer) li a {
   font-family: var(--ff2);
-  font-size: clamp(1rem, calc(.5rem + 1.333vw), 1.5rem);
+  font-size: clamp(1rem, calc(0.5rem + 1.333vw), 1.5rem);
   font-weight: 900;
-  letter-spacing: .025em;
+  letter-spacing: 0.025em;
   line-height: 1.4;
   text-align: center;
   text-wrap: pretty;
@@ -138,10 +156,10 @@ footer {
 
 footer p {
   color: inherit;
-  font-size: clamp(.875rem, calc(.75rem + .333vw), 1rem);
+  font-size: clamp(0.875rem, calc(0.75rem + 0.333vw), 1rem);
   font-weight: 700;
   text-align: center;
-  margin-block-start: .5em;
+  margin-block-start: 0.5em;
   margin-block-end: unset;
 }
 
@@ -157,7 +175,11 @@ footer p {
 }
 
 section {
-  background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.025));
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.025)
+  );
   display: grid;
   align-items: center;
   padding-inline: 1rem;
@@ -166,7 +188,11 @@ section {
 }
 
 section:not(:last-child) {
-  mask: conic-gradient(from -20deg at bottom,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%, conic-gradient(from -20deg at top,#0000,#000 1deg 39deg,#0000 40deg) 50%/0.73rem 100%;
+  mask:
+    conic-gradient(from -20deg at bottom, #0000, #000 1deg 39deg, #0000 40deg)
+      50%/0.73rem 100%,
+    conic-gradient(from -20deg at top, #0000, #000 1deg 39deg, #0000 40deg)
+      50%/0.73rem 100%;
 }
 
 section:has(.cover) {
@@ -185,7 +211,7 @@ section:has(.cover) {
 .cover svg {
   block-size: max(40dvmin, 15rem);
   inline-size: max(40dvmin, 15rem);
-  filter: blur(.5rem) opacity(.2);
+  filter: blur(0.5rem) opacity(0.2);
   transform: skew(-3deg);
 }
 
@@ -211,7 +237,11 @@ section:nth-of-type(even) .cover svg {
   font-weight: 900;
   line-height: 1.2;
   letter-spacing: -0.05em;
-  text-shadow: var(--s) var(--s) 0 var(--c2), -1px -1px 0 var(--c2), 1px -1px 0 var(--c2), -1px 1px 0 var(--c2);
+  text-shadow:
+    var(--s) var(--s) 0 var(--c2),
+    -1px -1px 0 var(--c2),
+    1px -1px 0 var(--c2),
+    -1px 1px 0 var(--c2);
   text-wrap: balance;
   margin-block: 1em;
 }
@@ -221,7 +251,7 @@ section:nth-of-type(even) .cover svg {
 }
 
 .title:is(h2) {
-  font-size: clamp(1.688rem, calc(.25rem + 3.833vw), 3.125rem);
+  font-size: clamp(1.688rem, calc(0.25rem + 3.833vw), 3.125rem);
 }
 
 .title::first-line {
@@ -230,7 +260,7 @@ section:nth-of-type(even) .cover svg {
 
 .subtitle {
   font-family: var(--ff2);
-  font-size: clamp(1.563rem, calc(.625rem + 2.5vw), 2.5rem);
+  font-size: clamp(1.563rem, calc(0.625rem + 2.5vw), 2.5rem);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -238,7 +268,7 @@ section:nth-of-type(even) .cover svg {
 
 .description {
   text-wrap: pretty;
-  font-size: clamp(1.25rem, calc(.938rem + .833vw), 1.563rem);
+  font-size: clamp(1.25rem, calc(0.938rem + 0.833vw), 1.563rem);
   max-inline-size: 60ch;
   margin-block-end: 1em;
 }
@@ -248,59 +278,59 @@ section:nth-of-type(even) .cover svg {
   margin-block-end: 1em;
 }
 
-[class*="__title"] {
-  font-size: clamp(1.563rem, calc(.625rem + 2.5vw), 2.5rem);
+[class*='__title'] {
+  font-size: clamp(1.563rem, calc(0.625rem + 2.5vw), 2.5rem);
   line-height: 1.05;
-  margin-block: .5em;
+  margin-block: 0.5em;
 }
 
-[class*="__title"]:has(a) {
+[class*='__title']:has(a) {
   transition: var(--tr1);
 }
 
-[class*="__title"]:has(a):is(:hover, :focus, :active) {
+[class*='__title']:has(a):is(:hover, :focus, :active) {
   filter: brightness(1.5) hue-rotate(10deg);
 }
 
-[class*="__title"]::first-letter {
+[class*='__title']::first-letter {
   color: var(--c4);
   font-size: 110%;
 }
 
-[class*="__title"]:not(:has(a))::first-letter {
+[class*='__title']:not(:has(a))::first-letter {
   text-decoration: overline;
-  text-decoration-thickness: .05em;
-  text-underline-offset: .1em;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.1em;
 }
 
-[class*="__subtitle"] {
+[class*='__subtitle'] {
   font-size: clamp(1.438rem, calc(1rem + 1.167vw), 1.875rem);
   line-height: 1.2;
 }
 
-[class*="__description"] {
-  font-size: clamp(1.125rem, calc(.75rem + 1vw), 1.5rem);
+[class*='__description'] {
+  font-size: clamp(1.125rem, calc(0.75rem + 1vw), 1.5rem);
   line-height: 1.5;
 }
 
-[class*="__tags"] {
-  font-size: clamp(1rem, calc(.625rem + 1vw), 1.375rem);
+[class*='__tags'] {
+  font-size: clamp(1rem, calc(0.625rem + 1vw), 1.375rem);
   line-height: 1.2;
 }
 
-[class*="__note"] {
+[class*='__note'] {
   display: inline-flex;
-  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
+  font-size: clamp(1rem, calc(0.75rem + 0.667vw), 1.25rem);
   line-height: 1.5;
   margin-block-start: 3em;
 }
 
-[class*="__grid"] {
+[class*='__grid'] {
   inline-size: 100%;
 }
 
-:is([class*="__item"], [class*="__note"]) a:is(:hover, :focus, :active) {
-  text-decoration-thickness: .2em;
+:is([class*='__item'], [class*='__note']) a:is(:hover, :focus, :active) {
+  text-decoration-thickness: 0.2em;
 }
 
 .inner :is(p, li) a:is(:hover, :focus, :active) {
@@ -319,7 +349,7 @@ section:nth-of-type(even) .cover svg {
   grid-row: span 2;
   display: grid;
   grid-template-rows: subgrid;
-  gap: .1rem;
+  gap: 0.1rem;
 }
 
 .cards__item h3 {
@@ -344,7 +374,7 @@ section:nth-of-type(even) .cover svg {
 }
 
 .split__item:is(:first-of-type) {
-  margin-block-start: clamp(1.25rem, calc(.357rem + 2.381vw), 2.5rem);
+  margin-block-start: clamp(1.25rem, calc(0.357rem + 2.381vw), 2.5rem);
 }
 
 .split__title,
@@ -359,7 +389,10 @@ section:nth-of-type(even) .cover svg {
 
 .quotes__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(17.5rem, calc(10rem + 20vw), 25rem), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(17.5rem, calc(10rem + 20vw), 25rem), 1fr)
+  );
   column-gap: max(10dvw, 4rem);
   row-gap: max(5dvw, 2rem);
   margin-block-start: 2em;
@@ -372,7 +405,7 @@ section:nth-of-type(even) .cover svg {
 
 .quotes__block details {
   margin-block-end: 1em;
-  font-size: clamp(1.125rem, calc(.875rem + .667vw), 1.375rem);
+  font-size: clamp(1.125rem, calc(0.875rem + 0.667vw), 1.375rem);
   font-style: italic;
   padding-inline-end: 1em;
 }
@@ -381,8 +414,8 @@ section:nth-of-type(even) .cover svg {
   display: block;
   cursor: pointer;
   position: relative;
-  outline: solid .1em transparent;
-  outline-offset: .2em;
+  outline: solid 0.2em transparent;
+  outline-offset: 0.2em;
   transition: var(--tr1) ease-out;
 }
 
@@ -396,18 +429,18 @@ section:nth-of-type(even) .cover svg {
 }
 
 .quotes__block details:is([open]) summary:before {
-  content: "-";
+  content: '-';
 }
 
 .quotes__block details:not([open]) summary:before {
-  content: "+";
+  content: '+';
 }
 
 .quotes__block summary p {
   display: inline;
 }
 
-.quotes__block summary:is(:focus-visible) {
+.quotes__block summary:is(:hover, :focus, :active) {
   transition: var(--tr2) ease-in;
 }
 
@@ -423,17 +456,17 @@ section:nth-of-type(even) .cover svg {
   margin-block-start: 1em;
 }
 
-[lang="en"] .quotes__block details:not([open]) summary:after {
-  content: "More...";
+[lang='en'] .quotes__block details:not([open]) summary:after {
+  content: 'More...';
 }
 
-[lang="hr"] .quotes__block details:not([open]) summary:after {
-  content: "Više...";
+[lang='hr'] .quotes__block details:not([open]) summary:after {
+  content: 'Više...';
 }
 
 .quotes__block details + div {
   text-align: right;
-  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
+  font-size: clamp(1rem, calc(0.75rem + 0.667vw), 1.25rem);
 }
 
 .contact__form {
@@ -445,14 +478,14 @@ section:nth-of-type(even) .cover svg {
 
 .contact__row {
   display: grid;
-  row-gap: .5em;
+  row-gap: 0.5em;
 }
 
 .contact label {
   font-family: var(--ff3);
   font-weight: 700;
-  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
-  letter-spacing: .1em;
+  font-size: clamp(1rem, calc(0.75rem + 0.667vw), 1.25rem);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -461,14 +494,14 @@ section:nth-of-type(even) .cover svg {
   color: var(--c5);
   font-family: var(--ff2);
   font-weight: 500;
-  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
-  letter-spacing: .025em;
-  padding-block: .5em;
-  padding-inline: .5em;
-  border: .125em solid var(--c6);
+  font-size: clamp(1rem, calc(0.75rem + 0.667vw), 1.25rem);
+  letter-spacing: 0.025em;
+  padding-block: 0.5em;
+  padding-inline: 0.5em;
+  border: 0.125em solid var(--c6);
   border-radius: 0;
-  outline: solid .1em transparent;
-  outline-offset: .2em;
+  outline: solid 0.2em transparent;
+  outline-offset: 0.2em;
   transition: var(--tr1) ease-in;
 }
 
@@ -487,15 +520,15 @@ section:nth-of-type(even) .cover svg {
   color: var(--c1);
   font-family: var(--ff2);
   font-weight: 900;
-  font-size: clamp(1rem, calc(.75rem + .667vw), 1.25rem);
-  letter-spacing: .025em;
+  font-size: clamp(1rem, calc(0.75rem + 0.667vw), 1.25rem);
+  letter-spacing: 0.025em;
   text-transform: uppercase;
-  padding-block: .75em;
+  padding-block: 0.75em;
   padding-inline: 1em;
   border: unset;
   cursor: pointer;
-  outline: solid .1em transparent;
-  outline-offset: .2em;
+  outline: solid 0.2em transparent;
+  outline-offset: 0.2em;
   transition: var(--tr1) ease-in;
 }
 
@@ -516,9 +549,9 @@ section:nth-of-type(even) .cover svg {
   background-color: var(--c5);
   color: var(--c1);
   font-family: var(--ff2);
-  font-size: clamp(1.125rem, calc(.625rem + 1.333vw), 1.625rem);
+  font-size: clamp(1.125rem, calc(0.625rem + 1.333vw), 1.625rem);
   font-weight: 900;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
   display: inline-flex;
@@ -529,8 +562,8 @@ section:nth-of-type(even) .cover svg {
   padding-inline: clamp(1.25rem, calc(-0.625rem + 5vw), 3.125rem);
   border-radius: 3em;
   margin-block: 1rem;
-  outline: solid .1em transparent;
-  outline-offset: .2em;
+  outline: solid 0.2em transparent;
+  outline-offset: 0.2em;
   cursor: pointer;
   transition: var(--tr1) ease-in;
 }

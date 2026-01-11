@@ -2,12 +2,17 @@
   {%- if sections -%}
     {%- assign hlevel1 = 1 -%}
     {%- for item in sections -%}
-      <section class="{{ item.type }}"{% if item.nav %} id="{{ item.nav | slugify }}"{% endif %}>
-        <div class="inner">
+      <section
+        class='{{ item.type }}'
+        {% if item.nav %}
+          id='{{ item.nav | slugify }}'
+        {% endif %}
+      >
+        <div class='inner'>
           {%- if item.title -%}
-            <h{{ hlevel1 }} class="title">
+            <h{{ hlevel1 }} class='title'>
               {%- if item.title.href and item.title.text -%}
-                <a href="{{ item.title.href }}">{{ item.title.text }}</a>
+                <a href='{{ item.title.href }}'>{{ item.title.text }}</a>
               {%- else -%}
                 {{ item.title }}
               {%- endif -%}
@@ -17,35 +22,39 @@
           {%- assign hlevel2 = hlevel1 -%}
           {%- if item.subtitle -%}
             {%- assign hlevel2 = hlevel2 | plus: 1 -%}
-            <h{{ hlevel2 }} class="subtitle">{{ item.subtitle }}</h{{ hlevel2 }}>
+            <h{{ hlevel2 }} class='subtitle'>
+              {{- item.subtitle -}}
+            </h{{ hlevel2 }}>
           {%- endif -%}
           {%- if item.description -%}
-            <div class="description">{{ item.description | markdownify }}</div>
+            <div class='description'>{{ item.description | markdownify }}</div>
           {%- endif -%}
           {%- if item.gfx -%}
-            <div class="{{ item.type }}__gfx">
+            <div class='{{ item.type }}__gfx'>
               {%- if item.gfx contains '.svg' -%}
                 {%- assign gfxPath = item.gfx -%}
                 {%- include gfxPath -%}
               {%- else -%}
-                <img src="{{ item.gfx.src }}" alt="{{ item.gfx.alt }}">
+                <img src='{{ item.gfx.src }}' alt='{{ item.gfx.alt }}'>
               {%- endif -%}
             </div>
           {%- endif -%}
           {%- if item.cta -%}
-            <div class="action">
-              <a class="cta" href="{{ item.cta.href }}">{{ item.cta.text }}</a>
+            <div class='action'>
+              <a class='cta' href='{{ item.cta.href }}'>{{ item.cta.text }}</a>
             </div>
           {%- endif -%}
           {%- if item.list -%}
-            <div class="{{ item.type }}__grid">
+            <div class='{{ item.type }}__grid'>
               {%- for subitem in item.list -%}
                 {%- assign hlevel3 = 3 -%}
-                <div class="{{ item.type }}__item">
+                <div class='{{ item.type }}__item'>
                   {%- if subitem.title -%}
-                    <h{{ hlevel3 }} class="{{ item.type }}__title">
+                    <h{{ hlevel3 }} class='{{ item.type }}__title'>
                       {%- if subitem.title.href and subitem.title.text -%}
-                        <a href="{{ subitem.title.href }}">{{ subitem.title.text }}</a>
+                        <a href='{{ subitem.title.href }}'>
+                          {{- subitem.title.text -}}
+                        </a>
                       {%- else -%}
                         {{ subitem.title }}
                       {%- endif -%}
@@ -54,33 +63,42 @@
                   {%- endif -%}
                   {%- assign hlevel4 = hlevel3 -%}
                   {%- if subitem.subtitle -%}
-                    <h{{ hlevel4 }} class="{{ item.type }}__subtitle">{{ subitem.subtitle }}</h{{ hlevel4 }}>
+                    <h{{ hlevel4 }} class='{{ item.type }}__subtitle'>
+                      {{- subitem.subtitle -}}
+                    </h{{ hlevel4 }}>
                   {%- endif -%}
                   {%- if subitem.tags -%}
-                    <ul class="{{ item.type }}__tags">
+                    <ul class='{{ item.type }}__tags'>
                       {%- for tag in subitem.tags -%}
                         <li>{{ tag }}</li>
                       {%- endfor -%}
                     </ul>
                   {%- endif -%}
                   {%- if subitem.description -%}
-                    <div class="{{ item.type }}__description">{{ subitem.description | markdownify }}</div>
+                    <div class='{{ item.type }}__description'>
+                      {{ subitem.description | markdownify }}
+                    </div>
                   {%- endif -%}
                   {%- if subitem.gfx -%}
-                    <div class="card__gfx">
+                    <div class='card__gfx'>
                       {%- if subitem.gfx contains '.svg' -%}
                         {%- assign gfxPath = subitem.gfx -%}
                         {%- include gfxPath -%}
                       {%- else -%}
-                        <img src="{{ subitem.gfx.src }}" alt="{{ subitem.gfx.alt }}">
+                        <img
+                          src='{{ subitem.gfx.src }}'
+                          alt='{{ subitem.gfx.alt }}'
+                        >
                       {%- endif -%}
                     </div>
                   {%- endif -%}
                   {%- if subitem.quote -%}
-                    <blockquote class="{{ item.type }}__block">
+                    <blockquote class='{{ item.type }}__block'>
                       {%- if subitem.quote.summary and subitem.quote.full -%}
                         <details>
-                          <summary>{{ subitem.quote.summary | markdownify }}</summary>
+                          <summary>
+                            {{ subitem.quote.summary | markdownify }}
+                          </summary>
                           <div>{{ subitem.quote.full | markdownify }}</div>
                         </details>
                       {%- else -%}
@@ -88,7 +106,12 @@
                       {%- endif -%}
                       {%- if subitem.person or subitem.position -%}
                         <div>
-                          {%- if subitem.person -%}— <b>{{ subitem.person }}</b>{%- endif -%}{%- if subitem.position -%}, {{ subitem.position }}{%- endif -%}
+                          {%- if subitem.person -%}
+                            — <b>{{ subitem.person }}</b>
+                          {%- endif -%}
+                          {%- if subitem.position -%}
+                            , {{ subitem.position }}
+                          {%- endif -%}
                         </div>
                       {%- endif -%}
                     </blockquote>
@@ -98,29 +121,34 @@
             </div>
           {%- endif -%}
           {%- if item.form -%}
-            <form class="{{ item.type }}__form" name="contact" netlify>
-              <div class="{{ item.type }}__row">
-                <label for="contactName">Name</label>
-                <input type="text" name="name" id="contactName">
+            <form class='{{ item.type }}__form' name='contact' netlify>
+              <div class='{{ item.type }}__row'>
+                <label for='contactName'>Name</label>
+                <input type='text' name='name' id='contactName'>
               </div>
-              <div class="{{ item.type }}__row">
-                <label for="contactEmail">Email</label>
-                <input type="email" name="email" id="contactEmail">
+              <div class='{{ item.type }}__row'>
+                <label for='contactEmail'>Email</label>
+                <input type='email' name='email' id='contactEmail'>
               </div>
-              <div class="{{ item.type }}__row">
-                <label for="contactText">Message</label>
-                <textarea name="message" id="contactText" rows="6"></textarea>
+              <div class='{{ item.type }}__row'>
+                <label for='contactText'>Message</label>
+                <textarea name='message' id='contactText' rows='6'></textarea>
               </div>
-              <button type="submit">Send</button>
+              <button type='submit'>Send</button>
             </form>
           {%- endif -%}
           {%- if item.note -%}
-            <div class="{{ item.type }}__note">{{ item.note | markdownify }}</div>
+            <div class='{{ item.type }}__note'>
+              {{ item.note | markdownify }}
+            </div>
           {%- endif -%}
         </div>
         {%- if item.icon -%}
-          <div class="cover">
-            {%- assign sectionPath = 'gfx/' | append: item.icon | append: '.svg' -%}
+          <div class='cover'>
+            {%- assign sectionPath = 'gfx/'
+              | append: item.icon
+              | append: '.svg'
+            -%}
             {%- include sectionPath, item: item -%}
           </div>
         {%- endif -%}
