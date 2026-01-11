@@ -6,6 +6,11 @@
     <link rel='stylesheet' href='/style.css'>
     <title>Studio CiTA</title>
     <meta name='description' content='Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.'>
+    <meta property='og:title' content='Studio CiTA'>
+    <meta property='og:description' content='Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.'>
+    <meta property='og:image' content='https://www.cita.hr/gfx/cover-en.jpg'>
+    <meta property='og:url' content='https://www.cita.hr/en/'>
+    <meta property='og:type' content='website'>
     <link
       rel='icon'
       type='image/png'
@@ -29,7 +34,83 @@
           rel='alternate'
           href='https://www.cita.hr/en/'
           hreflang='x-default'
-        ></head>
+        ><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.cita.hr/#organization",
+      "name": "Studio CiTA",
+      "url": "https://www.cita.hr",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.cita.hr/favicon/favicon-96x96.png"
+      },
+      "description": "Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.",
+      "founder": {
+        "@type": "Person",
+        "name": "Silvestar Bistrović",
+        "url": "https://www.silvestar.codes/",
+        "sameAs": ["https://www.linkedin.com/in/starbist/","https://github.com/maliMirkec","https://codepen.io/CiTA"]
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "silvestar@cita.hr",
+        "contactType": "Customer Service"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.cita.hr/#website",
+      "url": "https://www.cita.hr",
+      "name": "Studio CiTA",
+      "description": "Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.",
+      "publisher": {
+        "@id": "https://www.cita.hr/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.cita.hr/en/#webpage",
+      "url": "https://www.cita.hr/en/",
+      "name": "Studio CiTA",
+      "description": "Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.",
+      "isPartOf": {
+        "@id": "https://www.cita.hr/#website"
+      },
+      "about": {
+        "@id": "https://www.cita.hr/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.cita.hr/#service",
+      "name": "Studio CiTA",
+      "description": "Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.",
+      "url": "https://www.cita.hr",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.cita.hr/gfx/cover-en.jpg"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sunčana 6",
+        "addressLocality": "Josipovac",
+        "postalCode": "31221",
+        "addressCountry": "HR"
+      },
+      "priceRange": "$$",
+      "areaServed": "Worldwide",
+      "serviceType": ["Website Development","E-commerce Development","Web Maintenance","PageSpeed Optimization","Web Development Consulting"]
+    }
+  ]
+}
+</script>
+
+  </head>
   <body>
     <header><nav>
       <ul>

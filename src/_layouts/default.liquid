@@ -6,6 +6,11 @@
     <link rel='stylesheet' href='/style.css'>
     <title>{{ title }}</title>
     <meta name='description' content='{{ description }}'>
+    <meta property='og:title' content='{{ title }}'>
+    <meta property='og:description' content='{{ description }}'>
+    <meta property='og:image' content='{{ site.url }}{{ site.cover[lang] }}'>
+    <meta property='og:url' content='{{ site.url | append: page.url }}'>
+    <meta property='og:type' content='website'>
     <link
       rel='icon'
       type='image/png'
@@ -42,6 +47,7 @@
         >
       {%- endif -%}
     {%- endif -%}
+    {% include 'structured-data' %}
   </head>
   <body>
     {% include 'header' %}

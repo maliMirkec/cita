@@ -1,0 +1,75 @@
+<script type='application/ld+json'>
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ site.url }}/#organization",
+        "name": "{{ site.name }}",
+        "url": "{{ site.url }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}{{ site.logo }}"
+        },
+        "description": "{{ site.description[lang] }}",
+        "founder": {
+          "@type": "Person",
+          "name": "{{ site.founder.name }}",
+          "url": "{{ site.founder.url }}",
+          "sameAs": {{ site.founder.sameAs | json }}
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "{{ site.email }}",
+          "contactType": "{{ site.contactType[lang] }}"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}/#website",
+        "url": "{{ site.url }}",
+        "name": "{{ site.name }}",
+        "description": "{{ description }}",
+        "publisher": {
+          "@id": "{{ site.url }}/#organization"
+        },
+        "inLanguage": "{{ lang }}"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "{{ site.url | append: page.url }}#webpage",
+        "url": "{{ site.url | append: page.url }}",
+        "name": "{{ title }}",
+        "description": "{{ description }}",
+        "isPartOf": {
+          "@id": "{{ site.url }}/#website"
+        },
+        "about": {
+          "@id": "{{ site.url }}/#organization"
+        },
+        "inLanguage": "{{ lang }}"
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "{{ site.url }}/#service",
+        "name": "{{ site.name }}",
+        "description": "{{ site.description[lang] }}",
+        "url": "{{ site.url }}",
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}{{ site.cover[lang] }}"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "{{ site.address.streetAddress }}",
+          "addressLocality": "{{ site.address.addressLocality }}",
+          "postalCode": "{{ site.address.postalCode }}",
+          "addressCountry": "{{ site.address.addressCountry }}"
+        },
+        "priceRange": "{{ site.priceRange }}",
+        "areaServed": "{{ site.areaServed[lang] }}",
+        "serviceType": {{ site.serviceTypes[lang] | json }}
+      }
+    ]
+  }
+</script>
