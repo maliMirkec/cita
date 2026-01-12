@@ -187,7 +187,7 @@ section {
   align-items: center;
   padding-inline: 1rem;
   margin-block-end: -1rem;
-  padding-block: clamp(5rem, calc(0rem + 13.333vw), 10rem);
+  padding-block: clamp(2.5rem, calc(-5rem + 20vw), 10rem);
 }
 
 section:not(:last-child) {
