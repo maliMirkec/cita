@@ -111,7 +111,7 @@ sections:
           **Ishod:**<br>
           Optimizirana i moderna web stranica koja radi godinama.
       - title:
-          href: https://colours-alliance.eu/wp-admin
+          href: https://colours-alliance.eu/
           text: Colours Alliance
         tags:
           - WordPress

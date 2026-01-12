@@ -110,7 +110,7 @@ sections:
           **Outcome:**<br>
           An optimized and modern website that runs for years.
       - title:
-          href: https://colours-alliance.eu/wp-admin
+          href: https://colours-alliance.eu/
           text: Colours Alliance
         tags:
           - WordPress

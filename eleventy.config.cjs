@@ -2,6 +2,8 @@ const markdownIt = require('markdown-it');
 const CleanCSS = require('clean-css');
 const postcss = require('postcss');
 const autoprefixer = require('autoprefixer');
+const fs = require('fs');
+const path = require('path');
 
 module.exports = async function(eleventyConfig) {
   const md = new markdownIt({
@@ -10,6 +12,17 @@ module.exports = async function(eleventyConfig) {
 
   eleventyConfig.addFilter('markdownify', (content) => {
     return md.render(content);
+  });
+
+  // Filter to read and return file contents
+  eleventyConfig.addFilter('readFile', (filePath) => {
+    try {
+      const fullPath = path.join(__dirname, '_site', filePath);
+      return fs.readFileSync(fullPath, 'utf8');
+    } catch (err) {
+      console.error(`Error reading file ${filePath}:`, err);
+      return '';
+    }
   });
 
   // Process and minify CSS with Autoprefixer
