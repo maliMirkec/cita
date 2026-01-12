@@ -47,6 +47,7 @@ body {
 
 body:has(section:only-child) {
   min-block-size: 100dvh;
+  grid-template-rows: auto 1fr auto;
 }
 
 ::selection {

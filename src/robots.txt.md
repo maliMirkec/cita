@@ -5,9 +5,9 @@ templateEngineOverride: liquid
 ---
 
 {%- if BRANCH == 'master' -%}
-User-agent: _
+User-agent: *
 Allow: /
 {%- else -%}
-User-agent: _
+User-agent: *
 Disallow: /
 {%- endif -%}

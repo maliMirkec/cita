@@ -1,6 +1,6 @@
 ---
 layout: default
-lang: en
+lang: hr
 eleventyExcludeFromCollections: true
 title: Hvala na poruci
 description: Studio CiTA je dugogodišnji inženjerski studio specijaliziran za razvoj izazovnih web stranica i učinkovitih online trgovina.

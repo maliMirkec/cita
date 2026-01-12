@@ -9,3 +9,6 @@ package-lock.json
 
 # Git
 .git
+
+# Robots.txt template (contains plain text, not markdown)
+src/robots.txt.md

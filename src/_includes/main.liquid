@@ -127,20 +127,28 @@
               method='POST'
               action='/{{ lang }}/ok/'
               data-netlify='true'
+              netlify-honeypot='bot-field'
             >
+              <p style='display:none;'>
+                <label>
+                  Don't fill this out if you're human:
+                  <input name='bot-field' type='text'>
+                </label>
+              </p>
+              <input type='hidden' name='language' value='{{ lang }}'>
               <div class='{{ item.type }}__row'>
-                <label for='contactName'>Name</label>
+                <label for='contactName'>{{ site.form.name[lang] }}</label>
                 <input type='text' name='name' id='contactName'>
               </div>
               <div class='{{ item.type }}__row'>
-                <label for='contactEmail'>Email</label>
+                <label for='contactEmail'>{{ site.form.email[lang] }}</label>
                 <input type='email' name='email' id='contactEmail'>
               </div>
               <div class='{{ item.type }}__row'>
-                <label for='contactText'>Message</label>
+                <label for='contactText'>{{ site.form.message[lang] }}</label>
                 <textarea name='message' id='contactText' rows='6'></textarea>
               </div>
-              <button type='submit'>Send</button>
+              <button type='submit'>{{ site.form.send[lang] }}</button>
             </form>
           {%- endif -%}
           {%- if item.note -%}

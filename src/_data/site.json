@@ -50,5 +50,23 @@
       "Optimizacija brzine učitavanja",
       "Konzultacije za web razvoj"
     ]
+  },
+  "form": {
+    "name": {
+      "en": "Name",
+      "hr": "Ime"
+    },
+    "email": {
+      "en": "Email",
+      "hr": "Email"
+    },
+    "message": {
+      "en": "Message",
+      "hr": "Poruka"
+    },
+    "send": {
+      "en": "Send",
+      "hr": "Pošalji"
+    }
   }
 }
