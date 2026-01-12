@@ -135,7 +135,6 @@
                   <input name='bot-field' type='text'>
                 </label>
               </p>
-              <input type='hidden' name='language' value='{{ lang }}'>
               <div class='{{ item.type }}__row'>
                 <label for='contactName'>{{ site.form.name[lang] }}</label>
                 <input type='text' name='name' id='contactName'>
@@ -148,6 +147,7 @@
                 <label for='contactText'>{{ site.form.message[lang] }}</label>
                 <textarea name='message' id='contactText' rows='6'></textarea>
               </div>
+              <input type='hidden' name='language' value='{{ lang }}'>
               <button type='submit'>{{ site.form.send[lang] }}</button>
             </form>
           {%- endif -%}
