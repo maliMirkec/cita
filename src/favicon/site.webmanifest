@@ -1,0 +1,21 @@
+{
+  "name": "Studio CiTA",
+  "short_name": "CiTA",
+  "icons": [
+    {
+      "src": "/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#332450",
+  "background_color": "#f0eef5",
+  "display": "standalone"
+}

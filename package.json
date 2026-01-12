@@ -1,15 +1,40 @@
 {
-  "name": "cita",
-  "version": "1.4.1",
-  "description": "Website for CiTA d.o.o.",
-  "main": "index",
-  "repository": "git@bitbucket.org:maliMirkec/cita.git",
-  "author": "Star Bist <malimirkeccita@gmail.com>",
-  "license": "MIT",
+  "name": "cita.hr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build-clean": "gulp"
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "format": "prettier --write \"**/*.{css,js,md,liquid}\"",
+    "format:check": "prettier --check \"**/*.{css,js,md,liquid}\"",
+    "prepare": "husky"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maliMirkec/cita.git"
+  },
+  "keywords": [],
+  "author": "Silvestar Bistrović <me@silvestar.codes> (https://www.silvestar.codes/)",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/maliMirkec/cita/issues"
+  },
+  "homepage": "https://github.com/maliMirkec/cita#readme",
   "dependencies": {
-    "starter-project": "^1.1.14"
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.10.0",
+    "autoprefixer": "^10.4.23",
+    "clean-css": "^5.3.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "postcss": "^8.5.6",
+    "prettier": "^3.7.4"
+  },
+  "lint-staged": {
+    "*.{css,js,md,liquid}": "prettier --write"
   }
 }

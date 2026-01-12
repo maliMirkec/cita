@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <link rel="canonical" href="https://www.cita.hr/en/">
+  <script>
+    (function() {
+      const userLang = navigator.language || navigator.userLanguage;
+      const isHrvatski = userLang.toLowerCase().startsWith('hr');
+      const redirectUrl = isHrvatski ? '/hr/' : '/en/';
+      window.location.href = redirectUrl;
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/en/">
+  </noscript>
+</head>
+<body>
+  <p>Redirecting...</p>
+  <p>
+    Please select your language:
+    <a href="/en/">English</a> |
+    <a href="/hr/">Hrvatski</a>
+  </p>
+</body>
+</html>

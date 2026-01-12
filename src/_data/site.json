@@ -1,0 +1,54 @@
+{
+  "url": "https://www.cita.hr",
+  "name": "Studio CiTA",
+  "description": {
+    "en": "Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.",
+    "hr": "Studio CiTA je dugogodišnji inženjerski studio specijaliziran za razvoj izazovnih web stranica i učinkovitih online trgovina."
+  },
+  "logo": "/favicon/favicon-96x96.png",
+  "cover": {
+    "en": "/gfx/cover-en.jpg",
+    "hr": "/gfx/cover-hr.jpg"
+  },
+  "email": "silvestar@cita.hr",
+  "founder": {
+    "name": "Silvestar Bistrović",
+    "url": "https://www.silvestar.codes/",
+    "sameAs": [
+      "https://www.linkedin.com/in/starbist/",
+      "https://github.com/maliMirkec",
+      "https://codepen.io/CiTA"
+    ]
+  },
+  "contactType": {
+    "en": "Customer Service",
+    "hr": "Korisnička podrška"
+  },
+  "address": {
+    "streetAddress": "Sunčana 6",
+    "addressLocality": "Josipovac",
+    "postalCode": "31221",
+    "addressCountry": "HR"
+  },
+  "priceRange": "$$",
+  "areaServed": {
+    "en": "Worldwide",
+    "hr": "Svijet"
+  },
+  "serviceTypes": {
+    "en": [
+      "Website Development",
+      "E-commerce Development",
+      "Web Maintenance",
+      "PageSpeed Optimization",
+      "Web Development Consulting"
+    ],
+    "hr": [
+      "Razvoj web stranica",
+      "Izrada web shopa",
+      "Održavanje web servisa",
+      "Optimizacija brzine učitavanja",
+      "Konzultacije za web razvoj"
+    ]
+  }
+}
