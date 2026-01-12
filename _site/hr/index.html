@@ -436,7 +436,13 @@ Potpuno nova WordPress tema izgrađena oko WordPress plugina razvijenog posebno 
         
       >
         <div class='inner'><h2 class='title'>Započnimo suradnju</h2><div class='description'><p>Javite nam se. Nijedan projekt nije premalen ili previše složen.</p>
-</div><form class='contact__form' name='contact' netlify>
+</div><form
+              class='contact__form'
+              name='contact'
+              method='POST'
+              action='/hr/ok/'
+              data-netlify='true'
+            >
               <div class='contact__row'>
                 <label for='contactName'>Name</label>
                 <input type='text' name='name' id='contactName'>
