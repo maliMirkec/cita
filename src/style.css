@@ -45,6 +45,10 @@ body {
   margin: unset;
 }
 
+body:has(section:only-child) {
+  min-block-size: 100dvh;
+}
+
 ::selection {
   color: var(--c5);
   background-color: var(--c2);
@@ -178,16 +182,19 @@ footer p {
 }
 
 section {
-  background-image: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(0, 0, 0, 0.025)
-  );
   display: grid;
   align-items: center;
   padding-inline: 1rem;
   margin-block-end: -1rem;
   padding-block: clamp(2.5rem, calc(-5rem + 20vw), 10rem);
+}
+
+section:not(:only-child) {
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.025)
+  );
 }
 
 section:not(:last-child) {

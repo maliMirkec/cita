@@ -7,7 +7,7 @@ description: Studio CiTA je dugogodišnji inženjerski studio specijaliziran za 
 sections:
   - title: Hvala na poruci
     description: |
-      Očekujte odgovor na poruku vrlo brzo. ヽ(^◇^*)/
+      Očekujte odgovor na poruku vrlo brzo. (●'◡'●)
     cta:
       href: '/hr/'
       text: Natrag na početnu stranicu

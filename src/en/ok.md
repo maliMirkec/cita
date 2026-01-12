@@ -7,7 +7,7 @@ description: Studio CiTA is an experienced engineering studio that specializes i
 sections:
   - title: Thank you for message
     description: |
-      The answer to your message will arrive soon. ヽ(^◇^*)/
+      The answer to your message will arrive soon. (●'◡'●)
     cta:
       href: '/en/'
       text: Go back to homepage
