@@ -6,6 +6,9 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = async function(eleventyConfig) {
+  // Add BRANCH environment variable as global data
+  eleventyConfig.addGlobalData('BRANCH', process.env.BRANCH || '');
+
   const md = new markdownIt({
     html: true
   });
