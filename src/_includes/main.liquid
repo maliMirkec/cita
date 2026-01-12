@@ -121,7 +121,13 @@
             </div>
           {%- endif -%}
           {%- if item.form -%}
-            <form class='{{ item.type }}__form' name='contact' netlify>
+            <form
+              class='{{ item.type }}__form'
+              name='contact'
+              method='POST'
+              action='/{{ lang }}/ok/'
+              data-netlify='true'
+            >
               <div class='{{ item.type }}__row'>
                 <label for='contactName'>Name</label>
                 <input type='text' name='name' id='contactName'>
