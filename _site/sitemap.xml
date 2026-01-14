@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <p><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-<loc>https://www.cita.hr/en/</loc>
-<lastmod>2026-01-12</lastmod>
+<loc>https://www.cita.hr/en/blog/</loc>
+<lastmod>2025-03-26</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url><url>
@@ -12,6 +12,36 @@
 </url><url>
 <loc>https://www.cita.hr/style.css</loc>
 <lastmod>2026-01-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url><url>
+<loc>https://www.cita.hr/en/blog/website-101/</loc>
+<lastmod>2026-01-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url><url>
+<loc>https://www.cita.hr/hr/blog/</loc>
+<lastmod>2026-01-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url><url>
+<loc>https://www.cita.hr/hr/blog/web-stranica-101/</loc>
+<lastmod>2026-01-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url><url>
+<loc>https://www.cita.hr/en/</loc>
+<lastmod>2026-01-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url><url>
+<loc>https://www.cita.hr/hr/rss.xml</loc>
+<lastmod>2026-01-14</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url><url>
+<loc>https://www.cita.hr/en/rss.xml</loc>
+<lastmod>2026-01-14</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url></urlset></p>

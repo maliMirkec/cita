@@ -12,3 +12,6 @@ package-lock.json
 
 # Robots.txt template (contains plain text, not markdown)
 src/robots.txt.md
+
+# RSS feeds (XML files that Prettier's Liquid parser can't handle)
+src/**/rss.liquid

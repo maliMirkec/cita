@@ -1,13 +1,21 @@
 <header>
-  {%- if sections -%}
-    <nav>
-      <ul>
-        <li>
-          <a href='/{{ lang }}/'>
-            {%- include 'gfx/studio-cita-indigo.svg' -%}
-            <span class='sr-only'>{{ title }}</span>
-          </a>
-        </li>
+  <nav>
+    <ul>
+      <li>
+        <a href='/{{ lang }}/'>
+          {%- include 'gfx/studio-cita-indigo.svg' -%}
+          <span class='sr-only'>{{ title }}</span>
+        </a>
+      </li>
+      {%- if page.url contains 'blog' and site.nav[lang] -%}
+        {%- for item in site.nav[lang] -%}
+          {%- if item.href and item.title -%}
+            <li>
+              <a href='{{ item.href }}'>{{ item.title }}</a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- elsif sections -%}
         {%- for item in sections -%}
           {%- if item.nav -%}
             <li>
@@ -15,7 +23,7 @@
             </li>
           {%- endif -%}
         {%- endfor -%}
-      </ul>
-    </nav>
-  {%- endif -%}
+      {%- endif -%}
+    </ul>
+  </nav>
 </header>

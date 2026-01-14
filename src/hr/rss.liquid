@@ -1,0 +1,49 @@
+---
+lang: hr
+permalink: /hr/rss.xml
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+
+<channel>
+    <title>{{ site.name }} Blog</title>
+    <link>{{ site.url }}/hr/blog/</link>
+    <description>{{ site.description.hr }}</description>
+    <language>hr</language>
+    {%- assign articles = collections.blogHr | sort: "published" | reverse -%}
+    {%- if articles.size > 0 -%}
+    <lastBuildDate>{{ articles[0].data.published | date: '%a, %d %b %Y 00:00:00 +0000' }}</lastBuildDate>
+    {%- endif -%}
+    <atom:link href="{{ site.url }}/hr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    {%- assign now = 'now' | date: "%Y-%m-%d" -%}
+    {%- for article in articles -%}
+    {%- assign checkDate = article.data.published | date: "%Y-%m-%d" -%}
+    {%- if checkDate <= now -%}
+    {%- assign authorKey = article.data.author -%}
+    {%- assign authorName = site.authors[authorKey].name | default: site.founder.name -%}
+
+    <item>
+        <title>{{ article.data.title | xml_escape }}</title>
+        <link>{{ site.url }}{{ article.url }}</link>
+        <pubDate>{{ article.data.published | date: '%a, %d %b %Y 00:00:00 +0000' }}</pubDate>
+        <dc:creator><![CDATA[{{ authorName }}]]></dc:creator>
+        <guid isPermaLink="true">{{ site.url }}{{ article.url }}</guid>
+
+        <description><![CDATA[{{ article.data.description }}]]></description>
+
+        <content:encoded><![CDATA[
+            {{ article.content }}
+        ]]></content:encoded>
+    </item>
+    {%- endif -%}
+    {%- endfor -%}
+
+</channel>
+</rss>

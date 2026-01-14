@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel><title>Studio CiTA Blog</title>
+    <link>https://www.cita.hr/en/blog/</link>
+    <description>Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.</description><lastBuildDate>Wed, 14 Jan 2026 00:00:00 +0000</lastBuildDate><docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <generator>Eleventy</generator>
+    <language>en</language>
+    <image>
+      <title>Studio CiTA</title>
+      <url>https://www.cita.hr/favicon/favicon-96x96.png</url>
+      <link>https://www.cita.hr/en/</link>
+    </image>
+    <copyright>All rights reserved:, Silvestar Bistrović</copyright>
+    <atom:link href="https://www.cita.hr/en/rss/" rel="self" type="application/rss+xml"/><item>
+        <title><![CDATA[So you think your website is doing great]]></title>
+        <link>https://www.cita.hr/en/blog/website-101/</link>
+        <guid>https://www.cita.hr/en/blog/website-101/</guid>
+        <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
+        <description><![CDATA[Most websites are not perfect, far from it. There are so many things that could go wrong or just be forgotten.]]></description>
+        <author>silvestar@cita.hr (Silvestar Bistrović)</author>
+      </item></channel>
+</rss>

@@ -68,5 +68,56 @@
       "en": "Send",
       "hr": "Pošalji"
     }
+  },
+  "nav": {
+    "en": [
+      {
+        "href": "/en/blog/",
+        "title": "Blog"
+      },
+      {
+        "href": "/en/#services",
+        "title": "Services"
+      },
+      {
+        "href": "/en/#contact",
+        "title": "Contact"
+      }
+    ],
+    "hr": [
+      {
+        "href": "/hr/blog/",
+        "title": "Blog"
+      },
+      {
+        "href": "/hr/#usluge",
+        "title": "Usluge"
+      },
+      {
+        "href": "/hr/#kontakt",
+        "title": "Kontakt"
+      }
+    ]
+  },
+  "authors": {
+    "cita": {
+      "name": "Silvestar Bistrović"
+    }
+  },
+  "translations": {
+    "en": {
+      "published": "Published",
+      "updated": "Updated",
+      "author": "Author",
+      "more": "Read the article",
+      "copyright": "All rights reserved"
+    },
+    "hr": {
+      "published": "Objavljeno",
+      "updated": "Ažurirano",
+      "author": "Autor",
+      "more": "Pročitajte cijeli članak",
+      "copyright": "Sva prava pridržana"
+    }
   }
 }

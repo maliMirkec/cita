@@ -227,9 +227,15 @@ sections:
     description: |
       We always try to give something back to the community.
     list:
-      - title: Published author & blog writer
+      - title: Our blog
         description: |
-          Among our (not-so-regular) [blog posts](https://www.silvestar.codes/articles/), some articles got featured in dev magazines like:
+          Latest blog posts:
+
+          - [So you think your website is doing great](/en/blog/website-101/)
+          - [All articles](/en/blog/)
+      - title: Published authors & blog writers
+        description: |
+          Our developers run (not-so-regular) [blog posts](https://www.silvestar.codes/articles/), and some articles got featured in dev magazines like:
 
           - [Smashing Magazine](https://www.smashingmagazine.com/author/silvestar-bistrovic/)
           - [CSS-Tricks](https://css-tricks.com/author/silvestar/)

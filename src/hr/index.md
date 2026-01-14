@@ -225,9 +225,15 @@ sections:
     description: |
       Uvijek se trudimo nešto vratiti zajednici.
     list:
-      - title: Objavljeni blog autor
+      - title: Naš blog
         description: |
-          Među našim (ne baš redovitim) [objavama na blogu](https://www.silvestar.codes/articles/), neki članci su objavljeni u provjerenim magazinima poput:
+          Posljednje blog objave:
+
+          - [Mislite da vaša stranica dobro funkcionira](/hr/blog/web-stranica-101/)
+          - [Sve objave](/hr/blog/)
+      - title: Objavljeni blog autori
+        description: |
+          Naši developeri vode (ne baš redovit) [blog](https://www.silvestar.codes/articles/), a neki članci su objavljeni u provjerenim magazinima poput:
 
           - [Smashing Magazine](https://www.smashingmagazine.com/author/silvestar-bistrovic/)
           - [CSS-Tricks](https://css-tricks.com/author/silvestar/)

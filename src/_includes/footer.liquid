@@ -1,15 +1,23 @@
 <footer>
   <ul>
-    <li><a href='/en/'>EN</a></li>
-    <li><a href='/hr/'>HR</a></li>
+    {%- if lang == 'hr' and altPage -%}
+      <li><a href='{{ altPage }}'>EN</a></li>
+    {%- else -%}
+      <li><a href='/en/'>EN</a></li>
+    {%- endif -%}
+    {%- if lang == 'en' and altPage -%}
+      <li><a href='{{ altPage }}'>HR</a></li>
+    {%- else -%}
+      <li><a href='/hr/'>HR</a></li>
+    {%- endif -%}
   </ul>
   <div>
     <a href=''>
       {%- include 'gfx/studio-cita-indigo.svg' -%}
-      <span class='sr-only'>{{ title }}</span>
+      <span class='sr-only'>{{ site.name }}</span>
     </a>
   </div>
   <p>
-    &copy; <a href='/{{ lang }}/'>{{ title }}</a>
+    &copy; <a href='/{{ lang }}/'>{{ site.name }}</a>
   </p>
 </footer>

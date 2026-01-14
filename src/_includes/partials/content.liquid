@@ -1,0 +1,40 @@
+<section class='content'>
+  <div class='inner'>
+    <div class='content__body'>
+      {{ content | markdownify }}
+    </div>
+    <div class='content__footer'>
+      {%- assign defaultDateFormat = '%Y-%m-%d' -%}
+      {%- if lang == 'hr' -%}
+        {%- assign localDateFormat = '%d.%m.%Y.' -%}
+      {%- elsif lang == 'en' -%}
+        {%- assign localDateFormat = '%Y-%m-%d' -%}
+      {%- endif -%}
+      {%- assign publishDate = published | date: defaultDateFormat -%}
+      {%- assign updatedDate = updated | date: defaultDateFormat -%}
+      {%- if author and site.authors[author] -%}
+        <p>
+          {{ site.translations[lang].author }}:
+          {{ site.authors[author].name }}
+        </p>
+      {%- endif -%}
+      {%- if published -%}
+        <p>
+          {{ site.translations[lang].published }}:
+          <time datetime='{{ publishDate }}'>
+            {{ published | date: localDateFormat }}
+          </time>
+        </p>
+        {%- if updatedDate and publishDate != updatedDate -%}
+          <p>
+            {{ site.translations[lang].updated }}:
+            <time datetime='{{ updatedDate }}'>
+              {{ updated | date: localDateFormat }}
+            </time>
+          </p>
+        {%- endif -%}
+      {%- endif -%}
+      <p><a href='/{{ lang }}/rss.xml'>RSS</a></p>
+    </div>
+  </div>
+</section>

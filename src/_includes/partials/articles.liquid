@@ -1,0 +1,84 @@
+{%- assign list = collections[collection] | sort: 'published' | reverse -%}
+
+{%- if list -%}
+  <section class='hero'>
+    <div class='inner'>
+      <h1 class='title'>{{ title }}</h1>
+      <p class='description'>{{ description }}</p>
+    </div>
+  </section>
+  <section class='articles'>
+    <div class='inner'>
+      <ul>
+        {%- assign defaultDateFormat = '%Y-%m-%d' -%}
+        {%- if lang == 'hr' -%}
+          {%- assign localDateFormat = '%d.%m.%Y.' -%}
+        {%- elsif lang == 'en' -%}
+          {%- assign localDateFormat = '%Y-%m-%d' -%}
+        {%- endif -%}
+        {% for article in list %}
+          <li class='articles__item'>
+            {%- assign publishDate = article.data.published
+              | date: defaultDateFormat
+            -%}
+            <h2 class='articles__title'>
+              <a href='{{ article.url }}'>{{ article.data.title }}</a>
+            </h2>
+            <p class='articles__description'>{{ article.data.description }}</p>
+            <p class='articles__date'>
+              <time datetime='{{ publishDate }}'>
+                {{ article.data.published | date: localDateFormat }}
+              </time>
+            </p>
+            <p>
+              <a href='{{ article.url }}'>{{ site.translations[lang].more }}</a>
+            </p>
+          </li>
+        {% endfor %}
+      </ul>
+      <p><a href='/{{ lang }}/rss.xml'>RSS</a></p>
+    </div>
+  </section>
+
+  {% comment %}
+    <section class='content'>
+      <div class='inner'>
+        <div class='content__body'>
+          {{ content | markdownify }}
+        </div>
+        <div class='content__footer'>
+          {%- assign defaultDateFormat = '%Y-%m-%d' -%}
+          {%- if lang == 'hr' -%}
+            {%- assign localDateFormat = '%d.%m.%Y.' -%}
+          {%- elsif lang == 'en' -%}
+            {%- assign localDateFormat = '%Y-%m-%d' -%}
+          {%- endif -%}
+          {%- assign publishDate = published | date: defaultDateFormat -%}
+          {%- assign updatedDate = updated | date: defaultDateFormat -%}
+          {%- if author and site.authors[author] -%}
+            <p>
+              {{ site.translations[lang]['author'] }}:
+              {{ site.authors[author].name }}
+            </p>
+          {%- endif -%}
+          {%- if published -%}
+            <p>
+              {{ site.translations[lang]['published'] }}:
+              <time datetime="{{ publishDate }}">
+                {{ published | date: localDateFormat }}
+              </time>
+            </p>
+            {%- if updatedDate and publishDate != updatedDate -%}
+              <p>
+                {{ site.translations[lang]['updated'] }}:
+                <time datetime="{{ updatedDate }}">
+                  {{ updated | date: localDateFormat }}
+                </time>
+              </p>
+            {%- endif -%}
+          {%- endif -%}
+          <p><a href="/{{ lang }}/rss.xml">RSS</a></p>
+        </div>
+    </section>
+  {% endcomment %}
+{%- endif -%}
