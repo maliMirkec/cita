@@ -1,22 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel><title>Studio CiTA Blog</title>
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+
+<channel>
+    <title>Studio CiTA Blog</title>
     <link>https://www.cita.hr/hr/blog/</link>
-    <description>Studio CiTA je dugogodišnji inženjerski studio specijaliziran za razvoj izazovnih web stranica i učinkovitih online trgovina.</description><lastBuildDate>Wed, 14 Jan 2026 00:00:00 +0000</lastBuildDate><docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <generator>Eleventy</generator>
-    <language>hr</language>
-    <image>
-      <title>Studio CiTA</title>
-      <url>https://www.cita.hr/favicon/favicon-96x96.png</url>
-      <link>https://www.cita.hr/hr/</link>
-    </image>
-    <copyright>Sva prava pridržana:, Silvestar Bistrović</copyright>
-    <atom:link href="https://www.cita.hr/hr/rss/" rel="self" type="application/rss+xml"/><item>
-        <title><![CDATA[Mislite da vaša stranica dobro funkcionira]]></title>
+    <description>Studio CiTA je dugogodišnji inženjerski studio specijaliziran za razvoj izazovnih web stranica i učinkovitih online trgovina.</description>
+    <language>hr</language><lastBuildDate>Wed, 14 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cita.hr/hr/rss.xml" rel="self" type="application/rss+xml" />
+
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency><item>
+        <title>Mislite da vaša stranica dobro funkcionira</title>
         <link>https://www.cita.hr/hr/blog/web-stranica-101/</link>
-        <guid>https://www.cita.hr/hr/blog/web-stranica-101/</guid>
         <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[Silvestar Bistrović]]></dc:creator>
+        <guid isPermaLink="true">https://www.cita.hr/hr/blog/web-stranica-101/</guid>
+
         <description><![CDATA[Većina web stranica nije savršena, daleko od toga. Toliko je stvari koje mogu poći po zlu ili se zaborave.]]></description>
-        <author>silvestar@cita.hr (Silvestar Bistrović)</author>
-      </item></channel>
+
+        <content:encoded><![CDATA[
+            <h1>Mislite da vaša web stranica dobro funkcionira</h1>
+<p>Većina web stranica nije savršena, daleko od toga. Toliko je stvari koje mogu poći po zlu ili se zaborave.</p>
+<p>Ako niste web profesionalac, možda vas nije briga. Ono što ne znate ne može vam naštetiti, zar ne? Naravno, to nije ispravan način razmišljanja. Umjesto toga, trebali biste angažirati profesionalnog web developera koji vam može pomoći u poboljšanju vaše online vidljivosti i pomoći vam da proširite svoje poslovanje.</p>
+<p>Vidljivost vaše web stranice većinom se odnosi na tehničku ispravnost i promet. Iako se promet ne može kontrolirati, tehnički detalji se mogu poboljšati i optimizirati.</p>
+<p>Recimo da vaša web stranica ima HTML pogreške. Dok preglednici mogu biti popustljivi i prikazivati web stranicu (gotovo) ispravno, drugi alati vas mogu kazniti. Ponekad čak i valjan, ali loše strukturiran HTML kod može naštetiti vašim rezultatima. Na primjer, Google bi se mogao mučiti s indeksiranjem vaše web stranice ako postoje prevelike pogreške ili ako vaša web stranica ne koristi semantičke tagove.</p>
+<p>Neispravan JavaScript neće naštetiti samo vašim rezultatima, već će spriječiti ispravan rad vaše web stranice. Previše JavaScript koda može usporiti vašu stranicu pa možete biti kažnjeni te će vaše PageSpeed ocjene biti iznimno loše.</p>
+<p>Previše CSS koda može usporiti renderiranje vaše stranice, što može uzrokovati “skokove” kod učitavanja stranice ali i vizualne nepravilnosti stilu koje je nerijetko teško otkloniti i ispraviti.</p>
+<p>Možda ne znate kako dodati og slike ili strukturirane podatke pa će prizak rezultata pretraživanja na tražilicama biti štur ili nepotpun.</p>
+<p>A o sigurnosti web stranica bolje da ni ne počinjemo. Sigurnost ionako većina ljudi danas uzima zdravo za gotovo, a web stranice se svakodnevno hakiraju.</p>
+<p>Toliko. Mnogo. Stvari.</p>
+<p>Toliko mnogo stvari za koje možda nikada niste čuli, ali vam mogu pomoći da uspostavite bolju vidljivost za sebe i svoje poslovanje online. Bolja vidljivost od konkurencije. Bolja vidljivost koja će privući više posjetitelja. Bolja vidljivost koja će generirati više potencijalnih klijenata. Bolja vidljivost koja će povećati vaše prihode.</p>
+<p>Pronađite pouzdanog web programera koji će se pobrinuti za sve ove stvari umjesto vas.</p>
+<p>Zapratite ovaj blog jer ćemo uskoro pisati više o razvoju uspješne web stranice iz vlastitog, ljudskog iskustva.</p>
+
+        ]]></content:encoded>
+    </item></channel>
 </rss>

@@ -3,7 +3,7 @@ layout: default
 lang: hr
 altLang: en
 altPage: /en/
-title: Studio CiTA
+title: Vaš partner za izradu web stranica
 description: Studio CiTA je dugogodišnji inženjerski studio specijaliziran za razvoj izazovnih web stranica i učinkovitih online trgovina.
 sections:
   - title: Vaš partner za<br>izradu web stranica

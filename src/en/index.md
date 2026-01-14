@@ -3,7 +3,7 @@ layout: default
 lang: en
 altLang: hr
 altPage: /hr/
-title: Studio CiTA
+title: Your partner for building websites
 description: Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
 sections:
   - title: Your partner<br>for building websites

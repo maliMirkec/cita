@@ -2,5 +2,12 @@
   "clampExtension.globalMinViewport": 600,
   "clampExtension.globalMaxViewport": 1200,
   "clampExtension.baseFontSize": 16,
-  "clampExtension.showComments": false
+  "clampExtension.showComments": false,
+  "deno.enable": true,
+  "deno.enablePaths": [
+    "netlify/edge-functions"
+  ],
+  "deno.unstable": true,
+  "deno.importMap": ".netlify/edge-functions-import-map.json",
+  "deno.path": "/Users/starbist/Library/Preferences/netlify/deno-cli/deno"
 }
