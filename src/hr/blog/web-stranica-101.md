@@ -31,6 +31,6 @@ Toliko. Mnogo. Stvari.
 
 Toliko mnogo stvari za koje možda nikada niste čuli, ali vam mogu pomoći da uspostavite bolju vidljivost za sebe i svoje poslovanje online. Bolja vidljivost od konkurencije. Bolja vidljivost koja će privući više posjetitelja. Bolja vidljivost koja će generirati više potencijalnih klijenata. Bolja vidljivost koja će povećati vaše prihode.
 
-Pronađite pouzdanog web programera koji će se pobrinuti za sve ove stvari umjesto vas.
+Isplati se uložiti u pronalazak pouzdanog web programera koji će se pobrinuti za sve ove stvari umjesto vas.
 
-Zapratite ovaj blog jer ćemo uskoro pisati više o razvoju uspješne web stranice iz vlastitog, ljudskog iskustva.
+Zapratite ovaj blog jer ćemo uskoro pisati više o razvoju uspješne web stranice iz naše ljudske perspektive i iz našeg iskustva.
