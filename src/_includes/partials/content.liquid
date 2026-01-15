@@ -16,6 +16,21 @@
         <p>
           {{ site.translations[lang].author }}:
           {{ site.authors[author].name }}
+          {% if site.authors[author].social %}
+            [
+            {%- for social in site.authors[author].social -%}
+              <a
+                href='{{ social.href }}'
+                {% if social.rel %}
+                  rel='{{ social.rel }}'
+                {% endif %}
+              >
+                {{- social.title -}}
+              </a>
+              {%- unless forloop.last %}, {% endunless %}
+            {%- endfor -%}
+            ]
+          {% endif %}
         </p>
       {%- endif -%}
       {%- if published -%}

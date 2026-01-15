@@ -101,7 +101,18 @@
   },
   "authors": {
     "cita": {
-      "name": "Silvestar Bistrović"
+      "name": "Silvestar Bistrović",
+      "social": [
+        {
+          "title": "Mastodon",
+          "href": "https://mastodon.social/@cita",
+          "rel": "me"
+        },
+        {
+          "title": "BlueSky",
+          "href": "https://bsky.app/profile/silvestar.codes"
+        }
+      ]
     }
   },
   "translations": {
