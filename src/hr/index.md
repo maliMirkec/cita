@@ -261,6 +261,13 @@ sections:
           - [Codepen](https://codepen.io/CiTA/pens/popular)
           - [GitHub](https://github.com/maliMirkec?tab=repositories)
           - [npm](https://www.npmjs.com/~starbist)
+      - title: Lead web developer
+        description: |
+          Silvestar je senior web developer i dostupan je na sljedećim mrežama:
+
+          - <a rel="me" href="https://mastodon.social/@cita">Mastodon</a>
+          - [BlueSky](https://bsky.app/profile/silvestar.codes)
+          - [LinkedIn](https://www.linkedin.com/in/starbist/)
     type: split
     nav: Ostalo
 ---
