@@ -33,4 +33,4 @@ There are so many things that you might never have heard of, but they can help y
 
 It is worth the investment to find a reliable web developer to handle all of these things for you.
 
-Keep an eye on this blog, as we plan to write more about developing a successful website from our own human perspective and experience.
+If you want to learn if you website is doing great, we can run a technical audit for you and provide detailed analysis about possible improvements.
