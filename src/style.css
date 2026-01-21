@@ -557,7 +557,12 @@ section:nth-of-type(even) .cover svg {
 .content .inner {
   max-inline-size: min(50rem, 90dvw);
   font-size: clamp(1.125rem, calc(0.75rem + 1vw), 1.5rem);
-  line-height: 1.3;
+  line-height: 1.6;
+}
+
+.content__body {
+  max-inline-size: 100%;
+  overflow: hidden;
 }
 
 .content h1 {
@@ -580,6 +585,31 @@ section:nth-of-type(even) .cover svg {
 
 .content p {
   text-wrap: pretty;
+}
+
+.content code {
+  font-family: var(--ff3);
+  font-size: 80%;
+  line-height: 120%;
+}
+
+.content pre:has(code) {
+  font-size: 80%;
+  background-image: linear-gradient(to bottom right, transparent, var(--c2));
+  padding-block: 1em;
+  padding-inline: 2em;
+  border: 0.1em dashed var(--c6);
+  max-inline-size: 100%;
+  overflow-x: auto;
+}
+
+.content blockquote {
+  font-size: 80%;
+  margin-block: 2em;
+  margin-inline: unset;
+  padding-block: unset;
+  padding-inline: 2em;
+  border-inline-start: 0.2em dotted var(--c6);
 }
 
 .content__footer {

@@ -25,13 +25,6 @@
     <meta property='og:image:height' content='630'>
     <meta property='og:url' content='{{ site.url | append: page.url }}'>
     <meta property='og:type' content='website'>
-    <meta name='twitter:card' content='summary_large_image'>
-    <meta name='twitter:title' content='{{ title }}'>
-    <meta name='twitter:description' content='{{ description }}'>
-    <meta
-      name='twitter:image'
-      content='{{ site.url }}/og-image?title={{ title | url_encode }}&lang={{ lang }}'
-    >
     <link
       rel='icon'
       type='image/png'
@@ -69,7 +62,14 @@
       {%- endif -%}
     {%- endif -%}
     {% include 'structured-data' %}
+    <link
+      rel='alternate'
+      type='application/rss+xml'
+      title='Studio CiTA Blog'
+      href='/rss.xml'
+    >
     <meta name='fediverse:creator' content='@cita@mastodon.social'>
+    <meta name='generator' content='{{ eleventy.generator }}'>
   </head>
   <body>
     {% include 'header' %}
