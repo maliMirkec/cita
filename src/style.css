@@ -193,6 +193,8 @@ section {
   padding-inline: 1rem;
   margin-block-end: -1rem;
   padding-block: clamp(2.5rem, calc(-5rem + 20vw), 10rem);
+  overflow: hidden;
+  /* transform: skewY(-4deg); */
 }
 
 section:not(:only-child) {
@@ -229,7 +231,7 @@ section:has(.cover) {
   block-size: max(40dvmin, 15rem);
   inline-size: max(40dvmin, 15rem);
   filter: blur(0.5rem) opacity(0.2);
-  transform: skew(-3deg);
+  transform: skew(-4deg);
 }
 
 section:nth-of-type(odd) .cover svg {
@@ -246,7 +248,7 @@ section:nth-of-type(even) .cover svg {
   max-inline-size: min(80rem, 90dvw);
   inline-size: 100%;
   margin-inline: auto;
-  /* transform: skew(-1deg); */
+  /* transform: skewY(4deg); */
 }
 
 .title {
@@ -284,10 +286,14 @@ section:nth-of-type(even) .cover svg {
 }
 
 .description {
-  text-wrap: pretty;
   font-size: clamp(1.25rem, calc(0.938rem + 0.833vw), 1.563rem);
-  max-inline-size: 60ch;
+  text-wrap: pretty;
+  max-inline-size: 70ch;
   margin-block-end: 1em;
+}
+
+.hero .description {
+  max-inline-size: 60ch;
 }
 
 .description p {

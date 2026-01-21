@@ -246,7 +246,7 @@
                 </div></div><div class='cards__item'><h3 class='cards__title'>Izrada<br>web shopa</h3><div class='cards__description'>
                   <p>Razvijamo sigurne web shopove koji ostvaruju dobit omogućujući rast vaše trgovine.</p>
 
-                </div></div><div class='cards__item'><h3 class='cards__title'>Regular<br>maintainance</h3><div class='cards__description'>
+                </div></div><div class='cards__item'><h3 class='cards__title'>Redovno<br>održavanje</h3><div class='cards__description'>
                   <p>Održavamo sve servise kako bi vaši digitalni proizvodi ostali sigurni i pouzdani.</p>
 
                 </div></div><div class='cards__item'><h3 class='cards__title'>Optimizacija<br>brzine učitavanja</h3><div class='cards__description'>
@@ -643,17 +643,17 @@ Potpuno nova WordPress tema izgrađena oko WordPress plugina razvijenog posebno 
 </footer>
 
     <script>
-      (function() {
+      (function () {
         const originalTitle = document.title;
         const titles = ['Studio CiTA', 'Hire us!'];
         let currentIndex = 0;
         let intervalId = null;
 
-        document.addEventListener('visibilitychange', function() {
+        document.addEventListener('visibilitychange', function () {
           if (document.hidden) {
             document.title = titles[currentIndex];
             currentIndex = (currentIndex + 1) % titles.length;
-            intervalId = setInterval(function() {
+            intervalId = setInterval(function () {
               document.title = titles[currentIndex];
               currentIndex = (currentIndex + 1) % titles.length;
             }, 3000);

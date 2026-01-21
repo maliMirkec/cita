@@ -318,17 +318,17 @@
 </footer>
 
     <script>
-      (function() {
+      (function () {
         const originalTitle = document.title;
         const titles = ['Studio CiTA', 'Hire us!'];
         let currentIndex = 0;
         let intervalId = null;
 
-        document.addEventListener('visibilitychange', function() {
+        document.addEventListener('visibilitychange', function () {
           if (document.hidden) {
             document.title = titles[currentIndex];
             currentIndex = (currentIndex + 1) % titles.length;
-            intervalId = setInterval(function() {
+            intervalId = setInterval(function () {
               document.title = titles[currentIndex];
               currentIndex = (currentIndex + 1) % titles.length;
             }, 3000);

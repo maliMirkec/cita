@@ -24,7 +24,7 @@ sections:
       - title: Izrada<br>web shopa
         description: |
           Razvijamo sigurne web shopove koji ostvaruju dobit omogućujući rast vaše trgovine.
-      - title: Regular<br>maintainance
+      - title: Redovno<br>održavanje
         description: |
           Održavamo sve servise kako bi vaši digitalni proizvodi ostali sigurni i pouzdani.
       - title: Optimizacija<br>brzine učitavanja
