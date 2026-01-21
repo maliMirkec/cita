@@ -6,7 +6,7 @@ altPage: /hr/
 title: Your partner for building websites
 description: Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
 sections:
-  - title: Your technical partner<br>for the 10x web
+  - title: Your technical partner<br>for website development
     description: |
       Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
     cta:
