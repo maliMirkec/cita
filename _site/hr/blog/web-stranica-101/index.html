@@ -40,7 +40,7 @@
           rel='alternate'
           href='https://www.cita.hr/en/blog/website-101/'
           hreflang='x-default'
-        ><meta name='referrer' content='no-referrer'>
+        ><meta name='referrer' content='strict-origin-when-cross-origin'>
     <script type='application/ld+json'>
   {
     "@context": "https://schema.org",
@@ -330,5 +330,28 @@
   </p>
 </footer>
 
+    <script>
+      (function() {
+        const originalTitle = document.title;
+        const titles = ['Studio CiTA', 'Hire us!'];
+        let currentIndex = 0;
+        let intervalId = null;
+
+        document.addEventListener('visibilitychange', function() {
+          if (document.hidden) {
+            document.title = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length;
+            intervalId = setInterval(function() {
+              document.title = titles[currentIndex];
+              currentIndex = (currentIndex + 1) % titles.length;
+            }, 3000);
+          } else {
+            clearInterval(intervalId);
+            document.title = originalTitle;
+            currentIndex = 0;
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

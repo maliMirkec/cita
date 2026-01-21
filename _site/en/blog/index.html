@@ -40,7 +40,7 @@
           rel='alternate'
           href='https://www.cita.hr/en/blog/'
           hreflang='x-default'
-        ><meta name='referrer' content='no-referrer'>
+        ><meta name='referrer' content='strict-origin-when-cross-origin'>
     <script type='application/ld+json'>
   {
     "@context": "https://schema.org",
@@ -226,8 +226,8 @@
             </h2>
             <p class='articles__description'>In the head section, we can add metadata that will be used by many different devices and software, like browsers, screen readers, and social networks.</p>
             <p class='articles__date'>
-              <time datetime='2026-01-24'>
-                2026-01-24
+              <time datetime='2026-01-12'>
+                2026-01-12
               </time>
             </p>
             <p>
@@ -331,5 +331,28 @@
   </p>
 </footer>
 
+    <script>
+      (function() {
+        const originalTitle = document.title;
+        const titles = ['Studio CiTA', 'Hire us!'];
+        let currentIndex = 0;
+        let intervalId = null;
+
+        document.addEventListener('visibilitychange', function() {
+          if (document.hidden) {
+            document.title = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length;
+            intervalId = setInterval(function() {
+              document.title = titles[currentIndex];
+              currentIndex = (currentIndex + 1) % titles.length;
+            }, 3000);
+          } else {
+            clearInterval(intervalId);
+            document.title = originalTitle;
+            currentIndex = 0;
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

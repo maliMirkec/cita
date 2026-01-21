@@ -620,6 +620,28 @@ section:nth-of-type(even) .cover svg {
   border-inline-start: 0.2em dotted var(--c6);
 }
 
+.content code {
+  background-image: linear-gradient(
+    to right,
+    var(--c4) -250%,
+    var(--c2),
+    var(--c4) 350%
+  );
+  border-radius: 0.2em;
+  padding-inline: 0.2em;
+}
+
+.content__body p:last-child a:only-child {
+  background-color: var(--c5);
+  color: var(--c1);
+  display: inline-flex;
+  margin-block-start: 1em;
+  padding-block: 0.5em;
+  padding-inline: 1.25em;
+  border-radius: 3em;
+  text-decoration: none;
+}
+
 .content__footer {
   font-size: clamp(1rem, calc(0.75rem + 0.667vw), 1.25rem);
   font-weight: 500;

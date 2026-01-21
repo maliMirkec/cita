@@ -40,7 +40,7 @@
           rel='alternate'
           href='https://www.cita.hr/en/blog/head-101/'
           hreflang='x-default'
-        ><meta name='referrer' content='no-referrer'>
+        ><meta name='referrer' content='strict-origin-when-cross-origin'>
     <script type='application/ld+json'>
   {
     "@context": "https://schema.org",
@@ -216,260 +216,26 @@
   <div class='inner'>
     <div class='content__body'>
       <h1>Every great website starts with an organized head</h1>
-<p>An HTML document consists of <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags. The <code>&lt;head&gt;</code> tag is a place where we can add metadata that will be used by many different devices and software, like browsers, screen readers, and social networks. Therefore, it is crucial to define all metadata carefully and provide all meaningful information about your business.</p>
-<h2>Common tags</h2>
-<p>When talking about a <code>&lt;head&gt;</code> element, I often think of Anand Chowdhary's article called <a href="https://css-tricks.com/explain-the-first-10-lines-of-twitter-source-code/">Explain the First 10 Lines of Twitter's Source Code to Me</a>. In this article, Anand writes which answers would be perfect (and good enough) explanations of some of the most common <code>&lt;head&gt;</code> tags. One of my favorites is the <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> tag:</p>
-<blockquote>
-<p><strong>Perfect answer</strong>: The meta tag in the source code is for supplying metadata about this document. The character set (char-set) attribute tells the browser which character encoding to use, and Twitter uses the standard UTF-8 encoding. UTF-8 is great because it has many character points so you can use all sorts of symbols and emoji in your source code. It's important to put this tag near the beginning of your code so the browser hasn't already started parsing too much text when it comes across this line.</p>
-</blockquote>
-<p>and the <code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-...</code> tag:</p>
-<blockquote>
-<p><strong>Perfect answer</strong>: This meta tag in the source code is for properly sizing the webpage on small screens, like smartphones. (...) <code>width=device-width</code> tells the browser to use 100% of the device's width as the viewport so there's no horizontal scrolling, but you can even specify specific pixel values for width. The standard best practice is to set the initial scale to 1 and the width to device-width so people can still zoom around if they wish.</p>
-</blockquote>
-<p>So the first two things you want to place in your <code>&lt;head&gt;</code> are:</p>
-<pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-</code></pre>
-<h2>What else goes in the head?</h2>
+<p>Most people judge a website by what they see. However, design and aesthetics are only one side of a website. The technical part — the &quot;hidden&quot; side — is perhaps even more important. At the top of every HTML document lies the <code>&lt;head&gt;</code> section, which hides many challenges. When handled correctly, these challenges become opportunities to gain an edge over your competitors. At Studio CiTA, we've mastered the art of turning these technical hurdles into business opportunities.</p>
+<h2>We aren't just talking <code>&lt;head&gt;</code>s</h2>
+<p>If you choose to use a website builder — AI-powered or otherwise — you likely won't even see the <code>&lt;head&gt;</code> section until it is too late. Most builders prioritize presenting ideas as quickly as possible. While speed is important, you must think long-term and organize your <code>&lt;head&gt;</code> code properly.</p>
+<p>The <code>&lt;title</code>&gt; tag is what appears in your browser tab. Have you ever noticed how some websites change their title when the tab becomes inactive? We notice these details, and we ensure your visitors do too by implementing this feature for you.</p>
+<p>Next to the title is the favicon. We ensure your favicon tags are in order and look crisp on every device, from high-resolution Retina displays to small mobile screens. Since favicons are much more than just a tiny icon, we provide a complete manifest of assets that make your site feel like a premium, native app.</p>
+<p>Have you ever shared a link only to find it has no preview image on Slack, social networks, or chat apps? That is a missed opportunity we never let slip by. We ensure your Open Graph (OG) tags are correct and, as a bonus, we can integrate the automatic generation of perfect OG images. Your designer will be thrilled to hear about this feature.</p>
+<p>By leveraging a correct <code>&lt;head&gt;</code> setup, you strengthen your brand on all fronts. Every visitor will see the same brand assets on every device, channel, or network, making your company more recognizable and memorable.</p>
+<p>You can do even more by providing search engines with detailed information via Structured Data. We can define Rich Search Results snippets to help search engines display vital information — like your address, working hours, star reviews, and pricing — directly on the results page. By keeping your Knowledge Graph data up to date, you make it easier for customers to choose your business.</p>
+<p>The <code>&lt;head&gt;</code> code isn't just for metadata. It is where page speed optimization begins. We know how to remove bottlenecks to ensure your website achieves optimal performance. We ensure all assets load in the correct order to eliminate render-blocking issues, so your content appears instantly.</p>
+<p>Optimization is not a one-time job. We continuously monitor performance and make iterative improvements to ensure your website never drops its score on Core Web Vitals or other performance benchmarks.</p>
+<p>Just to be clear, we ensure the technical integrity by default by implementing the standard engineering tags:</p>
 <ul>
-<li>The <code>&lt;title&gt;</code> tag, which tells browsers and other devices the name of the current page.</li>
-<li>Tags for loading or inlining CSS and JavaScript code.</li>
-<li>Tags for prefetching, preloading, and prerendering code.</li>
-<li>Favicon tags.</li>
-<li>SEO-related tags.</li>
+<li>Canonical Links: To ensure Google doesn't penalize you for duplicate content.</li>
+<li>Alternative Links: To ensure your content is consumed in the correct language.</li>
+<li>Referrer Policies: To protect your users' privacy and data security.</li>
+<li>Webmentions &amp; Fediverse Tags: To place your business at the forefront of the modern, decentralized web.</li>
 </ul>
-<pre><code class="language-html">&lt;title&gt;Your partner for building websites / Studio CiTA&lt;/title&gt;
-&lt;style&gt;
-  ...
-&lt;/style&gt;
-&lt;script&gt;
-  ...
-&lt;/script&gt;
-</code></pre>
-<h3>Favicon tags</h3>
-<p>A favicon is an icon visible in a browser tab, but also in other places on different devices. There's a service I've been using <a href="https://realfavicongenerator.net/">RealFaviconGenerator</a> for years that generates all favicon tags and assets so you don't need to think if you missed any device or platform.</p>
-<pre><code class="language-html">&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;/favicon/favicon-96x96.png&quot; sizes=&quot;96x96&quot;&gt;
-&lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/favicon/favicon.svg&quot;&gt;
-&lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon/favicon.ico&quot;&gt;
-&lt;link
-  rel=&quot;apple-touch-icon&quot;
-  sizes=&quot;180x180&quot;
-  href=&quot;/favicon/apple-touch-icon.png&quot;
-&gt;
-&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Studio CiTA&quot;&gt;
-&lt;link rel=&quot;manifest&quot; href=&quot;/favicon/site.webmanifest&quot;&gt;
-</code></pre>
-<h2>What are SEO-related tags?</h2>
-<p>SEO-related tags help your site get better scores on search engines. These tags communicate your link structure, content, and other information about you and your business.</p>
-<h3>The description tag</h3>
-<p>The description tag describes the content of the current page.</p>
-<pre><code class="language-html">&lt;meta
-  name=&quot;description&quot;
-  content=&quot;In the head section, we can add metadata that will be used by many different devices and software, like browsers, screen readers, social networks and others.&quot;
-/&gt;
-</code></pre>
-<h3>OG tags</h3>
-<p>Social networks and other software like Slack or WhatsApp use Open Graph (OG) tags to display the image, title, and description when sharing links.</p>
-<pre><code class="language-html">&lt;meta
-  property=&quot;og:title&quot;
-  content=&quot;Every great website starts with an organized head&quot;
-/&gt;
-&lt;meta
-  property=&quot;og:description&quot;
-  content=&quot;In the head section, we can add metadata that will be used by many different devices and software, like browsers, screen readers, social networks and others.&quot;
-/&gt;
-&lt;meta
-  property=&quot;og:image&quot;
-  content=&quot;[https://www.cita.hr/og-image?title=Every+great+website+starts+with+an+organized+head&amp;lang=en](https://www.cita.hr/og-image?title=Every+great+website+starts+with+an+organized+head&amp;lang=en)&quot;
-/&gt;
-&lt;meta property=&quot;og:image:width&quot; content=&quot;1200&quot;&gt;
-&lt;meta property=&quot;og:image:height&quot; content=&quot;630&quot;&gt;
-&lt;meta property=&quot;og:url&quot; content=&quot;[https://www.cita.hr/en/blog/head-101/](https://www.cita.hr/en/blog/head-101/)&quot;&gt;
-&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
-</code></pre>
-<h3>Structured data</h3>
-<p>When you Google a term — for example, a company or a person — do you wonder why some brands or persons have additional data in the sidebar? That is called the <a href="https://blog.google/products-and-platforms/products/search/introducing-knowledge-graph-things-not/">Knowledge Graph</a> and it has been around for a long time. Most of this information comes from <a href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery">Structured data markup</a>.</p>
-<p>Structured data allows you to define many different entities and information. Make sure to escape and output HTML-safe characters. To avoid any issues, use the <a href="https://search.google.com/test/rich-results">Rich Results Test</a> and fix any issues it reports.</p>
-<p>Structured data looks like this:</p>
-<pre><code class="language-html">&lt;script type=&quot;application/ld+json&quot;&gt;
-  {
-    &quot;@context&quot;: &quot;[https://schema.org](https://schema.org)&quot;,
-    &quot;@graph&quot;: [
-      {
-        &quot;@type&quot;: &quot;Organization&quot;,
-        &quot;@id&quot;: &quot;[https://www.cita.hr/#organization](https://www.cita.hr/#organization)&quot;,
-        &quot;name&quot;: &quot;Studio CiTA&quot;,
-        &quot;url&quot;: &quot;[https://www.cita.hr](https://www.cita.hr)&quot;,
-        &quot;logo&quot;: {
-          &quot;@type&quot;: &quot;ImageObject&quot;,
-          &quot;url&quot;: &quot;[https://www.cita.hr/favicon/favicon-96x96.png](https://www.cita.hr/favicon/favicon-96x96.png)&quot;
-        },
-        &quot;description&quot;: &quot;Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.&quot;,
-        &quot;founder&quot;: {
-          &quot;@type&quot;: &quot;Person&quot;,
-          &quot;name&quot;: &quot;Silvestar Bistrović&quot;,
-          &quot;url&quot;: &quot;[https://www.silvestar.codes/](https://www.silvestar.codes/)&quot;,
-          &quot;sameAs&quot;: [
-            &quot;[https://www.linkedin.com/in/starbist/](https://www.linkedin.com/in/starbist/)&quot;,
-            &quot;[https://github.com/maliMirkec](https://github.com/maliMirkec)&quot;,
-            &quot;[https://codepen.io/CiTA](https://codepen.io/CiTA)&quot;
-          ]
-        },
-        &quot;contactPoint&quot;: {
-          &quot;@type&quot;: &quot;ContactPoint&quot;,
-          &quot;email&quot;: &quot;silvestar@cita.hr&quot;,
-          &quot;contactType&quot;: &quot;Customer Service&quot;
-        }
-      }
-    ]
-  }
-&lt;/script&gt;
-</code></pre>
-<p>By adding this data you might see the extra details in the search page next to your brand or company like location, price range, reviews, and more.</p>
-<h3>Canonical and alternative links</h3>
-<p>Most SEO tools will tell you that you need a canonical link in your <code>&lt;head&gt;</code>. It looks like this:</p>
-<pre><code class="language-html">&lt;link rel=&quot;canonical&quot; href=&quot;https://www.cita.hr/en/&quot;&gt;
-</code></pre>
-<p>A canonical link tells search engines which is the preferred page version and prevents indexing duplicate content, which can hurt your SEO score.</p>
-<p>Alternate links indicate that the page is translated:</p>
-<pre><code class="language-html">&lt;link rel=&quot;alternate&quot; href=&quot;https://www.cita.hr/hr/&quot; hreflang=&quot;hr&quot;&gt;
-&lt;link rel=&quot;alternate&quot; href=&quot;https://www.cita.hr/en/&quot; hreflang=&quot;x-default&quot;&gt;
-</code></pre>
-<p>You can also add RSS as an alternate link in your head so RSS readers can find your feed:</p>
-<pre><code class="language-html">&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;Studio CiTA Blog&quot; href=&quot;/rss.xml&quot;&gt;
-</code></pre>
-<h3>Other useful tags</h3>
-<p>You can define what your website sends to other sites. For example, to prevent the destination site from knowing the visitor clicked a link from your site, use this tag:</p>
-<pre><code class="language-html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-</code></pre>
-<p>If this is too extreme, you can use a less strict version which still sends the full URLs for your internal links but sends only the domain to others:</p>
-<pre><code class="language-html">&lt;meta name=&quot;referrer&quot; content=&quot;strict-origin-when-cross-origin&quot;&gt;
-</code></pre>
-<h2>Other tags</h2>
-<p>If you're on the Fediverse, you might want to add the following tag to feature your profile:</p>
-<pre><code class="language-html">&lt;meta name=&quot;fediverse:creator&quot; content=&quot;@cita@mastodon.social&quot;&gt;
-</code></pre>
-<p>A modern form of the outdated pingback is called a webmention. Not exactly the same, but close enough. If you are into webmentions, you can add them like this:</p>
-<pre><code class="language-html">&lt;link rel=&quot;webmention&quot; href=&quot;https://webmention.io/www.silvestar.codes/webmention&quot;&gt;
-</code></pre>
-<p>If you want to tell your visitors and your hosting provider which technology you're using, you can add the generator tag:</p>
-<pre><code class="language-html">&lt;meta name=&quot;generator&quot; content=&quot;Eleventy v3.1.2&quot;&gt;
-</code></pre>
-<p>Did you know you can refresh your page with an HTML tag? This will refresh your page every 5 seconds.</p>
-<pre><code class="language-html">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;5&quot;&gt;
-</code></pre>
-<p>And did you know you can redirect your page with an HTML tag? This will redirect your page to example.com after 5 seconds.</p>
-<pre><code class="language-html">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;5;url=https://example.com&quot;&gt;
-</code></pre>
-<p>Please use these tags with caution.</p>
-<h2>Conclusion</h2>
-<p>Every great website starts with an organized head, and you should let a web professional do this job for you.</p>
-<p>The complete example:</p>
-<pre><code class="language-html">&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-  &lt;title&gt;Your partner for building websites / Studio CiTA&lt;/title&gt;
-  &lt;meta name=&quot;description&quot; content=&quot;Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;/style.css&quot;&gt;
-  &lt;meta property=&quot;og:title&quot; content=&quot;Your partner for building websites&quot;&gt;
-  &lt;meta property=&quot;og:description&quot; content=&quot;Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.&quot;&gt;
-  &lt;meta property=&quot;og:image&quot; content=&quot;https://www.cita.hr/og-image?title=Your+partner+for+building+websites&amp;lang=en&quot;&gt;
-  &lt;meta property=&quot;og:image:width&quot; content=&quot;1200&quot;&gt;
-  &lt;meta property=&quot;og:image:height&quot; content=&quot;630&quot;&gt;
-  &lt;meta property=&quot;og:url&quot; content=&quot;https://www.cita.hr/en/&quot;&gt;
-  &lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
-  &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;/favicon/favicon-96x96.png&quot; sizes=&quot;96x96&quot;&gt;
-  &lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/favicon/favicon.svg&quot;&gt;
-  &lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon/favicon.ico&quot;&gt;
-  &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot; href=&quot;/favicon/apple-touch-icon.png&quot;&gt;
-  &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Studio CiTA&quot;&gt;
-  &lt;link rel=&quot;manifest&quot; href=&quot;/favicon/site.webmanifest&quot;&gt;
-  &lt;link rel=&quot;canonical&quot; href=&quot;https://www.cita.hr/en/&quot;&gt;
-  &lt;link rel=&quot;alternate&quot; href=&quot;https://www.cita.hr/hr/&quot; hreflang=&quot;hr&quot;&gt;
-  &lt;link rel=&quot;alternate&quot; href=&quot;https://www.cita.hr/en/&quot; hreflang=&quot;x-default&quot;&gt;
-  &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-  &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;Studio CiTA Blog&quot; href=&quot;/rss.xml&quot;&gt;
-  &lt;script type=&quot;application/ld+json&quot;&gt;
-    {
-      &quot;@context&quot;: &quot;https://schema.org&quot;,
-      &quot;@graph&quot;: [
-        {
-          &quot;@type&quot;: &quot;Organization&quot;,
-          &quot;@id&quot;: &quot;https://www.cita.hr/#organization&quot;,
-          &quot;name&quot;: &quot;Studio CiTA&quot;,
-          &quot;url&quot;: &quot;https://www.cita.hr&quot;,
-          &quot;logo&quot;: {
-            &quot;@type&quot;: &quot;ImageObject&quot;,
-            &quot;url&quot;: &quot;https://www.cita.hr/favicon/favicon-96x96.png&quot;
-          },
-          &quot;description&quot;: &quot;Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.&quot;,
-          &quot;founder&quot;: {
-            &quot;@type&quot;: &quot;Person&quot;,
-            &quot;name&quot;: &quot;Silvestar Bistrović&quot;,
-            &quot;url&quot;: &quot;https://www.silvestar.codes/&quot;,
-            &quot;sameAs&quot;: [&quot;https://www.linkedin.com/in/starbist/&quot;,&quot;https://github.com/maliMirkec&quot;,&quot;https://codepen.io/CiTA&quot;]
-          },
-          &quot;contactPoint&quot;: {
-            &quot;@type&quot;: &quot;ContactPoint&quot;,
-            &quot;email&quot;: &quot;silvestar@cita.hr&quot;,
-            &quot;contactType&quot;: &quot;Customer Service&quot;
-          }
-        },
-        {
-          &quot;@type&quot;: &quot;WebSite&quot;,
-          &quot;@id&quot;: &quot;https://www.cita.hr/#website&quot;,
-          &quot;url&quot;: &quot;https://www.cita.hr&quot;,
-          &quot;name&quot;: &quot;Studio CiTA&quot;,
-          &quot;description&quot;: &quot;Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.&quot;,
-          &quot;publisher&quot;: {
-            &quot;@id&quot;: &quot;https://www.cita.hr/#organization&quot;
-          },
-          &quot;inLanguage&quot;: &quot;en&quot;
-        },
-        {
-          &quot;@type&quot;: &quot;WebPage&quot;,
-          &quot;@id&quot;: &quot;https://www.cita.hr/en/#webpage&quot;,
-          &quot;url&quot;: &quot;https://www.cita.hr/en/&quot;,
-          &quot;name&quot;: &quot;Your partner for building websites&quot;,
-          &quot;description&quot;: &quot;Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.&quot;,
-          &quot;isPartOf&quot;: {
-            &quot;@id&quot;: &quot;https://www.cita.hr/#website&quot;
-          },
-          &quot;about&quot;: {
-            &quot;@id&quot;: &quot;https://www.cita.hr/#organization&quot;
-          },
-          &quot;inLanguage&quot;: &quot;en&quot;
-        },
-        {
-          &quot;@type&quot;: &quot;ProfessionalService&quot;,
-          &quot;@id&quot;: &quot;https://www.cita.hr/#service&quot;,
-          &quot;name&quot;: &quot;Studio CiTA&quot;,
-          &quot;description&quot;: &quot;Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.&quot;,
-          &quot;url&quot;: &quot;https://www.cita.hr&quot;,
-          &quot;image&quot;: {
-            &quot;@type&quot;: &quot;ImageObject&quot;,
-            &quot;url&quot;: &quot;https://www.cita.hr/gfx/cover-en.jpg&quot;
-          },
-          &quot;address&quot;: {
-            &quot;@type&quot;: &quot;PostalAddress&quot;,
-            &quot;streetAddress&quot;: &quot;Sunčana 6&quot;,
-            &quot;addressLocality&quot;: &quot;Josipovac&quot;,
-            &quot;postalCode&quot;: &quot;31221&quot;,
-            &quot;addressCountry&quot;: &quot;HR&quot;
-          },
-          &quot;priceRange&quot;: &quot;$$&quot;,
-          &quot;areaServed&quot;: &quot;Worldwide&quot;,
-          &quot;serviceType&quot;: [&quot;Website Development&quot;,&quot;E-commerce Development&quot;,&quot;Web Maintenance&quot;,&quot;PageSpeed Optimization&quot;,&quot;Web Development Consulting&quot;]
-        }
-      ]
-    }
-  &lt;/script&gt;
-  &lt;meta name=&quot;fediverse:creator&quot; content=&quot;@cita@mastodon.social&quot;&gt;
-  &lt;meta name=&quot;generator&quot; content=&quot;Eleventy v3.1.2&quot;&gt;
-  &lt;link rel=&quot;webmention&quot; href=&quot;https://webmention.io/www.silvestar.codes/webmention&quot;&gt;
-  &lt;link rel=&quot;expect&quot; blocking=&quot;render&quot; href=&quot;#footer&quot;&gt;
-&lt;/head&gt;
-</code></pre>
+<h2>Avoid the <code>&lt;head&gt;</code>ache and hire us</h2>
+<p>Every business needs a website. It is the first thing a potential client will look at, and it deserves expert attention. Without an organized <code>&lt;head&gt;</code>, your site will struggle to become a high-performing business asset.</p>
+<p><a href="/en/#contact">Get your technical audit today</a></p>
 
     </div>
     <div class='content__footer'><p>
@@ -488,8 +254,8 @@
           
         </p><p>
           Published:
-          <time datetime='2026-01-24'>
-            2026-01-24
+          <time datetime='2026-01-12'>
+            2026-01-12
           </time>
         </p><p><a href='/en/rss.xml'>RSS</a></p>
     </div>
@@ -572,5 +338,28 @@
   </p>
 </footer>
 
+    <script>
+      (function() {
+        const originalTitle = document.title;
+        const titles = ['Studio CiTA', 'Hire us!'];
+        let currentIndex = 0;
+        let intervalId = null;
+
+        document.addEventListener('visibilitychange', function() {
+          if (document.hidden) {
+            document.title = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length;
+            intervalId = setInterval(function() {
+              document.title = titles[currentIndex];
+              currentIndex = (currentIndex + 1) % titles.length;
+            }, 3000);
+          } else {
+            clearInterval(intervalId);
+            document.title = originalTitle;
+            currentIndex = 0;
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

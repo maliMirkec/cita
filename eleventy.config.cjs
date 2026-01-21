@@ -53,15 +53,19 @@ module.exports = async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/favicon/*');
   eleventyConfig.addPassthroughCopy('src/gfx/*');
 
-  // Blog collections by language
+  // Blog collections by language (excluding future posts)
   eleventyConfig.addCollection("blogHr", function(collectionApi) {
+    const now = new Date();
     return collectionApi.getFilteredByGlob("src/hr/blog/*.md")
-      .filter(item => item.url !== "/hr/blog/");
+      .filter(item => item.url !== "/hr/blog/")
+      .filter(item => !item.data.published || new Date(item.data.published) <= now);
   });
 
   eleventyConfig.addCollection("blogEn", function(collectionApi) {
+    const now = new Date();
     return collectionApi.getFilteredByGlob("src/en/blog/*.md")
-      .filter(item => item.url !== "/en/blog/");
+      .filter(item => item.url !== "/en/blog/")
+      .filter(item => !item.data.published || new Date(item.data.published) <= now);
   });
 
   // eleventyConfig.addPassthroughCopy({ "src/favicon": "subfolder/img" });
