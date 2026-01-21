@@ -6,33 +6,35 @@ altPage: /hr/
 title: Your partner for building websites
 description: Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
 sections:
-  - title: Your technical partner<br>for website development
+  - title: Your engineering partner<br>for building clean,<br>high-performance websites
     description: |
-      Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
+      Studio CiTA is an engineering partner dedicated to technical purity.
+
+      We build challenging websites and high-performing stores using clean, standards-based code that remains easy to maintain, scales without friction, and eliminates technical debt in the long term.
     cta:
       href: '#contact'
-      text: Get the best website
+      text: Talk to your new partner
     type: hero
     icon: code
   - title: Services we offer
     description: |
-      Studio CiTA offers the engineering expertise to make your website a world-class product.
+      Studio CiTA provides the engineering expertise to transform your website into a world-class product.
     list:
       - title: Website<br>development
         description: |
-          We build **high-performing** polished websites that outrank your competitors.
+          We **build high-performing**, polished websites that outrank your competitors.
       - title: Web shop<br>creation
         description: |
-          We develop **secure web shops** that convert and allow you to grow your business.
+          We **develop secure web shops** that convert and allow you to grow your business.
       - title: Regular<br>maintenance
         description: |
-          We eliminate technical debt and security risks before they become an issue.
+          We **eliminate technical debt and security risks** before they become an issue.
       - title: PageSpeed<br>optimization
         description: |
-          We make sure your websites and stores get **the best possible PageSpeed scores**.
+          We ensure your websites and stores **achieve the best possible PageSpeed scores**.
       - title: Reliable<br>consultants
         description: |
-          We provide **strategies and guidance** to ensure your digital presence is future-proof.
+          We **provide strategies and guidance** to ensure your digital presence is future-proof.
       - title: Expert<br>partnerships
         description: |
           **A direct communication** with our web dev expert for the most efficient execution.
@@ -41,7 +43,7 @@ sections:
     nav: Services
   - title: Selected work
     description: |
-      Explore the variety of projects we have delivered with a 100% success rate.
+      Here are some of our projects from our  of building fast websites.
     list:
       - title:
           href: https://heyflow.com/
@@ -162,7 +164,7 @@ sections:
           - [npm](https://www.npmjs.com/~starbist)
       - title: Lead web developer
         description: |
-          Silvestar is a senior web developer and you can find him at:
+          Silvestar is a senior web developer, and you can find him at:
 
           - <a rel="me" href="https://mastodon.social/@cita">Mastodon</a>
           - [BlueSky](https://bsky.app/profile/silvestar.codes)
@@ -265,7 +267,7 @@ sections:
           We make sure the final product keeps its high scores across all fields, from **page speed to SEO to security**.
       - title: User-Centric
         description: |
-          We use advanced AI tooling to accelerate development to make interactions **intuitive, accessible, and user-focused**.
+          We use advanced tooling to accelerate development to make interactions **intuitive, accessible, and user-focused**.
       - title: Collaborating
         description: |
           Studio CiTA collaborates with its trusted partners, ensuring **direct communication and fast execution**.
@@ -279,7 +281,7 @@ sections:
       Prefer email? Reach us at silvestar[at]cita.hr.
     # cta:
     #   href: "#contact"
-    #   text: Get the best website
+    #   text: Talk to your new partner
     form: true
     type: contact
     nav: Contact
