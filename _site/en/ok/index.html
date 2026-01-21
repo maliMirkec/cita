@@ -32,7 +32,8 @@
     >
     <meta name='apple-mobile-web-app-title' content='Studio CiTA'>
     <link rel='manifest' href='/favicon/site.webmanifest'>
-    <link rel='canonical' href='https://www.cita.hr/en/ok/'><script type='application/ld+json'>
+    <link rel='canonical' href='https://www.cita.hr/en/ok/'><meta name="referrer" content="no-referrer">
+    <script type='application/ld+json'>
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -108,9 +109,16 @@
   }
 </script>
 
-    <link rel="alternate" type="application/rss+xml" title="Studio CiTA Blog" href="/rss.xml">
+    <link
+      rel='alternate'
+      type='application/rss+xml'
+      title='Studio CiTA Blog'
+      href='/rss.xml'
+    >
     <meta name='fediverse:creator' content='@cita@mastodon.social'>
-    <meta name="generator" content="Eleventy v3.1.2">
+    <meta name='generator' content='Eleventy v3.1.2'>
+    <link rel="webmention" href="https://webmention.io/www.silvestar.codes/webmention" />
+    <link rel="expect" blocking="render" href="#footer">
   </head>
   <body>
     <header>
@@ -214,7 +222,7 @@
 </svg>
 </div></section></main>
 
-    <footer>
+    <footer id="footer">
   <ul><li><a href='/en/'>EN</a></li><li><a href='/hr/'>HR</a></li></ul>
   <div>
     <a href=''><svg width="497" height="78" viewBox="0 0 497 78" fill="none" xmlns="http://www.w3.org/2000/svg">

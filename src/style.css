@@ -56,6 +56,10 @@ body:has(section:only-child) {
   background-color: var(--c2);
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 :is(.sr-only) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);

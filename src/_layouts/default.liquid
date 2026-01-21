@@ -61,6 +61,7 @@
         >
       {%- endif -%}
     {%- endif -%}
+    <meta name='referrer' content='no-referrer'>
     {% include 'structured-data' %}
     <link
       rel='alternate'
@@ -70,6 +71,11 @@
     >
     <meta name='fediverse:creator' content='@cita@mastodon.social'>
     <meta name='generator' content='{{ eleventy.generator }}'>
+    <link
+      rel='webmention'
+      href='https://webmention.io/www.silvestar.codes/webmention'
+    >
+    <link rel='expect' blocking='render' href='#footer'>
   </head>
   <body>
     {% include 'header' %}

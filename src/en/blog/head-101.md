@@ -30,8 +30,6 @@ So the first two things you want to place in your `<head>` are:
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
 
-<iframe hidden class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/3a0d26bdfec642e496cb6d04103360b0?slide=39" title="Get Your Head Straight" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
-
 ## What else goes to head?
 
 - The `<title>` tag which tells browsers and other devices the name of the current page.
@@ -41,7 +39,31 @@ So the first two things you want to place in your `<head>` are:
 
 In his [famous talk “Get your head straight”](https://speakerdeck.com/csswizardry/get-your-head-straight), Harry Roberts says to remove as much as possible ([slide 22](https://speakerdeck.com/csswizardry/get-your-head-straight?slide=22)), and not only that, but to pay attention on the order of the tags, especially if you want to get the most optimized website ([slide 39](https://speakerdeck.com/csswizardry/get-your-head-straight?slide=39)).
 
+### Favicon
+
+Favicon tags
+
+```html
+<link
+  rel="icon"
+  type="image/png"
+  href="/favicon/favicon-96x96.png"
+  sizes="96x96"
+/>
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/favicon/apple-touch-icon.png"
+/>
+<meta name="apple-mobile-web-app-title" content="Studio CiTA" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+```
+
 ## What are SEO related tags?
+
+SEO related tags helps you site get better scores on search engines. These tags communicate about your link structure, the content, and other information about you and your business.
 
 ### The description tag
 
@@ -123,18 +145,83 @@ Structured data looks like this:
 
 ### Canonical and alternative links
 
-Canonical
+Most SEO tools will tell you that you need canonical link in your `<head>`. It looks like this:
 
-Alternate
+```html
+<link rel="canonical" href="https://www.cita.hr/en/" />
+```
 
-RSS
+Canonical link tells search engines what is the preferred page version and prevents with indexing duplicated content which can hurt your SEO score.
 
-Favicon
+Alternate links tells that the page is translated:
 
-Extras - generator, fediverse, verifications, etc
+```html
+<link rel="alternate" href="https://www.cita.hr/hr/" hreflang="hr" />
+<link rel="alternate" href="https://www.cita.hr/en/" hreflang="x-default" />
+```
 
-<m reta http-equiv="refresh" content="5;url=https://example.com">
-<m reta name="referrer" content="no-referrer">
+You can also add RSS as an alternate link in your head so RSS readers can find you feed:
 
-https://www.smashingmagazine.com/2021/09/css-head-tag/
-https://csswizardry.com/ct/
+```html
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="Studio CiTA Blog"
+  href="/rss.xml"
+/>
+```
+
+### Other useful tags
+
+You can define what your website is sending to other sites. For example, to prevent the destination site to know the visitor clicked from link on your site, use this tag:
+
+```html
+<meta name="referrer" content="no-referrer" />
+```
+
+If this is too extreme, you can use a less strict version which still sends the full URLs for your internal links and sends only domain to others:
+
+```html
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+```
+
+## Other tags
+
+If you're on Fediverse, you might want to add the following tag to feature your profile:
+
+```html
+<meta name="fediverse:creator" content="@cita@mastodon.social" />
+```
+
+An modern form of the outdated pingbacks are called webmetions. Not really, but close enough. And if you are into webmentions, you can add it like this:
+
+```html
+<link
+  rel="webmention"
+  href="https://webmention.io/www.silvestar.codes/webmention"
+/>
+```
+
+If you want to tell your visitors and your hosting provider which technology you're using, you can add the generator tag:
+
+```html
+<meta name="generator" content="Eleventy v3.1.2" />
+```
+
+Did you know you can refresh your page with HTML tag? This will refresh your page every 5 seconds.
+
+```html
+<meta http-equiv="refresh" content="5" />
+```
+
+And did you know you can redirect your page with HTML tag? This will redirect your page to example.com after 5 seconds.
+
+```html
+<meta http-equiv="refresh" content="5;url=https://example.com" />
+```
+
+Please use these tags with caution.
+
+## Conclusion
+
+Every great website starts with an organized head and you should let a web professional to do this job for you.

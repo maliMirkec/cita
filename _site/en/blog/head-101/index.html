@@ -40,7 +40,8 @@
           rel='alternate'
           href='https://www.cita.hr/en/blog/head-101/'
           hreflang='x-default'
-        ><script type='application/ld+json'>
+        ><meta name="referrer" content="no-referrer">
+    <script type='application/ld+json'>
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -116,9 +117,16 @@
   }
 </script>
 
-    <link rel="alternate" type="application/rss+xml" title="Studio CiTA Blog" href="/rss.xml">
+    <link
+      rel='alternate'
+      type='application/rss+xml'
+      title='Studio CiTA Blog'
+      href='/rss.xml'
+    >
     <meta name='fediverse:creator' content='@cita@mastodon.social'>
-    <meta name="generator" content="Eleventy v3.1.2">
+    <meta name='generator' content='Eleventy v3.1.2'>
+    <link rel="webmention" href="https://webmention.io/www.silvestar.codes/webmention" />
+    <link rel="expect" blocking="render" href="#footer">
   </head>
   <body>
     <header>
@@ -207,7 +215,7 @@
       <h1>Every great website starts with an organized head</h1>
 <p>HTML document consists of a <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags. The <code>&lt;head&gt;</code> tag is a place where we can add metadata that will be used for many different devices and software, like browsers, screen readers, social networks and more. Therefore, it is crucial to define all metadata carefully and take provide all meaningful information about your business.</p>
 <h2>Common tags</h2>
-<p>When talking about a <code>&lt;head&gt;</code> element, I often think of Anand Chowdhary's article called <a href="https://css-tricks.com/explain-the-first-10-lines-of-twitter-source-code/">Explain the First 10 Lines of Twitter’s Source Code to Me</a>. In this article, Anand writes which answers would be   perfect (and good enough) explanations of some of the most common <code>&lt;head&gt;</code> tags. One of my favorites are the <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> tag:</p>
+<p>When talking about a <code>&lt;head&gt;</code> element, I often think of Anand Chowdhary's article called <a href="https://css-tricks.com/explain-the-first-10-lines-of-twitter-source-code/">Explain the First 10 Lines of Twitter’s Source Code to Me</a>. In this article, Anand writes which answers would be perfect (and good enough) explanations of some of the most common <code>&lt;head&gt;</code> tags. One of my favorites are the <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> tag:</p>
 <blockquote>
 <p><strong>Perfect answer</strong>: The meta tag in the source code is for supplying metadata about this document. The character set (char-set) attribute tells the browser which character encoding to use, and Twitter uses the standard UTF-8 encoding. UTF-8 is great because it has many character points so you can use all sorts of symbols and emoji in your source code. It’s important to put this tag near the beginning of your code so the browser hasn’t already started parsing too much text when it comes across this line.</p>
 </blockquote>
@@ -216,10 +224,9 @@
 <p><strong>Perfect answer</strong>: This meta tag in the source code is for properly sizing the webpage on small screens, like smartphones. (...) <code>width=device-width</code> tells the browser to use 100% of the device’s width as the viewport so there’s no horizontal scrolling, but you can even specify specific pixel values for width. The standard best practice is to set the initial scale to 1 and the width to device-width so people can still zoom around if they wish.</p>
 </blockquote>
 <p>So the first two things you want to place in your <code>&lt;head&gt;</code> are:</p>
-<pre><code class="language-html">&lt;meta charset='UTF-8'&gt;
-&lt;meta name='viewport' content='width=device-width, initial-scale=1.0'&gt;
+<pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
 </code></pre>
-<iframe hidden class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/3a0d26bdfec642e496cb6d04103360b0?slide=39" title="Get Your Head Straight" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
 <h2>What else goes to head?</h2>
 <ul>
 <li>The <code>&lt;title&gt;</code> tag which tells browsers and other devices the name of the current page.</li>
@@ -228,26 +235,57 @@
 <li>SEO related tags</li>
 </ul>
 <p>In his <a href="https://speakerdeck.com/csswizardry/get-your-head-straight">famous talk “Get your head straight”</a>, Harry Roberts says to remove as much as possible (<a href="https://speakerdeck.com/csswizardry/get-your-head-straight?slide=22">slide 22</a>), and not only that, but to pay attention on the order of the tags, especially if you want to get the most optimized website (<a href="https://speakerdeck.com/csswizardry/get-your-head-straight?slide=39">slide 39</a>).</p>
+<h3>Favicon</h3>
+<p>Favicon tags</p>
+<pre><code class="language-html">&lt;link
+  rel='icon'
+  type='image/png'
+  href='/favicon/favicon-96x96.png'
+  sizes='96x96'
+&gt;
+&lt;link rel='icon' type='image/svg+xml' href='/favicon/favicon.svg'&gt;
+&lt;link rel='shortcut icon' href='/favicon/favicon.ico'&gt;
+&lt;link
+  rel='apple-touch-icon'
+  sizes='180x180'
+  href='/favicon/apple-touch-icon.png'
+&gt;
+&lt;meta name='apple-mobile-web-app-title' content='Studio CiTA'&gt;
+&lt;link rel='manifest' href='/favicon/site.webmanifest'&gt;
+</code></pre>
 <h2>What are SEO related tags?</h2>
+<p>SEO related tags helps you site get better scores on search engines. These tags communicate about your link structure, the content, and other information about you and your business.</p>
 <h3>The description tag</h3>
 <p>The description tag describes the content of the current page.</p>
-<pre><code class="language-html">&lt;meta name='description' content='In the head section, we can add metadata that will be used by many different devices and software, like browsers, screen readers, social networks and others.'&gt;
+<pre><code class="language-html">&lt;meta
+  name=&quot;description&quot;
+  content=&quot;In the head section, we can add metadata that will be used by many different devices and software, like browsers, screen readers, social networks and others.&quot;
+/&gt;
 </code></pre>
 <h3>OG tags</h3>
 <p>Social networks and other software like Slack or WhatsApp use OG tags to display image, title, and description when sharing the links.</p>
-<pre><code class="language-html">&lt;meta property='og:title' content='Every great website starts with an organized head'&gt;
-&lt;meta property='og:description' content='In the head section, we can add metadata that will be used by many different devices and software, like browsers, screen readers, social networks and others.'&gt;
-&lt;meta property='og:image' content='https://www.cita.hr/og-image?title=Every+great+website+starts+with+an+organized+head&amp;lang=en'&gt;
-&lt;meta property='og:image:width' content='1200'&gt;
-&lt;meta property='og:image:height' content='630'&gt;
-&lt;meta property='og:url' content='https://www.cita.hr/en/blog/head-101/'&gt;
-&lt;meta property='og:type' content='website'&gt;
+<pre><code class="language-html">&lt;meta
+  property=&quot;og:title&quot;
+  content=&quot;Every great website starts with an organized head&quot;
+/&gt;
+&lt;meta
+  property=&quot;og:description&quot;
+  content=&quot;In the head section, we can add metadata that will be used by many different devices and software, like browsers, screen readers, social networks and others.&quot;
+/&gt;
+&lt;meta
+  property=&quot;og:image&quot;
+  content=&quot;https://www.cita.hr/og-image?title=Every+great+website+starts+with+an+organized+head&amp;lang=en&quot;
+/&gt;
+&lt;meta property=&quot;og:image:width&quot; content=&quot;1200&quot;&gt;
+&lt;meta property=&quot;og:image:height&quot; content=&quot;630&quot;&gt;
+&lt;meta property=&quot;og:url&quot; content=&quot;https://www.cita.hr/en/blog/head-101/&quot;&gt;
+&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
 </code></pre>
 <h3>Structured data</h3>
 <p>When you Google a term, for example a company or a person, do you wonder why some brands or persons have additional data in the sidebar? That is called <a href="https://blog.google/products-and-platforms/products/search/introducing-knowledge-graph-things-not/">Knowledge Graph</a> and it has been around for a long time. Most of these information comes from <a href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery">Structured data markup</a>.</p>
 <p>Structured data allows you to define many different entities and information. Make sure to escape and output HTML safe characters. To avoid any issues, use <a href="https://search.google.com/test/rich-results">Rich Results Test</a> and fix any issues it reporst.</p>
 <p>Structured data looks like this:</p>
-<pre><code class="language-html">&lt;script type='application/ld+json'&gt;
+<pre><code class="language-html">&lt;script type=&quot;application/ld+json&quot;&gt;
   {
     &quot;@context&quot;: &quot;https://schema.org&quot;,
     &quot;@graph&quot;: [
@@ -265,7 +303,11 @@
           &quot;@type&quot;: &quot;Person&quot;,
           &quot;name&quot;: &quot;Silvestar Bistrović&quot;,
           &quot;url&quot;: &quot;https://www.silvestar.codes/&quot;,
-          &quot;sameAs&quot;: [&quot;https://www.linkedin.com/in/starbist/&quot;,&quot;https://github.com/maliMirkec&quot;,&quot;https://codepen.io/CiTA&quot;]
+          &quot;sameAs&quot;: [
+            &quot;https://www.linkedin.com/in/starbist/&quot;,
+            &quot;https://github.com/maliMirkec&quot;,
+            &quot;https://codepen.io/CiTA&quot;
+          ]
         },
         &quot;contactPoint&quot;: {
           &quot;@type&quot;: &quot;ContactPoint&quot;,
@@ -278,15 +320,43 @@
 &lt;/script&gt;
 </code></pre>
 <h3>Canonical and alternative links</h3>
-<p>Canonical</p>
-<p>Alternate</p>
-<p>RSS</p>
-<p>Favicon</p>
-<p>Extras - generator, fediverse, verifications, etc</p>
-<m reta http-equiv="refresh" content="5;url=https://example.com">
-<m reta name="referrer" content="no-referrer">
-<p>https://www.smashingmagazine.com/2021/09/css-head-tag/
-https://csswizardry.com/ct/</p>
+<p>Most SEO tools will tell you that you need canonical link in your <code>&lt;head&gt;</code>. It looks like this:</p>
+<pre><code class="language-html">&lt;link rel=&quot;canonical&quot; href=&quot;https://www.cita.hr/en/&quot;&gt;
+</code></pre>
+<p>Canonical link tells search engines what is the preferred page version and prevents with indexing duplicated content which can hurt your SEO score.</p>
+<p>Alternate links tells that the page is translated:</p>
+<pre><code class="language-html">&lt;link rel=&quot;alternate&quot; href=&quot;https://www.cita.hr/hr/&quot; hreflang=&quot;hr&quot;&gt;
+&lt;link rel=&quot;alternate&quot; href=&quot;https://www.cita.hr/en/&quot; hreflang=&quot;x-default&quot;&gt;
+</code></pre>
+<p>You can also add RSS as an alternate link in your head so RSS readers can find you feed:</p>
+<pre><code class="language-html">&lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;Studio CiTA Blog&quot; href=&quot;/rss.xml&quot;&gt;
+</code></pre>
+<h3>Other useful tags</h3>
+<p>You can define what your website is sending to other sites. For example, to prevent the destination site to know the visitor clicked from link on your site, use this tag:</p>
+<pre><code class="language-html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+</code></pre>
+<p>If this is too extreme, you can use a less strict version which still sends the full URLs for your internal links and sends only domain to others:</p>
+<pre><code class="language-html">&lt;meta name=&quot;referrer&quot; content=&quot;strict-origin-when-cross-origin&quot;&gt;
+</code></pre>
+<h2>Other tags</h2>
+<p>If you're on Fediverse, you might want to add the following tag to feature your profile:</p>
+<pre><code class="language-html">&lt;meta name='fediverse:creator' content='@cita@mastodon.social'&gt;
+</code></pre>
+<p>An modern form of the outdated pingbacks are called webmetions. Not really, but close enough. And if you are into webmentions, you can add it like this:</p>
+<pre><code class="language-html">&lt;link rel=&quot;webmention&quot; href=&quot;https://webmention.io/www.silvestar.codes/webmention&quot;&gt;
+</code></pre>
+<p>If you want to tell your visitors and your hosting provider which technology you're using, you can add the generator tag:</p>
+<pre><code class="language-html">&lt;meta name='generator' content='Eleventy v3.1.2'&gt;
+</code></pre>
+<p>Did you know you can refresh your page with HTML tag? This will refresh your page every 5 seconds.</p>
+<pre><code class="language-html">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;5&quot;&gt;
+</code></pre>
+<p>And did you know you can redirect your page with HTML tag? This will redirect your page to example.com after 5 seconds.</p>
+<pre><code class="language-html">&lt;meta http-equiv=&quot;refresh&quot; content=&quot;5;url=https://example.com&quot;&gt;
+</code></pre>
+<p>Please use these tags with caution.</p>
+<h2>Conclusion</h2>
+<p>Every great website starts with an organized head and you should let a web professional to do this job for you.</p>
 
     </div>
     <div class='content__footer'><p>
@@ -314,7 +384,7 @@ https://csswizardry.com/ct/</p>
 </section>
 </main>
 
-    <footer>
+    <footer id="footer">
   <ul><li><a href='/en/'>EN</a></li><li><a href='/hr/blog/web-stranica-101/'>HR</a></li></ul>
   <div>
     <a href=''><svg width="497" height="78" viewBox="0 0 497 78" fill="none" xmlns="http://www.w3.org/2000/svg">

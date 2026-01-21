@@ -5,3 +5,17 @@
 [[edge_functions]]
   path = "/og-image"
   function = "og-image"
+
+# Language-based redirects for root path
+# Croatian users get redirected to /hr/
+[[redirects]]
+  from = "/"
+  to = "/hr/"
+  status = 302
+  conditions = {Language = ["hr"]}
+
+# Everyone else gets English (fallback)
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
