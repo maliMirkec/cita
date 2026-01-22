@@ -4,8 +4,10 @@ const postcss = require('postcss');
 const autoprefixer = require('autoprefixer');
 const fs = require('fs');
 const path = require('path');
+const site = require('./src/_data/site.json');
 
 module.exports = async function(eleventyConfig) {
+  const { cldnryfetch } = await import('./eleventy/cldnry.js');
   // Add BRANCH environment variable as global data
   eleventyConfig.addGlobalData('BRANCH', process.env.BRANCH || '');
 
@@ -27,6 +29,8 @@ module.exports = async function(eleventyConfig) {
       return '';
     }
   });
+
+  eleventyConfig.addShortcode('cldnryfetch', async (src, alt, width, lazy = true, classes = '') => cldnryfetch(src, alt, width, lazy, classes, site.cldnry))
 
   // Process and minify CSS with Autoprefixer
   eleventyConfig.addTemplateFormats('css');
@@ -52,6 +56,8 @@ module.exports = async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/*.svg');
   eleventyConfig.addPassthroughCopy('src/favicon/*');
   eleventyConfig.addPassthroughCopy('src/gfx/*');
+  eleventyConfig.addPassthroughCopy({ ".cache/cldnry":
+  "gfx/cldnry" });
 
   // Blog collections by language (excluding future posts)
   eleventyConfig.addCollection("blogHr", function(collectionApi) {

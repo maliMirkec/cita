@@ -65,6 +65,11 @@
                   {{- subitem.subtitle -}}
                 </h{{ hlevel4 }}>
               {%- endif -%}
+              {%- if subitem.description -%}
+                <div class='{{ item.type }}__description'>
+                  {{ subitem.description | markdownify }}
+                </div>
+              {%- endif -%}
               {%- if subitem.tags -%}
                 <ul class='{{ item.type }}__tags'>
                   {%- for tag in subitem.tags -%}
@@ -72,9 +77,28 @@
                   {%- endfor -%}
                 </ul>
               {%- endif -%}
-              {%- if subitem.description -%}
-                <div class='{{ item.type }}__description'>
-                  {{ subitem.description | markdownify }}
+              {%- if subitem.img and subitem.img.src -%}
+                <div class='{{ item.type }}__img'>
+                  {%- if subitem.img.href -%}
+                    <a href='{{ subitem.img.href }}'>
+                      {%- cldnryfetch subitem.img.src subitem.img.alt 80 -%}
+                    </a>
+                  {%- else -%}
+                    {% cldnryfetch subitem.img.src subitem.img.alt 400 %}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+              {%- if subitem.logos -%}
+                <div class='{{ item.type }}__logos'>
+                  {%- for logo in subitem.logos -%}
+                    {%- if logo.href -%}
+                      <a href='{{ logo.href }}'>
+                        {%- cldnryfetch logo.src logo.alt 80 -%}
+                      </a>
+                    {%- else -%}
+                      {% cldnryfetch logo.src logo.alt 80 %}
+                    {%- endif -%}
+                  {%- endfor -%}
                 </div>
               {%- endif -%}
               {%- if subitem.gfx -%}
@@ -103,12 +127,17 @@
                     {{ subitem.quote | markdownify }}
                   {%- endif -%}
                   {%- if subitem.person or subitem.position -%}
-                    <div>
-                      {%- if subitem.person -%}
-                        — <b>{{ subitem.person }}</b>
-                      {%- endif -%}
-                      {%- if subitem.position -%}
-                        , {{ subitem.position }}
+                    <div class='{{ item.type }}__info'>
+                      <p>
+                        {%- if subitem.person -%}
+                          — <b>{{ subitem.person }}</b>
+                        {%- endif -%}
+                        {%- if subitem.position -%}
+                          , {{ subitem.position }}
+                        {%- endif -%}
+                      </p>
+                      {%- if subitem.avatar -%}
+                        {% cldnryfetch subitem.avatar.src subitem.avatar.alt 80 %}
                       {%- endif -%}
                     </div>
                   {%- endif -%}
@@ -119,35 +148,44 @@
         </div>
       {%- endif -%}
       {%- if item.form -%}
-        <form
-          class='{{ item.type }}__form'
-          name='contact-{{ lang }}'
-          method='POST'
-          action='/{{ lang }}/ok/'
-          data-netlify='true'
-          netlify-honeypot='bot-field'
-        >
-          <p style='display:none;'>
-            <label>
-              Don't fill this out if you're human:
-              <input name='bot-field' type='text'>
-            </label>
-          </p>
-          <div class='{{ item.type }}__row'>
-            <label for='contactName'>{{ site.form.name[lang] }}</label>
-            <input type='text' name='name' id='contactName'>
+        <div class='{{ item.type }}__grid'>
+          <div class='{{ item.type }}__content'>
+            {%- if item.form.description -%}
+              <div class='description'>
+                {{ item.form.description | markdownify }}
+              </div>
+            {%- endif -%}
           </div>
-          <div class='{{ item.type }}__row'>
-            <label for='contactEmail'>{{ site.form.email[lang] }}</label>
-            <input type='email' name='email' id='contactEmail'>
-          </div>
-          <div class='{{ item.type }}__row'>
-            <label for='contactText'>{{ site.form.message[lang] }}</label>
-            <textarea name='message' id='contactText' rows='6'></textarea>
-          </div>
-          <input type='hidden' name='language' value='{{ lang }}'>
-          <button type='submit'>{{ site.form.send[lang] }}</button>
-        </form>
+          <form
+            class='{{ item.type }}__form'
+            name='contact-{{ lang }}'
+            method='POST'
+            action='/{{ lang }}/ok/'
+            data-netlify='true'
+            netlify-honeypot='bot-field'
+          >
+            <p style='display:none;'>
+              <label>
+                Don't fill this out if you're human:
+                <input name='bot-field' type='text'>
+              </label>
+            </p>
+            <div class='{{ item.type }}__row'>
+              <label for='contactName'>{{ site.form.name[lang] }}</label>
+              <input type='text' name='name' id='contactName'>
+            </div>
+            <div class='{{ item.type }}__row'>
+              <label for='contactEmail'>{{ site.form.email[lang] }}</label>
+              <input type='email' name='email' id='contactEmail'>
+            </div>
+            <div class='{{ item.type }}__row'>
+              <label for='contactText'>{{ site.form.message[lang] }}</label>
+              <textarea name='message' id='contactText' rows='6'></textarea>
+            </div>
+            <input type='hidden' name='language' value='{{ lang }}'>
+            <button type='submit'>{{ site.form.send[lang] }}</button>
+          </form>
+        </div>
       {%- endif -%}
       {%- if item.note -%}
         <div class='{{ item.type }}__note'>

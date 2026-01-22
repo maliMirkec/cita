@@ -1,5 +1,6 @@
 {
   "url": "https://www.cita.hr",
+  "cldnry": "https://res.cloudinary.com/starbist/image/upload",
   "name": "Studio CiTA",
   "description": {
     "en": "Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.",
