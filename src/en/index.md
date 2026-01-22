@@ -38,6 +38,7 @@ sections:
         img:
           src: heyflow_g83eap.png
           alt: Heyflow website on desktop, tablet and mobile device.
+          href: https://heyflow.com/
         tags:
           - Static website
           - Eleventy
@@ -58,6 +59,7 @@ sections:
         img:
           src: javelin-bipod_pgmwsc.png
           alt: Spartan Precision Equipment website on desktop, tablet and mobile device.ment logo
+          href: https://javelinbipod.com/
         tags:
           - E-commerce Store
           - Shopify
@@ -76,6 +78,7 @@ sections:
         img:
           src: wunder-mobility_qv9mcn.png
           alt: Wunder Mobility website on desktop, tablet and mobile device.
+          href: https://www.wundermobility.com/
         tags:
           - Static website
           - Hugo
@@ -95,6 +98,7 @@ sections:
         img:
           src: colours-alliance_z3tj0z.png
           alt: Colours Alliance website on desktop, tablet and mobile device.
+          href: https://colours-alliance.eu/
         tags:
           - WordPress
           - WordPress theme
@@ -108,24 +112,13 @@ sections:
 
           **Outcome:**<br>
           An immediate jump in performance and user engagement and easier administration and content management.
-      # - title:
-      #     href: https://approx.blue/
-      #     text: Approximately Blue
-      #   img:
-      #     src: heyflow_g83eap.png
-      #     alt: Approximately Blue website on desktop, tablet and mobile device.
-      #   tags:
-      #     - Static website
-      #     - Eleventy
-      #   description: |
-      #     **Description:**<br>
-      #     A creative and visually different project, allowing us to demonstrate our **design variety and technical implementations**.
       - title:
           href: https://www.westwing.com/
           text: Westwing
         img:
           src: westwing_ykf9yi.png
           alt: Westwing website on desktop, tablet and mobile device.
+          href: https://www.westwing.com/
         tags:
           - Static website
           - Hugo
@@ -139,6 +132,18 @@ sections:
 
           **Outcome:**<br>
           A zero-maintenance, automated global talent pipeline that removed manual data entry for the HR team.
+      # - title:
+      #     href: https://approx.blue/
+      #     text: Approximately Blue
+      #   img:
+      #     src: heyflow_g83eap.png
+      #     alt: Approximately Blue website on desktop, tablet and mobile device.
+      #   tags:
+      #     - Static website
+      #     - Eleventy
+      #   description: |
+      #     **Description:**<br>
+      #     A creative and visually different project, allowing us to demonstrate our **design variety and technical implementations**.
     type: split
     icon: browser
     nav: Work

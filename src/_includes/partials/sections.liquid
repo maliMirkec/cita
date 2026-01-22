@@ -81,7 +81,7 @@
                 <div class='{{ item.type }}__img'>
                   {%- if subitem.img.href -%}
                     <a href='{{ subitem.img.href }}'>
-                      {%- cldnryfetch subitem.img.src subitem.img.alt 80 -%}
+                      {%- cldnryfetch subitem.img.src subitem.img.alt 400 -%}
                     </a>
                   {%- else -%}
                     {% cldnryfetch subitem.img.src subitem.img.alt 400 %}
