@@ -20,7 +20,11 @@ const cldnryfetch = async (
     formats: formats,
     svgShortCircuit: true,
     urlPath: '/gfx/cldnry/',
-    outputDir: '.cache/cldnry/',
+    outputDir: './_site/gfx/cldnry/',
+    cacheOptions: {
+      duration: '1y',
+      directory: '.cache/cldnry/',
+    },
   });
 
   let imageAttributes = {
