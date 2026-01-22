@@ -56,7 +56,7 @@ sections:
           href: https://javelinbipod.com/
           text: Spartan Precision Equipment
         img:
-          src: https://res.cloudinary.com/starbist/image/upload/v1706298503/heyflow_g83eap.png
+          src: javelin-bipod_pgmwsc.png
           alt: Spartan Precision Equipment website on desktop, tablet and mobile device.ment logo
         tags:
           - E-commerce Store
@@ -74,7 +74,7 @@ sections:
           href: https://www.wundermobility.com/
           text: Wunder Mobility
         img:
-          src: https://res.cloudinary.com/starbist/image/upload/v1706298503/heyflow_g83eap.png
+          src: wunder-mobility_qv9mcn.png
           alt: Wunder Mobility website on desktop, tablet and mobile device.
         tags:
           - Static website
@@ -93,7 +93,7 @@ sections:
           href: https://colours-alliance.eu/
           text: Colours Alliance
         img:
-          src: https://res.cloudinary.com/starbist/image/upload/v1706298503/heyflow_g83eap.png
+          src: colours-alliance_z3tj0z.png
           alt: Colours Alliance website on desktop, tablet and mobile device.
         tags:
           - WordPress
@@ -112,7 +112,7 @@ sections:
       #     href: https://approx.blue/
       #     text: Approximately Blue
       #   img:
-      #     src: https://res.cloudinary.com/starbist/image/upload/v1706298503/heyflow_g83eap.png
+      #     src: heyflow_g83eap.png
       #     alt: Approximately Blue website on desktop, tablet and mobile device.
       #   tags:
       #     - Static website
@@ -124,7 +124,7 @@ sections:
           href: https://www.westwing.com/
           text: Westwing
         img:
-          src: https://res.cloudinary.com/starbist/image/upload/v1706298503/heyflow_g83eap.png
+          src: westwing_ykf9yi.png
           alt: Westwing website on desktop, tablet and mobile device.
         tags:
           - Static website
@@ -328,6 +328,6 @@ sections:
           - <a rel="me" href="https://mastodon.social/@cita">Mastodon</a>
           - [BlueSky](https://bsky.app/profile/silvestar.codes)
           - [LinkedIn](https://www.linkedin.com/in/starbist/)
-    icon: bubble2
+    icon: work
     type: split
 ---
