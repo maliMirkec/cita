@@ -3,7 +3,6 @@ layout: default
 lang: en
 eleventyExcludeFromCollections: true
 title: Thank you for the message
-description: Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
 sections:
   - title: Thank you for the message
     description: |

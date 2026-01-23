@@ -4,33 +4,35 @@ lang: en
 altLang: hr
 altPage: /hr/blog/web-stranica-101/
 title: So you think your website is doing great
-description: Most websites are not perfect, far from it. There are so many things that could go wrong or just be forgotten.
+description: Most websites have room for improvement. There are countless little things that could be optimized or simply overlooked.
 author: cita
 published: 2026-01-14
 ---
 
 # So you think your website is doing great
 
-Most websites are far from perfect. There are so many things that could go wrong or simply be forgotten.
+Most websites have room for improvement. There are countless little things that could be optimized or simply overlooked.
 
-If you're not a web professional, you might not care. What you don't know can't hurt you, right? Of course, that is not the case. Instead, you should hire a professional web developer who can help elevate your online presence and assist you in growing your business.
+Running a business means focusing on what matters most: growth. While you lead your company, your technical team can focus on perfecting the website's code. These targeted improvements could bring in more visitors and, therefore, more revenue.
 
-Your website presence is all about technical correctness and traffic. While traffic cannot always be controlled, technical details can always be improved and optimized.
+A strong online presence relies on technical correctness and traffic. While traffic cannot always be controlled, technical details can always be improved and optimized.
 
-Let's say your website has HTML errors. While browsers can be forgiving and display the website (almost) correctly, other tools can penalize you. Sometimes, even valid but poorly structured HTML code can hurt your scores. For example, Google might struggle to crawl your site if there are errors that are too severe or if your site does not use semantic tags.
+For example, if a website has HTML errors, browsers might be forgiving and display it (almost) correctly, but other tools can impact performance. Sometimes, even valid but poorly structured HTML code can hurt search scores. Using semantic HTML allows search engines to consume every bit of the content, ensuring a higher rank for the right keywords.
 
-Broken JavaScript won't just hurt your scores — it will stop your site from working correctly. Too much JavaScript might slow your site, and you will be penalized because your PageSpeed scores will be too low.
+Broken JavaScript won't just hurt performance — it can stop a site from working correctly. Too much JavaScript might slow the site, potentially lowering PageSpeed scores. Implementing code linters and tests can prevent these issues.
 
-Bloated CSS might slow the rendering of your site, which might cause layout shifts and styling bugs that are hard to debug and fix.
+Bloated CSS might slow the rendering of a site, which can cause layout shifts and styling bugs that are hard to debug and fix. By eliminating Cumulative Layout Shift (CLS) and horizontal scrolling issues, Core Web Vitals scores naturally improve.
 
-You might not know how to add OG images or structured data, causing you to miss out on nice search page result features.
+Non-descriptive image tags can leave visitors who use screen readers without context. Ensuring WCAG compliance not only protects the business from legal risks but opens it up to every person with a disability.
 
-Don't get us started on website security, which most people take for granted these days. Websites get hacked daily.
+While competitors might already use OG images or structured data, any business can have detailed snippets on search engine results pages, too. The right technical details can make that happen.
+
+Website security is equally vital. Implementing strict Content Security Policies (CSP) mitigates risks, meaning users' data remains protected even if a third-party script is compromised.
 
 So. Many. Things.
 
-There are so many things that you might never have heard of, but they can help you establish a better presence for you and your business online. A better presence than your competitors. A better presence that will attract more visitors. A better presence that will generate more leads. A better presence that will increase your revenue.
+These details can help establish a better online presence — a stronger presence than competitors that attracts more visitors, generate more leads, and increase revenue.
 
-It is worth the investment to find a reliable web developer to handle all of these things for you.
+There is no need to guess how a website is doing. A technical audit can provide a detailed analysis of possible improvements.
 
-Keep an eye on this blog, as we plan to write more about developing a successful website from our own human perspective and experience.
+[Get your free technical audit](/en/#contact)

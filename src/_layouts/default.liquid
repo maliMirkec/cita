@@ -7,7 +7,10 @@
       {{ title }}
       {% if title != site.name %} / {{ site.name }}{% endif %}
     </title>
-    <meta name='description' content='{{ description }}'>
+    <meta
+      name='description'
+      content='{% if description %}{{ description }}{% else %}{{ site.description[lang] }}{% endif %}'
+    >
     {%- if BRANCH == 'master' -%}
       <style>
         {{ '/style.css' | readFile }}
@@ -25,13 +28,6 @@
     <meta property='og:image:height' content='630'>
     <meta property='og:url' content='{{ site.url | append: page.url }}'>
     <meta property='og:type' content='website'>
-    <meta name='twitter:card' content='summary_large_image'>
-    <meta name='twitter:title' content='{{ title }}'>
-    <meta name='twitter:description' content='{{ description }}'>
-    <meta
-      name='twitter:image'
-      content='{{ site.url }}/og-image?title={{ title | url_encode }}&lang={{ lang }}'
-    >
     <link
       rel='icon'
       type='image/png'
@@ -68,12 +64,48 @@
         >
       {%- endif -%}
     {%- endif -%}
+    <meta name='referrer' content='strict-origin-when-cross-origin'>
     {% include 'structured-data' %}
+    <link
+      rel='alternate'
+      type='application/rss+xml'
+      title='Studio CiTA Blog'
+      href='/rss.xml'
+    >
     <meta name='fediverse:creator' content='@cita@mastodon.social'>
+    <meta name='generator' content='{{ eleventy.generator }}'>
+    <link
+      rel='webmention'
+      href='https://webmention.io/www.silvestar.codes/webmention'
+    >
+    <link rel='expect' blocking='render' href='#footer'>
   </head>
   <body>
     {% include 'header' %}
     {% include 'main' %}
     {% include 'footer' %}
+    <script>
+      (function () {
+        const originalTitle = document.title;
+        const titles = ['Studio CiTA', 'Hire us!'];
+        let currentIndex = 0;
+        let intervalId = null;
+
+        document.addEventListener('visibilitychange', function () {
+          if (document.hidden) {
+            document.title = titles[currentIndex];
+            currentIndex = (currentIndex + 1) % titles.length;
+            intervalId = setInterval(function () {
+              document.title = titles[currentIndex];
+              currentIndex = (currentIndex + 1) % titles.length;
+            }, 3000);
+          } else {
+            clearInterval(intervalId);
+            document.title = originalTitle;
+            currentIndex = 0;
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
