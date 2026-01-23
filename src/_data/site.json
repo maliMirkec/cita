@@ -3,8 +3,8 @@
   "cldnry": "https://res.cloudinary.com/starbist/image/upload",
   "name": "Studio CiTA",
   "description": {
-    "en": "Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.",
-    "hr": "Studio CiTA je dugogodišnji inženjerski studio specijaliziran za razvoj izazovnih web stranica i učinkovitih online trgovina."
+    "en": "Studio CiTA engineers challenging websites and high-performing stores that visitors love to use and owners love to run.",
+    "hr": "Studio CiTA stvara izazovne web stranice i visokoučinkovite trgovine koje posjetitelji vole koristiti, a vlasnici vole voditi."
   },
   "logo": "/favicon/favicon-96x96.png",
   "cover": {
@@ -73,30 +73,46 @@
   "nav": {
     "en": [
       {
-        "href": "/en/blog/",
-        "title": "Blog"
-      },
-      {
         "href": "/en/#services",
         "title": "Services"
       },
       {
+        "href": "/en/#work",
+        "title": "Work"
+      },
+      {
+        "href": "/en/#proof",
+        "title": "Proof"
+      },
+      {
         "href": "/en/#contact",
         "title": "Contact"
+      },
+      {
+        "href": "/en/blog/",
+        "title": "Blog"
       }
     ],
     "hr": [
-      {
-        "href": "/hr/blog/",
-        "title": "Blog"
-      },
       {
         "href": "/hr/#usluge",
         "title": "Usluge"
       },
       {
+        "href": "/hr/#radovi",
+        "title": "Radovi"
+      },
+      {
+        "href": "/hr/#komentari",
+        "title": "Komentari"
+      },
+      {
         "href": "/hr/#kontakt",
         "title": "Kontakt"
+      },
+      {
+        "href": "/hr/blog/",
+        "title": "Blog"
       }
     ]
   },
@@ -122,6 +138,7 @@
       "updated": "Updated",
       "author": "Author",
       "more": "Read the article",
+      "blog": "Read more articles",
       "copyright": "All rights reserved"
     },
     "hr": {
@@ -129,6 +146,7 @@
       "updated": "Ažurirano",
       "author": "Autor",
       "more": "Pročitajte cijeli članak",
+      "blog": "Pročitajte više članaka",
       "copyright": "Sva prava pridržana"
     }
   }

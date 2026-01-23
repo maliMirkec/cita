@@ -1,4 +1,4 @@
-{%- assign list = collections[collection] | sort: 'published' -%}
+{%- assign list = collections[collection] | sort: 'data.published' | reverse -%}
 
 {%- if list -%}
   <section class='hero'>

@@ -3,14 +3,12 @@ layout: default
 lang: en
 altLang: hr
 altPage: /hr/
-title: Your partner for building websites
-description: Studio CiTA is an experienced engineering studio that specializes in developing challenging websites and performing online stores.
+title: Your partner for websites that give you an advantage
+description: Studio CiTA engineers challenging websites and high-performing stores that visitors love to use and owners love to run.
 sections:
-  - title: Your technical partner<br>for dominant websites
+  - title: Your partner for websites that give you an advantage
     description: |
-      Studio CiTA is an engineering partner dedicated to technical purity.
-
-      We are building challenging websites and high-performing stores using clean code with minimal technical debt.
+      Studio CiTA engineers challenging websites and high-performing stores that visitors love to use and owners love to run.
     cta:
       href: '#contact'
       text: Talk to your new partner
@@ -24,9 +22,9 @@ sections:
       - title: Web shop<br>creation
         description: |
           Developing secure web shops that convert and allowing you to grow your business.
-      - title: PageSpeed<br>optimization
+      - title: Speed<br>optimization
         description: |
-          Ensuring your websites and stores achieve the best possible PageSpeed scores.
+          Engineering websites to be incredibly fast ensuring higher ranks and better experience.
     type: cards
     icon: laptop
     nav: Services
@@ -88,7 +86,7 @@ sections:
           Wunder Mobility required a high-conversion mobility platform that balanced a sophisticated user interface with the technical performance necessary to minimize bounce rates and maximize user retention.
 
           **Solution:**<br>
-          We developed a static website architecture using Jekyll and Contentful, prioritizing performance and conversion. By leaning on native web technologies, we ensured the site remained incredibly lightweight.
+          We developed a static website architecture using Jekyll and Contentful, **prioritizing performance and conversion**. By leaning on native web technologies, we ensured the site remained incredibly lightweight.
 
           **Outcome:**<br>
           A seamless, fast-loading experience that drove a significant lift in conversion rates.
@@ -108,7 +106,7 @@ sections:
           The client request a new theme to improve the speed and administration experience.
 
           **Solution:**<br>
-          We replaced the website builder with a custom theme and a plugin we developed specifically for their needs. This allowed us to use a much cleaner code-first approach, which improved the performance of our development process. By focusing on only the features they actually needed, we removed the extra weight and created a much simpler dashboard for their team.
+          We replaced the website builder with a custom theme and a plugin we developed specifically for their needs. This allowed us to use a much cleaner code-first approach, which improved the performance of our development process. By focusing on only the features they actually needed, we **removed the extra weight and created a much simpler dashboard** for their team.
 
           **Outcome:**<br>
           An immediate jump in performance and user engagement and easier administration and content management.
@@ -128,22 +126,10 @@ sections:
           Westwing needed a brand new site that is fast and reliable, and it enables integrations for dynamic content like careers.
 
           **Solution:**<br>
-          We automated the **global recruitment pipeline** by integrating Personio into a high-performance static architecture.
+          We **automated the global recruitment pipeline** by integrating Personio into a high-performance static architecture.
 
           **Outcome:**<br>
           A zero-maintenance, automated global talent pipeline that removed manual data entry for the HR team.
-      # - title:
-      #     href: https://approx.blue/
-      #     text: Approximately Blue
-      #   img:
-      #     src: heyflow_g83eap.png
-      #     alt: Approximately Blue website on desktop, tablet and mobile device.
-      #   tags:
-      #     - Static website
-      #     - Eleventy
-      #   description: |
-      #     **Description:**<br>
-      #     A creative and visually different project, allowing us to demonstrate our **design variety and technical implementations**.
     type: split
     icon: browser
     nav: Work
@@ -156,7 +142,7 @@ sections:
         position: Senior Marketing Designer, Heyflow
         quote:
           summary: |
-            **He even optimized of our landing pages to a perfect 100% score across all PageSpeed Insights categories. It's all thanks to his constant hard work of iterating on all ends of the code until perfection.**
+            **Silvestar even optimized of our landing pages to a perfect 100% score across all PageSpeed Insights categories. It's all thanks to his constant hard work of iterating on all ends of the code until perfection.**
           full: |
             I've been working closely with Silvestar for about 2 years now, managing and designing the website project that he's in charge of developing. It has clearly been the most seamless and enriching developer-designer collaboration I've had so far.
 
@@ -188,7 +174,7 @@ sections:
         position: CTO, Westwing
         quote:
           summary: |
-            **He was available on a short notice, he closely collaborated with the PM on the project and delivered it on time with good quality.**
+            **Silvestar was available on a short notice, he closely collaborated with the PM on the project and delivered it on time with good quality.**
           full: |
             It was a pleasure to work with Silvestar. He was available on a short notice, he closely collaborated with the PM on the project and delivered it on time with good quality.
 
@@ -200,35 +186,13 @@ sections:
         position: Founder, Approximately Blue
         quote:
           summary: |
-            **Throughout the process, we felt in good hands with his expertise and his readiness to go the extra mile to guide us through the different steps.**
+            **Throughout the process, we felt in good hands with Silvestar's expertise and his readiness to go the extra mile to guide us through the different steps.**
           full: |
             My partner and I teamed up with Silvestar this year to bring our new company's website to life, based on some design sketches I had. The work he did for us was top-notch.
 
             Throughout the process, we felt in good hands with his expertise and his readiness to go the extra mile to guide us through the different steps.
 
             It's worth mentioning that he was super quick in getting the job done and was really accommodating with our requests. The whole experience was smooth and enjoyable. We're looking forward to the next chance to work with him!
-      # - person: Nicholas Bailey
-      #   position: Digital Media Manager, Spartan Precision Equipment
-      #   quote: |
-      #     Silvestar was great to work with on our recent website development project, forward-thinking and great communication. Would recommend to any businesses looking to bring their websites and e-com platforms to the next level.
-      # - person: Theresa Kneißle
-      #   position: Product Manager eCommerce, Westwing
-      #   quote:
-      #     summary: |
-      #       **The partnership was smooth, and his contribution greatly supported the successful launch.**
-      #     full: |
-      #       Excited to have worked alongside Silvestar during our implementation of a new ATS! He supported us with setting up our careers page integration and revamp our candidate facing pages.
-
-      #       The partnership was smooth, and his contribution greatly supported the successful launch. Thank you Silvestar for your support!
-      # - person: Devran Taskesen
-      #   position: Brand / Visual Designer, Wunder Mobility
-      #   quote:
-      #     summary: |
-      #       **He always found an effective and efficient way to realize the ideas the team came up.**
-      #     full: |
-      #       Working with Silvestar on various web projects was an absolute pleasure! He always found an effective and efficient way to realize the ideas the team came up while also bringing more than just his exceptional work ethic to the table.
-
-      #       Always enjoyed the humor and humanity while working with him!
     note: |
       All testimonials are verified on our [LinkedIn](https://www.linkedin.com/in/starbist/).
     type: quotes
@@ -244,23 +208,25 @@ sections:
           - [All articles](/en/blog/)
       - title: Published in industry-leading journals
         logos:
-          - src: Smashing_Magazine_vwg6zc.svg
-            alt: Smashing Magazine logo
-            href: https://www.smashingmagazine.com/author/silvestar-bistrovic/
-          - src: CSS_Tricks_ylxb3k.svg
-            alt: CSS-Tricks logo
-            href: https://css-tricks.com/author/silvestar/
-          - src: Frontend_Masters_m5ctch.svg
-            alt: Frontend Masters logo
-            href: https://frontendmasters.com/blog/author/silvestarbistrovic/
-          - src: Toptal_tqh9p9.svg
-            alt: Toptal Blog logo
-            href: https://www.toptal.com/developers/css/why-you-need-a-css-developer
-          - src: LogRocket_qow4d6.svg
-            alt: LogRocket logo
-            href: https://blog.logrocket.com/author/silvestarbistrovic/
+          modifier: alpha
+          list:
+            - src: Smashing_Magazine_vwg6zc.svg
+              alt: Smashing Magazine logo
+              href: https://www.smashingmagazine.com/author/silvestar-bistrovic/
+            - src: CSS_Tricks_ylxb3k.svg
+              alt: CSS-Tricks logo
+              href: https://css-tricks.com/author/silvestar/
+            - src: Frontend_Masters_m5ctch.svg
+              alt: Frontend Masters logo
+              href: https://frontendmasters.com/blog/author/silvestarbistrovic/
+            - src: Toptal_tqh9p9.svg
+              alt: Toptal Blog logo
+              href: https://www.toptal.com/developers/css/why-you-need-a-css-developer
+            - src: LogRocket_qow4d6.svg
+              alt: LogRocket logo
+              href: https://blog.logrocket.com/author/silvestarbistrovic/
         description: |
-          Our lead developer runs a technical [blog](https://www.silvestar.codes/articles/) and is a regular contributor to the world's most respected technical publications:
+          Our lead developer runs [a technical blog](https://www.silvestar.codes/articles/) and is a regular contributor to the world's most respected technical publications:
 
           - [Smashing Magazine](https://www.smashingmagazine.com/author/silvestar-bistrovic/)
           - [CSS-Tricks](https://css-tricks.com/author/silvestar/)
@@ -269,27 +235,17 @@ sections:
           - [LogRocket](https://blog.logrocket.com/author/silvestarbistrovic/)
     type: split
     icon: heart
-    nav: Blog
   - title: Our way of working
     list:
       - title: Planning
         description: |
-          We **clarify all goals** and challenges and prepare for the development as early as possible.
-      - title: Developing
+          We **clarify all goals** and challenges and prepare for the design and development as early as possible.
+      - title: Execution
         description: |
           We develop a **minimum viable product** with all the required functionalities, while focusing on design and performance.
       - title: Iterating
         description: |
-          We target bottlenecks and find all opportunities to optimize, from **conversion rates to usability and speed scores**.
-      - title: Optimizing
-        description: |
-          We make sure the final product keeps its high scores across all fields, from **page speed to SEO to security**.
-      - title: User-Centric
-        description: |
-          We use advanced tooling to accelerate development to make interactions **intuitive, accessible, and user-focused**.
-      - title: Collaborating
-        description: |
-          Studio CiTA collaborates with its trusted partners, ensuring **direct communication and fast execution**.
+          We target bottlenecks and find all opportunities to **improve and optimize**, from conversion rates to usability and speed scores.
     type: cards
     icon: bulb
   - title: Get started
@@ -297,22 +253,46 @@ sections:
       description: |
         We would love to hear from you.
 
-        This is the first step to a successful collaboration.
+        Prefer email?
 
-        Prefer email? Reach us at [silvestar[at]cita.hr](mailto:silvestar@cita.hr).
+        Reach us at [silvestar[at]cita.hr](mailto:silvestar@cita.hr).
     type: contact
     icon: phone
     nav: Contact
   - title: Beyond clients work
     list:
       - title: Developer tools & extensions
+        # logos:
+        #   modifier: beta
+        #   list:
+        #     - src: yaml-custom-fields_fw7lcc.png
+        #       alt: YAML Custom Fields logo
+        #       href: https://wordpress.org/plugins/yaml-custom-fields/
+        #     - src: oklchanger_yokrdn.png
+        #       alt: OKLChanger logo
+        #       href: https://marketplace.visualstudio.com/items?itemName=starbist.oklchanger
+        #     - src: clamp-it_n5jnqw.png
+        #       alt: Clamp it! logo
+        #       href: https://marketplace.visualstudio.com/items?itemName=starbist.clamp-it
         description: |
           Building tools that help other developers:
 
+          - [WordPress plugin **YAML Custom Fields**](https://wordpress.org/plugins/yaml-custom-fields/)
           - [Visual Studio Code extension **OKLChanger**](https://marketplace.visualstudio.com/items?itemName=starbist.oklchanger)
           - [Visual Studio Code extension **Clamp it!**](https://marketplace.visualstudio.com/items?itemName=starbist.clamp-it)
-          - [WordPress plugin **YAML Custom Fields**](https://wordpress.org/plugins/yaml-custom-fields/)
       - title: Side projects
+        # logos:
+        #   modifier: beta
+        #   list:
+        #     - src: UI_Dev_Newsletter_12E09F_ftf610.svg
+        #       alt: UI Dev Newsletter logo
+        #       href: https://www.silvestar.codes/side-projects/ui-dev-newsletter/
+        #     - src: cld-2x_tvlemw.jpg
+        #       alt: Code Line Daily logo
+        #       href: https://www.silvestar.codes/side-projects/code-line-daily/
+        #     - src: css-auditors-logo-dark_asmhnd.svg
+        #       alt: CSS Auditors logo
+        #       href: https://css-auditors.com/
         description: |
           Building fun projects like:
 
@@ -335,4 +315,7 @@ sections:
           - [LinkedIn](https://www.linkedin.com/in/starbist/)
     icon: work
     type: split
+extraNavs:
+  - href: /en/blog/
+    title: Blog
 ---

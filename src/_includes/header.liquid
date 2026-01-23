@@ -24,6 +24,15 @@
           {%- endif -%}
         {%- endfor -%}
       {%- endif -%}
+      {% if extraNavs %}
+        {%- for extraNav in extraNavs -%}
+          {%- if extraNav.href and extraNav.title -%}
+            <li>
+              <a href='{{ extraNav.href }}'>{{ extraNav.title }}</a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      {% endif %}
     </ul>
   </nav>
 </header>

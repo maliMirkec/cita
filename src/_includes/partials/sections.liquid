@@ -88,9 +88,9 @@
                   {%- endif -%}
                 </div>
               {%- endif -%}
-              {%- if subitem.logos -%}
-                <div class='{{ item.type }}__logos'>
-                  {%- for logo in subitem.logos -%}
+              {%- if subitem.logos and subitem.logos.list -%}
+                <div class='{{ item.type }}__logos{% if subitem.logos.modifier %} {{ item.type }}__logos--{{ subitem.logos.modifier }}{% endif %}'>
+                  {%- for logo in subitem.logos.list -%}
                     {%- if logo.href -%}
                       <a href='{{ logo.href }}'>
                         {%- cldnryfetch logo.src logo.alt 80 -%}

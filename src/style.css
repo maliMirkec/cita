@@ -288,12 +288,8 @@ section:nth-of-type(even) .cover svg {
 .description {
   font-size: clamp(1.25rem, calc(0.938rem + 0.833vw), 1.563rem);
   text-wrap: pretty;
-  max-inline-size: 70ch;
-  margin-block-end: 1em;
-}
-
-.hero .description {
   max-inline-size: 60ch;
+  margin-block-end: 1em;
 }
 
 .description p {
@@ -413,30 +409,39 @@ section:nth-of-type(even) .cover svg {
   margin: unset;
 }
 
-.split__logos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 3em;
-  margin-block-start: 2em;
-  padding-inline-end: 4em;
-}
-
-.split__logos img {
-  block-size: 2rem;
-  inline-size: auto;
-  filter: brightness(0.25);
-}
-
 .split__img img {
   block-size: auto;
   inline-size: 100%;
 }
 
-.split__logos img {
+.split__logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 3em;
+  margin-block-start: 2em;
+  padding-inline-end: 4em;
+}
+
+.split__logos--alpha {
+  row-gap: 3em;
+}
+
+.split__logos--beta {
+  row-gap: 1.5em;
+}
+
+.split__logos--alpha img {
   block-size: 2rem;
   inline-size: auto;
   filter: brightness(0.25);
+}
+
+.split__logos--beta img {
+  block-size: auto;
+  inline-size: auto;
+  max-block-size: 4rem;
+  max-inline-size: 8rem;
 }
 
 .split__description {
@@ -661,7 +666,7 @@ section:nth-of-type(even) .cover svg {
     1px -1px 0 var(--c2),
     -1px 1px 0 var(--c2);
   text-wrap: balance;
-  margin-block: 1em;
+  margin-block-start: unset;
   margin-block-end: 1em;
   padding-block-end: 1em;
   border-block-end: 0.1em dotted var(--c6);
@@ -716,6 +721,7 @@ section:nth-of-type(even) .cover svg {
   color: var(--c1);
   display: inline-flex;
   margin-block-start: 1em;
+  margin-block-end: 0.5em;
   padding-block: 0.5em;
   padding-inline: 1.25em;
   border-radius: 3em;
@@ -738,7 +744,7 @@ section:nth-of-type(even) .cover svg {
 }
 
 .articles li {
-  margin-block: 2em;
+  margin-block: 4em;
   padding-inline-start: 2em;
   border-inline-start: 0.2em dotted var(--c6);
 }
