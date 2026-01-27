@@ -6,7 +6,7 @@ altPage: /en/blog/head-101/
 title: Svaka sjajna web stranica počinje s organiziranom head kôdom
 description: Saznajte kako strateško postavljanje zaglavlja poboljšava vaš rang u pretrazi, dijeljenje na društvenim mrežama i dugoročni rast poslovanja.
 author: cita
-published: 2026-01-27
+published: 2026-02-02
 ---
 
 # Svaka sjajna web stranica počinje s organiziranom head kôdom

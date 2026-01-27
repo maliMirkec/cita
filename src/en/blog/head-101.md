@@ -6,7 +6,7 @@ altPage: /hr/blog/head-101/
 title: Every great website starts with an organized head
 description: Learn how a strategic head setup improves your search ranking, social sharing, and long-term business growth.
 author: cita
-published: 2026-01-27
+published: 2026-02-02
 ---
 
 # Every great website starts with an organized head
