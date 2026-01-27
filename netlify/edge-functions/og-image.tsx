@@ -1,7 +1,42 @@
 // @ts-nocheck - Deno imports not recognized by VS Code
-import satori from "https://esm.sh/satori@0.10.14";
+import satori, { init as initSatori } from "https://esm.sh/satori@0.10.14/wasm";
+import initYoga from "https://esm.sh/yoga-wasm-web@0.3.3";
+import { Resvg, initWasm as initResvg } from "https://esm.sh/@resvg/resvg-wasm@2.6.2";
+
+// Track initialization state
+let initialized = false;
+
+async function initialize() {
+  if (initialized) return;
+
+  try {
+    // Initialize Yoga (for satori layout)
+    const yogaWasm = await fetch(
+      "https://unpkg.com/yoga-wasm-web@0.3.3/dist/yoga.wasm"
+    );
+    const yoga = await initYoga(await yogaWasm.arrayBuffer());
+    initSatori(yoga);
+
+    // Initialize Resvg (for PNG conversion)
+    const resvgWasm = await fetch(
+      "https://unpkg.com/@resvg/resvg-wasm@2.6.2/index_bg.wasm"
+    );
+    await initResvg(await resvgWasm.arrayBuffer());
+
+    initialized = true;
+  } catch (e) {
+    // If already initialized, that's fine
+    if (e.message?.includes("Already initialized")) {
+      initialized = true;
+    } else {
+      throw e;
+    }
+  }
+}
 
 export default async function handler(request: Request) {
+  await initialize();
+
   const url = new URL(request.url);
   const lang = url.searchParams.get("lang") || "en";
   const subtitle = url.searchParams.get("subtitle") || "";
@@ -126,9 +161,19 @@ export default async function handler(request: Request) {
     ],
   });
 
-  return new Response(svg, {
+  // Convert SVG to PNG
+  const resvg = new Resvg(svg, {
+    fitTo: {
+      mode: "width",
+      value: 1200,
+    },
+  });
+  const pngData = resvg.render();
+  const pngBuffer = pngData.asPng();
+
+  return new Response(pngBuffer, {
     headers: {
-      "Content-Type": "image/svg+xml",
+      "Content-Type": "image/png",
       "Cache-Control": "public, max-age=86400, s-maxage=86400",
     },
   });
