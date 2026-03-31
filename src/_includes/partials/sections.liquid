@@ -11,6 +11,9 @@
         <h{{ hlevel1 }} class='title'>
           {%- if item.title.href and item.title.text -%}
             <a href='{{ item.title.href }}'>{{ item.title.text }}</a>
+          {%- elsif item.title.line1 and item.title.line2 -%}
+            <span>{{ item.title.line1 }}</span>
+            <span>{{ item.title.line2 }}</span>
           {%- else -%}
             {{ item.title }}
           {%- endif -%}

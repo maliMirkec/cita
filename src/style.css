@@ -256,11 +256,11 @@ section:nth-of-type(even) .cover svg {
   font-weight: 900;
   line-height: 1.2;
   letter-spacing: -0.05em;
-  text-shadow:
+  /* text-shadow:
     var(--s) var(--s) 0 var(--c2),
     -1px -1px 0 var(--c2),
     1px -1px 0 var(--c2),
-    -1px 1px 0 var(--c2);
+    -1px 1px 0 var(--c2); */
   text-wrap: balance;
   margin-block: 1em;
 }
@@ -275,6 +275,23 @@ section:nth-of-type(even) .cover svg {
 
 .title::first-line {
   font-size: 110%;
+}
+
+.title:has(span) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.title span:first-of-type {
+  font-family: var(--ff2);
+  font-size: clamp(1.25rem, calc(0.625rem + 1.667vw), 1.875rem);
+  letter-spacing: 0.25em;
+}
+
+.title span:last-of-type {
+  font-size: clamp(2.5rem, calc(0rem + 6.667vw), 5rem);
+  max-block-size: 20ch;
 }
 
 .subtitle {

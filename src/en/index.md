@@ -6,12 +6,14 @@ altPage: /hr/
 title: Your partner for websites that give you an advantage
 description: Studio CiTA engineers challenging websites and high-performing stores that visitors love to use and owners love to run.
 sections:
-  - title: Your partner for websites that give you an advantage
+  - title:
+      line1: Your partner for
+      line2: Websites that give you an advantage
     description: |
       Studio CiTA engineers challenging websites and high-performing stores that visitors love to use and owners love to run.
     cta:
       href: '#contact'
-      text: Talk to your new partner
+      text: Contact us
     type: hero
     icon: code
   - title: Services we offer
