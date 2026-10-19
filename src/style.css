@@ -60,7 +60,7 @@ body:has(section:only-child) {
   navigation: auto;
 }
 
-:is(.sr-only) {
+.vh {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   block-size: 1px;
@@ -70,7 +70,7 @@ body:has(section:only-child) {
   white-space: nowrap;
 }
 
-:is(a) {
+a {
   color: inherit;
   text-decoration-thickness: 0.05em;
   text-underline-offset: 0.1em;
@@ -79,20 +79,20 @@ body:has(section:only-child) {
   transition: var(--tr1) ease-in;
 }
 
-:is(a):is(:hover, :focus, :active) {
+a:is(:hover, :focus, :active) {
   transition: var(--tr2) ease-out;
 }
 
-:is(a):is(:focus-visible) {
+a:focus-visible {
   outline-color: currentColor;
 }
 
-:is(ul) {
+ul {
   margin-inline: unset;
   padding-inline-start: 1em;
 }
 
-:is(li) {
+li {
   margin-block: 0.33em;
 }
 
@@ -265,11 +265,11 @@ section:nth-of-type(even) .cover svg {
   margin-block: 1em;
 }
 
-.title:is(h1) {
+h1.title {
   font-size: clamp(1.875rem, calc(0rem + 5vw), 3.75rem);
 }
 
-.title:is(h2) {
+h2.title {
   font-size: clamp(1.688rem, calc(0.25rem + 3.833vw), 3.125rem);
 }
 
@@ -410,7 +410,7 @@ section:nth-of-type(even) .cover svg {
   margin-block-start: clamp(1.25rem, calc(-2.321rem + 9.524vw), 6.25rem);
 }
 
-.split__item:is(:first-of-type) {
+.split__item:first-of-type {
   margin-block-start: clamp(1.25rem, calc(0.357rem + 2.381vw), 2.5rem);
 }
 
@@ -528,11 +528,11 @@ section:nth-of-type(even) .cover svg {
   transition: var(--tr2) ease-in;
 }
 
-.quotes__block summary:is(:focus-visible) {
+.quotes__block summary:focus-visible {
   outline-color: currentColor;
 }
 
-.quotes__block details:not([open]) summary:after {
+.quotes__block details:not([open]) summary::after {
   font-size: 75%;
   font-weight: 700;
   font-style: normal;
@@ -541,11 +541,11 @@ section:nth-of-type(even) .cover svg {
   margin-block-start: 2em;
 }
 
-[lang='en'] .quotes__block details:not([open]) summary:after {
+[lang='en'] .quotes__block details:not([open]) summary::after {
   content: 'Expand ↓';
 }
 
-[lang='hr'] .quotes__block details:not([open]) summary:after {
+[lang='hr'] .quotes__block details:not([open]) summary::after {
   content: 'Otvori ↓';
 }
 
@@ -630,7 +630,7 @@ section:nth-of-type(even) .cover svg {
   transition: var(--tr2) ease-out;
 }
 
-.contact :is(input, textarea):is(:focus-visible) {
+.contact :is(input, textarea):focus-visible {
   outline-color: var(--c4);
 }
 
@@ -656,7 +656,7 @@ section:nth-of-type(even) .cover svg {
   transition: var(--tr2) ease-out;
 }
 
-.contact button:is(:focus-visible) {
+.contact button:focus-visible {
   outline-color: var(--c4);
 }
 
@@ -793,7 +793,7 @@ section:nth-of-type(even) .cover svg {
   transition: var(--tr1) ease-in;
 }
 
-.cta:is([href]) {
+.cta[href] {
   text-decoration: none;
 }
 
@@ -802,6 +802,6 @@ section:nth-of-type(even) .cover svg {
   transition: var(--tr2) ease-out;
 }
 
-.cta:is(:focus-visible) {
+.cta:focus-visible {
   outline-color: var(--c4);
 }
