@@ -3,7 +3,7 @@ layout: default
 lang: en
 altLang: hr
 altPage: /hr/
-title: Your partner for websites that give you an advantage
+title: Your partner for websites that give you an advantage*
 description: Studio CiTA engineers challenging websites and high-performing stores that visitors love to use and owners love to run.
 sections:
   - title:
@@ -12,7 +12,7 @@ sections:
     description: |
       Studio CiTA engineers challenging websites and high-performing stores that visitors love to use and owners love to run.
     cta:
-      href: '#contact'
+      href: "#contact"
       text: Contact us
     type: hero
     icon: code
@@ -264,18 +264,6 @@ sections:
   - title: Beyond clients work
     list:
       - title: Developer tools & extensions
-        # logos:
-        #   modifier: beta
-        #   list:
-        #     - src: yaml-custom-fields_fw7lcc.png
-        #       alt: YAML Custom Fields logo
-        #       href: https://wordpress.org/plugins/yaml-custom-fields/
-        #     - src: oklchanger_yokrdn.png
-        #       alt: OKLChanger logo
-        #       href: https://marketplace.visualstudio.com/items?itemName=starbist.oklchanger
-        #     - src: clamp-it_n5jnqw.png
-        #       alt: Clamp it! logo
-        #       href: https://marketplace.visualstudio.com/items?itemName=starbist.clamp-it
         description: |
           Building tools that help other developers:
 
@@ -283,18 +271,6 @@ sections:
           - [Visual Studio Code extension **OKLChanger**](https://marketplace.visualstudio.com/items?itemName=starbist.oklchanger)
           - [Visual Studio Code extension **Clamp it!**](https://marketplace.visualstudio.com/items?itemName=starbist.clamp-it)
       - title: Side projects
-        # logos:
-        #   modifier: beta
-        #   list:
-        #     - src: UI_Dev_Newsletter_12E09F_ftf610.svg
-        #       alt: UI Dev Newsletter logo
-        #       href: https://www.silvestar.codes/side-projects/ui-dev-newsletter/
-        #     - src: cld-2x_tvlemw.jpg
-        #       alt: Code Line Daily logo
-        #       href: https://www.silvestar.codes/side-projects/code-line-daily/
-        #     - src: css-auditors-logo-dark_asmhnd.svg
-        #       alt: CSS Auditors logo
-        #       href: https://css-auditors.com/
         description: |
           Building fun projects like:
 
