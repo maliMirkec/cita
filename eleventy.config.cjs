@@ -7,21 +7,12 @@ const path = require('path');
 const site = require('./src/_data/site.json');
 
 module.exports = async function (eleventyConfig) {
-  if (fs.existsSync('.env')) {
-    const designerToken = process.env.DESIGNER_TOKEN;
-    process.loadEnvFile();
-    if (!designerToken) {
-      delete process.env.DESIGNER_TOKEN;
-    }
-  }
-
   const { cldnryfetch } = await import('./eleventy/cldnry.js');
 
-  const { default: staticrafter } = await import('staticrafter/eleventy');
-  const branchDeploy = process.env.CONTEXT === 'branch-deploy';
+  const { default: staticrafter, isDesignerFunction } =
+    await import('staticrafter/eleventy');
   eleventyConfig.addPlugin(staticrafter, {
-    enabled: process.env.ELEVENTY_RUN_MODE === 'serve' || branchDeploy,
-    dataDir: branchDeploy ? '.designer' : undefined,
+    hosted: true,
     media: { provider: 'cloudinary', direct: true },
     uploadFolder: () => 'cita',
   });
@@ -49,8 +40,16 @@ module.exports = async function (eleventyConfig) {
 
   eleventyConfig.addShortcode(
     'cldnryfetch',
-    async (src, alt, width, lazy = true, classes = '') =>
-      cldnryfetch(src, alt, width, lazy, classes, site.cldnry)
+    async (src, alt, width = 400, lazy = true, classes = '') => {
+      if (isDesignerFunction(eleventyConfig)) {
+        const url = src.startsWith('http')
+          ? src
+          : `${site.cldnry}/f_auto,q_auto,c_scale,w_${width * 2}/${src}`;
+        return `<img src="${url}" alt="${alt || ''}" width="${width}" class="${classes}" loading="${lazy ? 'lazy' : 'eager'}">`;
+      }
+
+      return cldnryfetch(src, alt, width, lazy, classes, site.cldnry);
+    }
   );
 
   // Process and minify CSS with Autoprefixer
