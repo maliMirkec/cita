@@ -7,10 +7,21 @@ const path = require('path');
 const site = require('./src/_data/site.json');
 
 module.exports = async function (eleventyConfig) {
+  if (fs.existsSync('.env')) {
+    const designerToken = process.env.DESIGNER_TOKEN;
+    process.loadEnvFile();
+    if (!designerToken) {
+      delete process.env.DESIGNER_TOKEN;
+    }
+  }
+
   const { cldnryfetch } = await import('./eleventy/cldnry.js');
 
   const { default: staticrafter } = await import('staticrafter/eleventy');
+  const branchDeploy = process.env.CONTEXT === 'branch-deploy';
   eleventyConfig.addPlugin(staticrafter, {
+    enabled: process.env.ELEVENTY_RUN_MODE === 'serve' || branchDeploy,
+    dataDir: branchDeploy ? '.designer' : undefined,
     media: { provider: 'cloudinary', direct: true },
     uploadFolder: () => 'cita',
   });

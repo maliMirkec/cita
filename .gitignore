@@ -11,3 +11,6 @@ _site
 
 # Local secrets
 .env
+
+# StatiCrafter hosted data
+.designer
