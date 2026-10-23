@@ -2,6 +2,9 @@
   publish = "_site"
   command = "npm run build"
 
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "CLOUDINARY_CLOUD_NAME"
+
 [[edge_functions]]
   path = "/og-image"
   function = "og-image"
