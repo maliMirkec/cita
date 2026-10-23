@@ -1,0 +1,128 @@
+{
+  "site": {
+    "name": "cita.hr",
+    "componentsKey": "sections",
+    "langKey": "lang",
+    "languages": [
+      { "id": "en", "label": "English" },
+      { "id": "hr", "label": "Hrvatski" }
+    ],
+    "newPage": {
+      "file": "src/{lang}/{name}.md",
+      "defaults": { "layout": "default" }
+    },
+    "posts": ["src/*/blog/*.md", "!src/*/blog/index.md"],
+    "seo": { "baseUrl": "https://www.cita.hr" },
+    "dataFiles": [
+      { "file": "src/_data/site.json", "label": "Site", "scope": "site" }
+    ],
+    "github": { "repo": "maliMirkec/cita", "base": "develop" }
+  },
+  "page": {
+    "order": ["title", "slug", "description", "altLang", "altPage"],
+    "fields": {
+      "altLang": { "label": "Other language", "enum": ["en", "hr"] },
+      "altPage": {
+        "label": "Page in the other language",
+        "ui": "url",
+        "help": "URL of the same page in the other language, like /hr/. The footer links to it."
+      }
+    }
+  },
+  "post": {
+    "order": [
+      "title",
+      "published",
+      "description",
+      "author",
+      "altLang",
+      "altPage"
+    ],
+    "fields": {
+      "published": { "ui": "date" },
+      "author": {
+        "data": "site.authors",
+        "help": "Authors are listed in site.json under authors."
+      },
+      "altLang": { "label": "Other language", "enum": ["en", "hr"] },
+      "altPage": {
+        "label": "Post in the other language",
+        "ui": "url",
+        "help": "URL of the same post in the other language, like /hr/blog/head-101/."
+      }
+    }
+  },
+  "components": {
+    "hero": {
+      "label": "Hero",
+      "description": "Page intro with title, text and a CTA.",
+      "fields": {
+        "description": {
+          "ui": "textarea"
+        }
+      }
+    },
+    "cards": {
+      "label": "Cards",
+      "description": "Grid of cards with title and text.",
+      "fields": {
+        "list": {
+          "fields": {
+            "logos": {
+              "fields": {
+                "list": {
+                  "fields": {
+                    "src": {
+                      "ui": "media"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "split": {
+      "label": "Split",
+      "description": "Projects with image, tags and text.",
+      "fields": {
+        "list": {
+          "fields": {
+            "img": {
+              "fields": {
+                "src": {
+                  "ui": "media"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "quotes": {
+      "label": "Quotes",
+      "description": "Client testimonials with an optional note.",
+      "fields": {
+        "note": {
+          "ui": "textarea"
+        },
+        "list": {
+          "fields": {
+            "avatar": {
+              "fields": {
+                "src": {
+                  "ui": "media"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "contact": {
+      "label": "Contact",
+      "description": "Contact form with intro text."
+    }
+  }
+}

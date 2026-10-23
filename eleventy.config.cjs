@@ -8,6 +8,12 @@ const site = require('./src/_data/site.json');
 
 module.exports = async function (eleventyConfig) {
   const { cldnryfetch } = await import('./eleventy/cldnry.js');
+
+  const { default: staticrafter } = await import('staticrafter/eleventy');
+  eleventyConfig.addPlugin(staticrafter, {
+    media: { provider: 'cloudinary', direct: true },
+    uploadFolder: () => 'cita',
+  });
   // Add BRANCH environment variable as global data
   eleventyConfig.addGlobalData('BRANCH', process.env.BRANCH || '');
 
@@ -59,6 +65,9 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.setLayoutsDirectory('_layouts');
   eleventyConfig.addPassthroughCopy('src/*.svg');
   eleventyConfig.addPassthroughCopy('src/favicon/*');
+  eleventyConfig.addPassthroughCopy({
+    'src/favicon/favicon.ico': 'favicon.ico',
+  });
   eleventyConfig.addPassthroughCopy('src/gfx/*');
   eleventyConfig.addPassthroughCopy({ '.cache/cldnry': 'gfx/cldnry' });
 

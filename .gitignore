@@ -8,3 +8,6 @@ _site
 
 # Eleventy image cache
 .cache
+
+# Local secrets
+.env

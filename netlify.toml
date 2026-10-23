@@ -12,6 +12,7 @@
   from = "/"
   to = "/hr/"
   status = 302
+  force = true
   conditions = {Language = ["hr"]}
 
 # Everyone else gets English (fallback)
@@ -19,3 +20,4 @@
   from = "/"
   to = "/en/"
   status = 302
+  force = true
