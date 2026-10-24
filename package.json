@@ -27,9 +27,10 @@
     "@11ty/eleventy": "^3.1.7",
     "@11ty/eleventy-img": "^7.1.1",
     "@anthropic-ai/sdk": "^1.2.0",
-    "staticrafter": "^0.1.6"
+    "staticrafter": "^0.2.0"
   },
   "devDependencies": {
+    "@netlify/zip-it-and-ship-it": "^16.5.0",
     "@shopify/prettier-plugin-liquid": "^1.11.2",
     "autoprefixer": "^10.6.1",
     "clean-css": "^5.3.3",

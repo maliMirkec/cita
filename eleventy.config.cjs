@@ -1,7 +1,4 @@
 const markdownIt = require('markdown-it');
-const CleanCSS = require('clean-css');
-const postcss = require('postcss');
-const autoprefixer = require('autoprefixer');
 const fs = require('fs');
 const path = require('path');
 const site = require('./src/_data/site.json');
@@ -58,6 +55,10 @@ module.exports = async function (eleventyConfig) {
     outputFileExtension: 'css',
     compile: async function (inputContent) {
       return async () => {
+        const CleanCSS = require('clean-css');
+        const postcss = require('postcss');
+        const autoprefixer = require('autoprefixer');
+
         // Add vendor prefixes for last 2 years of browsers
         const prefixed = await postcss([
           autoprefixer({ overrideBrowserslist: ['last 2 years'] }),
